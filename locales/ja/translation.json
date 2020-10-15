@@ -1,0 +1,77 @@
+{
+  "header": {
+    "home": "ホム",
+    "services": "礼拝",
+    "lifeGroups": "ライフグループ",
+    "ministries": "省庁",
+    "events": "イベント",
+    "location": "ロケーション",
+    "contactUs": "お問い合わせ"
+  },
+  "banner": {
+    "welcome": "ようこそ",
+    "churchName": "東京ライトハウスチャーチ",
+    "ministryName": "フィィピの省",
+    "everySunday": "礼拝に参加しょう！"
+  },
+  "services": {
+    "joinUs": "礼拝に参加しょう！",
+    "liveStreaming": "ライブストリーミングも利用可能です"
+  },
+  "lifeGroups": {
+    "title": "生活グループに参加する",
+    "description": "教会でつながるための最良の方法は、私たちのライフグループに参加することです。私たちは楽しい時間、関係、聖書研究、そして祈りの時間のために、家中、喫茶店、そして職場で街中のあらゆる場所で会います。",
+    "joinNow": "今すぐ参加"
+  },
+  "ministries": {
+    "title": "省庁",
+    "seeMore": "続きを見る"
+  },
+  "events": {
+    "title": "イベント",
+    "noUpcomingEvents": "今後のイベントはありません",
+    "moreEvents": "すべてのイベントを見る"
+  },
+  "meetPastor": {
+    "title": "私たちの最愛の牧師に会います",
+    "pastorName": "Ptr. フレデリック・ケスナーと家族"
+  },
+  "location": {
+    "title": "ロケーション",
+    "address": "〒１４６ー００９３ 東京都大田区矢口２−１−１８",
+    "viewChurchDirection": "教会の方向を見る"
+  },
+  "contactUs": {
+    "title": "お問い合わせ",
+    "subTitle": "ご連絡お待ちしております！",
+    "name": "お名前",
+    "email": "メール",
+    "message": "メッセージ",
+    "send": "送信",
+    "requiredField": "必須フィールド",
+    "messageSent": "メッセージが送信されました!"
+  },
+  "footer": {
+    "churchName": "東京ライトハウスチャーチフィィピの省",
+    "underTheOversee": "東京ライトハウスチャーチ日本の監督の下で",
+    "memberOfCog": "神の教会のメンバー"
+  },
+  "eventList": {
+    "upcomingEvents": "今後のイベント",
+    "pastEvents": "過去のイベント",
+    "noUpcomingEvents": "今後のイベントはありません",
+    "noPastEvents": "現在、過去のイベントはありません"
+  },
+  "eventDetails": {
+    "allDayEvent": "~ 終日イベント",
+    "clickHereForDirection": "道順はここをクリック",
+    "share": "共有"
+  },
+  "lifeGroupDetails": {
+    "direction": "方向を見る",
+    "contactPerson": "連絡窓口",
+    "contactNo": "連絡先＃",
+    "location": "ロケーション",
+    "stationNearby": "近くの駅"
+  }
+}
