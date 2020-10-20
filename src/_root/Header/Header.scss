@@ -1,0 +1,113 @@
+@import "helpers/stylings/_index";
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+
+  .scrolled {
+    background-color: #aac7fdc7;
+    transition: 0.5s ease-in-out;
+  }
+
+  .container {
+    @include media-query(pc) {
+      padding: 15px 100px;
+    }
+
+    @include media-query(tl) {
+      padding: 15px 60px;
+    }
+
+    transition: 0.5s ease-in-out;
+    padding: 15px 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .myName {
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 20px;
+      cursor: pointer;
+      transition: 0.25s ease-in-out;
+
+      &:hover {
+        color: rgb(51, 105, 206);
+      }
+    }
+
+    .menuContainer {
+      @include align-center;
+      cursor: pointer;
+
+      &:hover {
+        & > div > span {
+          background: rgb(51, 105, 206);
+        }
+        & > span {
+          color: rgb(51, 105, 206);
+        }
+      }
+
+      .menuName {
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 18px;
+        padding-right: 20px;
+        transition: 0.25s ease-in-out;
+      }
+
+      .burgerMenu {
+        margin-right: 10px;
+
+        & > span {
+          background: black;
+          border-radius: 3px;
+          display: block;
+          height: 5px;
+          margin-bottom: 2px;
+          transition: 0.25s ease-in-out;
+          width: 30px;
+        }
+      }
+
+      .burgerMenuToggle {
+        & > :first-child {
+          transform: rotate(-45deg) translate(-5px, 5px);
+          transition: 0.25s ease-in-out;
+        }
+        & > :nth-child(2) {
+          transition: 0.2s ease-in-out;
+          opacity: 0;
+        }
+        & > :last-child {
+          transform: rotate(45deg) translate(-4px, -5px);
+          transition: 0.25s ease-in-out;
+        }
+      }
+    }
+
+    .menuList {
+      @include media-query(pc) {
+        min-width: 580px;
+      }
+      & > span {
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 15px;
+        cursor: pointer;
+
+        &:not(:last-child) {
+          margin-right: 15px;
+        }
+
+        &:hover {
+          color: rgb(51, 105, 206);
+        }
+      }
+    }
+  }
+}

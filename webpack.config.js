@@ -18,17 +18,25 @@ var config = {
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".css", ".scss"],
-    // Assigning 'src' folder as teh absolute path
+    // Assigning 'src' folder as the absolute path
     modules: [path.resolve(__dirname, "src"), "node_modules"],
+    plugins: [
+      new TsconfigPathsPlugin({
+        configFile: path.resolve(__dirname, "./tsconfig.json"),
+        extensions: [".ts", ".tsx", ".js", ".css", ".scss"],
+        logLevel: "INFO",
+        baseUrl: APP_DIR,
+      }),
+    ],
   },
   devServer: {
     contentBase: BUILD_DIR,
     compress: true,
     port: 3000,
     disableHostCheck: false,
-    headers: {
-      "X-Custom-header": "custom",
-    },
+    // headers: {
+    //   "X-Custom-header": "custom",
+    // },
     open: true,
     hot: true,
   },
@@ -55,12 +63,19 @@ var config = {
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
         use: [
-          "file-loader",
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[hash].[ext]",
+              outputPath: "assets",
+              publicPath: "assets",
+            },
+          },
           {
             loader: "image-webpack-loader",
             options: {
-              bypassOnDebug: true, // webpack@1.x
-              disable: true, // webpack@2.x and newer
+              bypassOnDebug: true,
+              disable: true,
             },
           },
         ],
@@ -76,7 +91,7 @@ var config = {
     new webpack.DefinePlugin({
       "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV),
     }),
-    new TsconfigPathsPlugin({ configFile: "tsconfig.json" }),
+    // new TsconfigPathsPlugin({ configFile: "tsconfig.json" }),
   ],
   optimization: {
     splitChunks: {
