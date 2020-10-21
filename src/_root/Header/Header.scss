@@ -5,10 +5,30 @@
   align-items: center;
   position: fixed;
   width: 100vw;
+  z-index: 99;
 
   .scrolled {
-    background-color: #aac7fdc7;
-    transition: 0.5s ease-in-out;
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  .defaultMenuList {
+    & > span {
+      color: $headerTextDefault;
+
+      &:hover {
+        color: $headerTextDefaultHover;
+      }
+    }
+  }
+
+  .scrolledMenuList {
+    & > span {
+      color: $headerTextScrolled;
+
+      &:hover {
+        color: $headerTextDefault;
+      }
+    }
   }
 
   .container {
@@ -20,7 +40,7 @@
       padding: 15px 60px;
     }
 
-    transition: 0.5s ease-in-out;
+    transition: 0.7s ease-in-out;
     padding: 15px 20px;
     width: 100%;
     display: flex;
@@ -33,9 +53,29 @@
       font-size: 20px;
       cursor: pointer;
       transition: 0.25s ease-in-out;
+      padding-right: 15px;
+      color: $headerTextDefault;
 
       &:hover {
-        color: rgb(51, 105, 206);
+        color: $headerTextDefaultHover;
+      }
+    }
+
+    .menuList {
+      @include media-query(pc) {
+        min-width: 595px;
+      }
+
+      & > span {
+        font-weight: 600;
+        text-transform: uppercase;
+        transition: 0.25s ease-in-out;
+        font-size: 15px;
+        cursor: pointer;
+
+        &:not(:last-child) {
+          margin-right: 15px;
+        }
       }
     }
 
@@ -45,14 +85,15 @@
 
       &:hover {
         & > div > span {
-          background: rgb(51, 105, 206);
+          background: $headerTextDefaultHover;
         }
         & > span {
-          color: rgb(51, 105, 206);
+          color: $headerTextDefaultHover;
         }
       }
 
       .menuName {
+        color: $headerTextDefault;
         font-weight: 600;
         text-transform: uppercase;
         font-size: 18px;
@@ -64,7 +105,7 @@
         margin-right: 10px;
 
         & > span {
-          background: black;
+          background: $headerTextDefault;
           border-radius: 3px;
           display: block;
           height: 5px;
@@ -77,35 +118,12 @@
       .burgerMenuToggle {
         & > :first-child {
           transform: rotate(-45deg) translate(-5px, 5px);
-          transition: 0.25s ease-in-out;
         }
         & > :nth-child(2) {
-          transition: 0.2s ease-in-out;
           opacity: 0;
         }
         & > :last-child {
           transform: rotate(45deg) translate(-4px, -5px);
-          transition: 0.25s ease-in-out;
-        }
-      }
-    }
-
-    .menuList {
-      @include media-query(pc) {
-        min-width: 580px;
-      }
-      & > span {
-        font-weight: 600;
-        text-transform: uppercase;
-        font-size: 15px;
-        cursor: pointer;
-
-        &:not(:last-child) {
-          margin-right: 15px;
-        }
-
-        &:hover {
-          color: rgb(51, 105, 206);
         }
       }
     }

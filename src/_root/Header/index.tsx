@@ -9,7 +9,7 @@ const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const isScrolled = () => setIsScrolled(window && window.scrollY > 60);
+    const isScrolled = () => setIsScrolled(window && window.scrollY > 200);
     window.addEventListener("scroll", isScrolled);
 
     return () => {
@@ -22,10 +22,7 @@ const Header: React.FC = () => {
   return (
     <div className={styles.wrapper}>
       <div className={classNames(styles.container, isScrolled && styles.scrolled)}>
-        <div>
-          <div className={styles.myName}>John Christopher Gonzaga</div>
-          <div></div>
-        </div>
+        <div className={styles.myName}>John Christopher Gonzaga</div>
         {deviceType !== "pc" ? (
           <div className={styles.menuContainer} onClick={handleMenuToggle}>
             <span className={styles.menuName}>Menu</span>
@@ -36,7 +33,12 @@ const Header: React.FC = () => {
             </div>
           </div>
         ) : (
-          <div className={styles.menuList}>
+          <div
+            className={classNames(
+              styles.menuList,
+              isScrolled ? styles.scrolledMenuList : styles.defaultMenuList
+            )}
+          >
             <span>About Me</span>
             <span>Skills</span>
             <span>Projects</span>

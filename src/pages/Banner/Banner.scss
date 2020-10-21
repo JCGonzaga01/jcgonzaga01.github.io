@@ -1,0 +1,25 @@
+@import "helpers/stylings/_index";
+
+.wrapper {
+  .container {
+    @include align-center;
+    height: 100vh;
+    position: relative;
+    width: 100vw;
+  }
+
+  .bannerImg {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    will-change: opacity;
+  }
+
+  .bannerText {
+    @include align-center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+  }
+}
