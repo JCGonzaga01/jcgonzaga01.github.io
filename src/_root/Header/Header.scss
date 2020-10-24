@@ -1,8 +1,6 @@
 @import "helpers/stylings/_index";
 
 .wrapper {
-  display: flex;
-  align-items: center;
   position: fixed;
   width: 100vw;
   z-index: 99;
@@ -33,31 +31,26 @@
 
   .container {
     @include media-query(pc) {
-      padding: 15px 100px;
+      padding: 5px 100px;
     }
 
     @include media-query(tl) {
-      padding: 15px 60px;
+      padding: 5px 60px;
     }
 
     transition: 0.7s ease-in-out;
-    padding: 15px 20px;
+    padding: 5px 20px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     .myName {
-      text-transform: uppercase;
-      font-weight: 600;
-      font-size: 20px;
-      cursor: pointer;
-      transition: 0.25s ease-in-out;
-      padding-right: 15px;
-      color: $headerTextDefault;
-
-      &:hover {
-        color: $headerTextDefaultHover;
+      height: 60px;
+      & > img {
+        cursor: pointer;
+        transition: 0.25s ease-in-out;
+        height: 100%;
       }
     }
 
@@ -70,7 +63,7 @@
         font-weight: 600;
         text-transform: uppercase;
         transition: 0.25s ease-in-out;
-        font-size: 15px;
+        font-size: 18px;
         cursor: pointer;
 
         &:not(:last-child) {
@@ -124,6 +117,65 @@
         }
         & > :last-child {
           transform: rotate(45deg) translate(-4px, -5px);
+        }
+      }
+    }
+  }
+
+  .spMenuWrapper {
+    @include align-center;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    transition: 0.2s ease-in;
+
+    .spMenuClose {
+      margin-right: 10px;
+      position: fixed;
+      top: 25px;
+      right: 25px;
+      cursor: pointer;
+      z-index: 1;
+
+      & > span {
+        background: $headerTextDefault;
+        border-radius: 3px;
+        display: block;
+        height: 5px;
+        width: 30px;
+      }
+
+      & > :first-child {
+        transform: rotate(-45deg) translate(0px, 5px);
+      }
+      & > :last-child {
+        transform: rotate(45deg) translate(2px, -4px);
+      }
+    }
+
+    .spMenuContainer {
+      height: 100vh;
+      position: absolute;
+      width: 100vw;
+    }
+
+    .spMenuList {
+      z-index: 1;
+
+      & > div {
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 18px;
+        cursor: pointer;
+        text-align: center;
+        color: $headerTextDefault;
+        padding: 15px 50px;
+        border-bottom: 1px solid #e3f6ff5e;
+
+        &:hover {
+          color: $headerTextScrolled;
         }
       }
     }

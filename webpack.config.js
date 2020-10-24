@@ -85,6 +85,7 @@ var config = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
+      favicon: "./src/assets/favicon.ico",
       template: APP_DIR + "/index.html",
     }),
     new webpack.HotModuleReplacementPlugin(),
