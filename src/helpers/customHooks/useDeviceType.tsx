@@ -8,7 +8,7 @@ function useDeviceType() {
   useEffect(() => {
     if (!window.matchMedia) return;
 
-    const mediaQueryTL = window.matchMedia("(max-width: 1024px)");
+    const mediaQueryTL = window.matchMedia("(max-width: 1023px)");
     const mediaQuerySP = window.matchMedia("(max-width: 743px)");
 
     function updateMediaQuery() {

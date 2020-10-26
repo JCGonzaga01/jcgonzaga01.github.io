@@ -39,7 +39,6 @@ const Header: React.FC = () => {
               <div>{item}</div>
             ))}
           </div>
-          {/* <div className={styles.spMenuContainer}>Here</div> */}
         </div>
       ) : (
         <div className={classNames(styles.container, isScrolled && styles.scrolled)}>
@@ -54,9 +53,7 @@ const Header: React.FC = () => {
           {deviceType !== "pc" ? (
             <div className={styles.menuContainer} onClick={handleMenuToggle}>
               <span className={styles.menuName}>Menu</span>
-              <div
-                className={classNames(styles.burgerMenu, isMenuToggle && styles.burgerMenuToggle)}
-              >
+              <div className={styles.burgerMenu}>
                 <span />
                 <span />
                 <span />

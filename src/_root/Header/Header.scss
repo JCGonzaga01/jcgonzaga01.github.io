@@ -31,15 +31,15 @@
 
   .container {
     @include media-query(pc) {
-      padding: 5px 100px;
+      padding: 10px 100px;
     }
 
     @include media-query(tl) {
-      padding: 5px 60px;
+      padding: 10px 60px;
     }
 
     transition: 0.7s ease-in-out;
-    padding: 5px 20px;
+    padding: 10px 20px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -94,30 +94,14 @@
         transition: 0.25s ease-in-out;
       }
 
-      .burgerMenu {
-        margin-right: 10px;
-
-        & > span {
-          background: $headerTextDefault;
-          border-radius: 3px;
-          display: block;
-          height: 5px;
-          margin-bottom: 2px;
-          transition: 0.25s ease-in-out;
-          width: 30px;
-        }
-      }
-
-      .burgerMenuToggle {
-        & > :first-child {
-          transform: rotate(-45deg) translate(-5px, 5px);
-        }
-        & > :nth-child(2) {
-          opacity: 0;
-        }
-        & > :last-child {
-          transform: rotate(45deg) translate(-4px, -5px);
-        }
+      .burgerMenu > span {
+        background: $headerTextDefault;
+        border-radius: 3px;
+        display: block;
+        height: 5px;
+        margin-bottom: 2px;
+        transition: 0.25s ease-in-out;
+        width: 30px;
       }
     }
   }
