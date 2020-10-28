@@ -8,12 +8,12 @@
     width: 100vw;
   }
 
-  .bannerImg {
-    height: 100%;
-    position: absolute;
-    width: 100%;
-    // will-change: opacity;
-  }
+  // .bannerImg {
+  //   height: 100%;
+  //   position: absolute;
+  //   width: 100%;
+  //   // will-change: opacity;
+  // }
 
   .bannerTextWrapper {
     @include align-center;
@@ -27,13 +27,59 @@
       text-transform: uppercase;
       color: $textDefault;
       font-family: "Concert One";
+      padding: 0 20px;
 
       & > :first-child {
-        font-size: 34px;
-        border-bottom: 1px solid white;
-        border-top: 1px solid white;
-        padding: 20px 0;
+        font-size: 44px;
+        border-bottom: 1px solid $textScrolled;
+        border-top: 1px solid $textScrolled;
+        padding: 20px;
         margin-bottom: 10px;
+      }
+
+      & > :not(:first-child) {
+        font-family: "Poppins";
+        letter-spacing: 0.5px;
+        line-height: 50px;
+        font-size: 20px;
+      }
+
+      .textWithImage {
+        color: $textScrolled;
+        & > img {
+          width: 25px;
+          height: 25px;
+          margin: 0 8px;
+        }
+      }
+
+      & > :last-child {
+        @include align-center;
+        margin-top: 15px;
+
+        & > div {
+          @include align-center;
+          border: 2px solid $textDefault;
+          color: $textDefault;
+          padding: 0 15px;
+          cursor: pointer;
+
+          &:hover {
+            border: 2px solid $textDefaultHover;
+            color: $textDefaultHover;
+
+            & > :last-child {
+              background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='https://www.w3.org/1999/xlink' width='36px' height='24px' viewBox='0 0 36 24' zoomAndPan='disable'%3E%3Cstyle%3Eline %7B stroke: %235fcbff%3B stroke-width: 2px%3B %7D%3C/style%3E%3Cline x1='0' y1='12' x2='34' y2='12' /%3E%3Cline x1='25' y1='4' x2='34' y2='12.5' /%3E%3Cline x1='25' y1='20' x2='34' y2='11.5' /%3E%3C/svg%3E");
+            }
+          }
+
+          & > :last-child {
+            width: 35px;
+            height: 25px;
+            margin-left: 10px;
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='https://www.w3.org/1999/xlink' width='36px' height='24px' viewBox='0 0 36 24' zoomAndPan='disable'%3E%3Cstyle%3Eline %7B stroke: %23ffffff%3B stroke-width: 2px%3B %7D%3C/style%3E%3Cline x1='0' y1='12' x2='34' y2='12' /%3E%3Cline x1='25' y1='4' x2='34' y2='12.5' /%3E%3Cline x1='25' y1='20' x2='34' y2='11.5' /%3E%3C/svg%3E");
+          }
+        }
       }
     }
   }
