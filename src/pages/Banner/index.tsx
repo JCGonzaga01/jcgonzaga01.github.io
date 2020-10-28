@@ -1,6 +1,6 @@
 import React from "react";
 import { useDeviceType } from "helpers/customHooks";
-import bannerImg from "assets/banner.jpg";
+import assets from "assets";
 import styles from "./Banner.scss";
 
 const Banner: React.FC = () => {
@@ -11,12 +11,18 @@ const Banner: React.FC = () => {
         <div
           className={styles.bannerImg}
           style={{
-            background: `url(${bannerImg}) center center / cover no-repeat`,
+            background: `url(${assets.bannerImg}) center center / cover no-repeat`,
             // Parallex is not supported in tl and sp
             backgroundAttachment: deviceType === "pc" ? "fixed" : "initial",
           }}
         />
-        <div className={styles.bannerText}>John Christopher Gonzaga</div>
+        <div className={styles.bannerTextWrapper}>
+          <div className={styles.bannerTextContainer}>
+            <div>John Christopher Gonzaga</div>
+            <div>Web Developer</div>
+            <div>Who am I?</div>
+          </div>
+        </div>
       </div>
     </div>
   );

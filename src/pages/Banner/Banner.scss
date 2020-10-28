@@ -12,14 +12,29 @@
     height: 100%;
     position: absolute;
     width: 100%;
-    will-change: opacity;
+    // will-change: opacity;
   }
 
-  .bannerText {
+  .bannerTextWrapper {
     @include align-center;
     height: 100%;
     width: 100%;
     position: absolute;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.75);
+
+    .bannerTextContainer {
+      text-align: center;
+      text-transform: uppercase;
+      color: $textDefault;
+      font-family: "Concert One";
+
+      & > :first-child {
+        font-size: 34px;
+        border-bottom: 1px solid white;
+        border-top: 1px solid white;
+        padding: 20px 0;
+        margin-bottom: 10px;
+      }
+    }
   }
 }
