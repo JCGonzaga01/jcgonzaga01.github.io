@@ -92,6 +92,9 @@
               background-color: rgba(0, 0, 0, 0.75);
               color: $textDefault;
             }
+            @include media-query(sp) {
+              max-width: 100vw;
+            }
 
             color: #000000;
             background-color: $textDefault;
