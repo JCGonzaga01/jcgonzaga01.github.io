@@ -4,18 +4,20 @@
   justify-content: center;
 }
 
-@mixin media-query($mqType) {
-  @if $mqType == "sp" {
-    @media (max-width: 743px) {
-      @content;
-    }
-  } @else if $mqType == "tl" {
-    @media (min-width: 744px) and (max-width: 1023px) {
-      @content;
-    }
-  } @else {
-    @media (min-width: 1024px) {
-      @content;
+@mixin media-query($mqTypes...) {
+  @each $mqType in $mqTypes {
+    @if $mqType == "sp" {
+      @media (max-width: 743px) {
+        @content;
+      }
+    } @else if $mqType == "tl" {
+      @media (min-width: 744px) and (max-width: 1023px) {
+        @content;
+      }
+    } @else {
+      @media (min-width: 1024px) {
+        @content;
+      }
     }
   }
 }

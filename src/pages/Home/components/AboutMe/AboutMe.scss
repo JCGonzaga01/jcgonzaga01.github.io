@@ -1,0 +1,113 @@
+@import "helpers/stylings/_index";
+
+.wrapper {
+  .container {
+    @include media-query(pc) {
+      @include align-center;
+      height: 100vh;
+    }
+    position: relative;
+    width: 100vw;
+    margin-top: 5px;
+  }
+
+  .aboutMeBG {
+    @include media-query(pc) {
+      position: absolute;
+      height: 100%;
+    }
+    height: 50vh;
+    width: 100%;
+  }
+
+  .aboutMeDetailsWrapper {
+    @include align-center;
+
+    @include media-query(pc) {
+      padding: 30px 100px;
+      position: absolute;
+      background: rgba(0, 0, 0, 0.75);
+    }
+
+    @include media-query(tl) {
+      padding: 30px 60px;
+    }
+
+    padding: 30px 20px;
+    width: 100%;
+    background-color: #000000f5;
+    border-top: 3px solid #ff8080;
+    bottom: 0;
+
+    .aboutMeDetails {
+      text-align: center;
+      text-transform: uppercase;
+      color: $textDefault;
+      width: 100%;
+
+      & > :first-child {
+        padding: 7px 0px;
+        margin-bottom: 40px;
+
+        span {
+          font-size: 40px;
+          border-bottom: 1px solid $textScrolled;
+          border-top: 1px solid $textScrolled;
+          padding: 5px 10px;
+        }
+      }
+
+      & > :last-child {
+        @include media-query(pc) {
+          @include align-center;
+          justify-content: space-between;
+        }
+
+        @include media-query(tl) {
+          @include align-center;
+          flex-wrap: wrap;
+        }
+
+        & > :not(:last-child) {
+          @include media-query(pc, tl) {
+            margin-right: 30px;
+          }
+        }
+
+        .aboutMeList {
+          @include media-query(tl, sp) {
+            margin-bottom: 50px;
+          }
+
+          font-family: "Poppins";
+
+          .listTitle {
+            font-size: 30px;
+            letter-spacing: 1px;
+          }
+
+          .listDetail {
+            @include align-center;
+            @include media-query(pc) {
+              background-color: rgba(0, 0, 0, 0.75);
+              color: $textDefault;
+            }
+
+            color: #000000;
+            background-color: $textDefault;
+            min-height: 145px;
+            max-width: 300px;
+            padding: 10px;
+            border-radius: 10px;
+          }
+
+          img {
+            width: 80px;
+            height: 80px;
+            filter: invert(0.55) sepia(1) saturate(9) hue-rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+}

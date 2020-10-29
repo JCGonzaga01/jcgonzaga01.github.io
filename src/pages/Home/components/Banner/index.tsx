@@ -12,9 +12,9 @@ const Banner: React.FC = () => {
     <div className={styles.wrapper}>
       <div className={styles.container}>
         <div
-          className={styles.bannerImg}
+          className={styles.bannerBG}
           style={{
-            background: `url(${assets.bannerImg}) center center / cover no-repeat`,
+            background: `url(${assets.bannerBG}) center center / cover no-repeat`,
             // Parallex is not supported in tl and sp
             backgroundAttachment: deviceType === "pc" ? "fixed" : "initial",
           }}

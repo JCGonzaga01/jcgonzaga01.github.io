@@ -8,7 +8,7 @@
     width: 100vw;
   }
 
-  .bannerImg {
+  .bannerBG {
     height: 100%;
     position: absolute;
     width: 100%;
@@ -26,7 +26,6 @@
       text-align: center;
       text-transform: uppercase;
       color: $textDefault;
-      font-family: "Concert One";
       padding: 0 20px;
 
       & > :first-child {
