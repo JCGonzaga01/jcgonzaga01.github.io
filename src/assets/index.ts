@@ -8,6 +8,7 @@ import guitar from "./svg/guitar.svg";
 import keyboard from "./svg/keyboard.svg";
 import cajon from "./svg/cajon.svg";
 import drums from "./svg/drums.svg";
+import arrowDown from "./svg/arrowDown.svg";
 
 export default {
   jcgHeader,
@@ -20,4 +21,5 @@ export default {
   keyboard,
   cajon,
   drums,
+  arrowDown,
 };
