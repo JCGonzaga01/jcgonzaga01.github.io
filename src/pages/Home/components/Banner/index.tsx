@@ -6,7 +6,10 @@ import styles from "./Banner.scss";
 const Banner: React.FC = () => {
   const deviceType = useDeviceType();
 
-  const handleGetStartedClick = () => {};
+  const handleGetStartedClick = () => {
+    const aboutMeEL = document.getElementById("aboutMeDivId");
+    aboutMeEL?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <div className={styles.wrapper}>
@@ -38,28 +41,6 @@ const Banner: React.FC = () => {
                 Playing musical instruments
               </span>
             </div>
-            {/* <div>
-              <span>Like</span>
-              <span className={styles.textWithImage}>
-                <img src={assets.guitar} alt={"Guitar"} />
-                Guitar,
-              </span>
-              <span className={styles.textWithImage}>
-                <img src={assets.keyboard} alt={"Keyboard"} />
-                Keyboard,
-              </span>
-              <span className={styles.textWithImage}>
-                <img src={assets.cajon} alt={"Cajon"} />
-                Cajon,
-              </span>
-            </div>
-            <div>
-              <span className={styles.textWithImage}>
-                &nbsp; && a little bit of
-                <img src={assets.drums} alt={"Drums"} />
-                drums
-              </span>
-            </div> */}
             <div>
               <div onClick={handleGetStartedClick}>
                 <span>Get Started</span>

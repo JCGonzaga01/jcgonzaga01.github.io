@@ -1,13 +1,14 @@
 import React from "react";
 import assets from "assets";
 import { useDeviceType } from "helpers/customHooks";
+import { Button } from "components";
 import styles from "./AboutMe.scss";
 
 const AboutMe: React.FC = () => {
   const deviceType = useDeviceType();
 
   return (
-    <div className={styles.wrapper}>
+    <div id={"aboutMeDivId"} className={styles.wrapper}>
       <div className={styles.container}>
         <div
           className={styles.aboutMeBG}
@@ -24,30 +25,32 @@ const AboutMe: React.FC = () => {
             <div>
               <span>About Me</span>
             </div>
-            <div>
+            <div className={styles.aboutMeListWrapper}>
               <div className={styles.aboutMeList}>
                 <img src={assets.education} alt={"Education"} />
                 <div className={styles.listTitle}>Education</div>
                 <div className={styles.listDetail}>
-                  Graduated Bachelor of Science in Computer Science at Polytechnic University of the
-                  Philippines
+                  {
+                    "Graduated Bachelor of Science in Computer Science at Polytechnic University of the Philippines"
+                  }
                 </div>
               </div>
               <div className={styles.aboutMeList}>
                 <img src={assets.working} alt={"Work"} />
                 <div className={styles.listTitle}>Work</div>
                 <div className={styles.listDetail}>
-                  Currently working as Web Developer in Finastra Philippines, Inc.
+                  {"Currently work as a Web Developer in Finastra Philippines, Inc."}
                 </div>
               </div>
               <div className={styles.aboutMeList}>
                 <img src={assets.guitar} alt={"Guitar"} />
                 <div className={styles.listTitle}>Who am i?</div>
                 <div className={styles.listDetail}>
-                  I am a simple guy who loves to play musical instrument
+                  {"I am just a simple guy who loves to play and learn musical instruments"}
                 </div>
               </div>
             </div>
+            <Button handleOnClick={() => {}} title={"Wanna know more ?"} />
           </div>
         </div>
       </div>

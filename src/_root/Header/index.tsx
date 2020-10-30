@@ -36,7 +36,7 @@ const Header: React.FC = () => {
           <div className={styles.spMenuContainer} onClick={handleMenuToggle} />
           <div className={styles.spMenuList}>
             {menuItems.map((item) => (
-              <div>{item}</div>
+              <div key={item}>{item}</div>
             ))}
           </div>
         </div>
@@ -67,7 +67,7 @@ const Header: React.FC = () => {
               )}
             >
               {menuItems.map((item) => (
-                <span>{item}</span>
+                <span key={item}>{item}</span>
               ))}
             </div>
           )}

@@ -57,10 +57,11 @@
         }
       }
 
-      & > :last-child {
+      .aboutMeListWrapper {
         @include media-query(pc) {
           @include align-center;
           justify-content: space-between;
+          margin-bottom: 50px;
         }
 
         @include media-query(tl) {
