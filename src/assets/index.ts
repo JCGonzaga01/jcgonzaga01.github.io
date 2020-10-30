@@ -12,7 +12,6 @@ import skillsBG from "./bg/skills.jpg";
 import biking from "./svg/biking.svg";
 import running from "./svg/running.svg";
 import musicNote1 from "./svg/music-note1.svg";
-import guitar from "./svg/guitar.svg";
 import keyboard from "./svg/keyboard.svg";
 import cajon from "./svg/cajon.svg";
 import drums from "./svg/drums.svg";
@@ -20,6 +19,12 @@ import arrowDown from "./svg/arrowDown.svg";
 // - About Me
 import education from "./svg/education.svg";
 import working from "./svg/working.svg";
+import guitar from "./svg/guitar.svg";
+// - Skills
+import web from "./svg/web.svg";
+import database from "./svg/database.svg";
+import otherTools from "./svg/otherTools.svg";
+import scrum from "./svg/scrum.svg";
 
 export default {
   jcgHeader,
@@ -37,4 +42,8 @@ export default {
   arrowDown,
   education,
   working,
+  web,
+  database,
+  otherTools,
+  scrum,
 };

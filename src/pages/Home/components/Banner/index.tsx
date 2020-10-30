@@ -28,26 +28,26 @@ const Banner: React.FC = () => {
         />
         <div className={styles.bannerTextWrapper}>
           <div className={styles.bannerTextContainer}>
-            <div>John Christopher Gonzaga</div>
-            <div>A Web Developer who loves:</div>
+            <div>{"John Christopher Gonzaga"}</div>
+            <div>{"A Web Developer who loves:"}</div>
             <div>
               <span className={styles.textWithImage}>
                 <img src={assets.biking} alt={"Biking"} />
-                Biking,
+                {"Biking,"}
               </span>
               <span className={styles.textWithImage}>
                 <img src={assets.running} alt={"Running"} />
-                Running,
+                {"Running,"}
               </span>
               <span className={styles.textWithImage}>
-                &nbsp; &&
+                {" &&"}
                 <img src={assets.musicNote1} alt={"Music Note 1"} />
-                Playing musical instruments
+                {"Playing musical instruments"}
               </span>
             </div>
             <div>
               <div onClick={handleGetStartedClick}>
-                <span>Get Started</span>
+                <span>{"Get Started"}</span>
                 <div />
               </div>
             </div>

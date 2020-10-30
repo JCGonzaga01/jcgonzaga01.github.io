@@ -84,12 +84,12 @@
 
           font-family: "Poppins";
 
-          .listTitle {
+          .title {
             font-size: 30px;
             letter-spacing: 1px;
           }
 
-          .listDetail {
+          .detail {
             @include align-center;
             @include media-query(pc) {
               background-color: rgba(0, 0, 0, 0.75);
@@ -110,10 +110,36 @@
           img {
             width: 80px;
             height: 80px;
-            filter: invert(0.55) sepia(1) saturate(9) hue-rotate(180deg);
+            filter: invert(0.55) sepia(1) saturate(9) hue-rotate(315deg);
           }
         }
       }
+
+      .custonButton {
+        & > div:hover {
+          border: 2px solid #ff8080;
+          color: #ff8080;
+        }
+      }
     }
+  }
+
+  .showDetails {
+    animation: fadeUpIn 1.5s ease-in-out;
+  }
+
+  .hideDetails {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeUpIn {
+  0% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
