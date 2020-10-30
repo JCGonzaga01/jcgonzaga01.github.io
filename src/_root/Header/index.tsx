@@ -4,19 +4,30 @@ import { useDeviceType } from "helpers/customHooks";
 import assets from "assets";
 import { menuItems } from "constants/common";
 import styles from "./Header.scss";
+import { truncateSync } from "fs";
 
 const Header: React.FC = () => {
   const deviceType = useDeviceType();
+  const [curDivViewPort, setCurDivViewPort] = useState("home");
   const [isMenuToggle, setIsMenuToggle] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [headerImg, setheaderImg] = useState(assets.jcgHeader);
 
   useEffect(() => {
-    const isScrolled = () => setIsScrolled(window && window.scrollY > 200);
-    window.addEventListener("scroll", isScrolled);
+    const scrolling = () => {
+      setIsScrolled(window && window.scrollY > 200);
+      menuItems.some((item, idx) => {
+        const menuEl = document.getElementById(`${item.key}DivId`);
+        if (menuEl && menuEl.getBoundingClientRect().top - 85 > 0) {
+          setCurDivViewPort(menuItems[idx - 1].key);
+          return true;
+        }
+      });
+    };
+    window.addEventListener("scroll", scrolling);
 
     return () => {
-      window.removeEventListener("scroll", isScrolled);
+      window.removeEventListener("scroll", scrolling);
     };
   }, []);
 
@@ -47,7 +58,14 @@ const Header: React.FC = () => {
           <div className={styles.spMenuContainer} onClick={handleMenuToggle} />
           <div className={styles.spMenuList}>
             {menuItems.map((item) => (
-              <div id={item.key} key={item.key} onClick={handleOnClickMenu}>
+              <div
+                id={item.key}
+                key={item.key}
+                onClick={handleOnClickMenu}
+                className={
+                  curDivViewPort === item.key ? styles.selectedMenuScrolled : styles.defaultMenuList
+                }
+              >
                 {item.value}
               </div>
             ))}
@@ -80,7 +98,20 @@ const Header: React.FC = () => {
               )}
             >
               {menuItems.map((item) => (
-                <span id={item.key} key={item.key} onClick={handleOnClickMenu}>
+                <span
+                  id={item.key}
+                  key={item.key}
+                  onClick={handleOnClickMenu}
+                  className={
+                    item.key === "home" && !isScrolled
+                      ? styles.selectedMenuScrolled
+                      : curDivViewPort === item.key
+                      ? styles.selectedMenuDefault
+                      : isScrolled
+                      ? styles.scrolledMenuList
+                      : styles.defaultMenuList
+                  }
+                >
                   {item.value}
                 </span>
               ))}

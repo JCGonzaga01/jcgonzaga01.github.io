@@ -10,7 +10,7 @@ const Banner: React.FC = () => {
   const handleGetStartedClick = () => {
     const aboutMeEL = document.getElementById("aboutMeDivId");
     if (aboutMeEL) {
-      const curOffset = aboutMeEL.getBoundingClientRect().top + window.pageYOffset;
+      const curOffset = aboutMeEL.getBoundingClientRect().top + window.pageYOffset - 80;
       window.scrollTo({ top: curOffset, behavior: "smooth" });
     }
   };
