@@ -5,6 +5,7 @@ import jcgHeaderHover from "./jcg_header_hover.png";
 // BACKGROUND
 import bannerBG from "./bg/banner.jpg";
 import aboutMeBG from "./bg/aboutMe.jpg";
+import skillsBG from "./bg/skills.jpg";
 
 // SVG
 // - Banner
@@ -25,6 +26,7 @@ export default {
   jcgHeaderHover,
   bannerBG,
   aboutMeBG,
+  skillsBG,
   biking,
   running,
   musicNote1,

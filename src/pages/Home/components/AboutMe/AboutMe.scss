@@ -5,7 +5,9 @@
     @include media-query(pc) {
       @include align-center;
       height: 100vh;
+      min-height: 600px;
     }
+
     position: relative;
     width: 100vw;
     margin-top: 5px;

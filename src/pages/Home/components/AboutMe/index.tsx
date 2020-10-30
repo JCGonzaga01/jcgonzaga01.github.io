@@ -50,7 +50,7 @@ const AboutMe: React.FC = () => {
                 </div>
               </div>
             </div>
-            <Button handleOnClick={() => {}} title={"Wanna know more ?"} />
+            <Button handleOnClick={() => {}} title={"Wanna know me more ?"} />
           </div>
         </div>
       </div>

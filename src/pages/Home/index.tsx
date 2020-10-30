@@ -1,6 +1,7 @@
 import React from "react";
 import Banner from "./components/Banner";
 import AboutMe from "./components/AboutMe";
+import Skills from "./components/Skills";
 import styles from "./Home.scss";
 
 const Home: React.FC = () => {
@@ -8,6 +9,7 @@ const Home: React.FC = () => {
     <div className={styles.wrapper}>
       <Banner />
       <AboutMe />
+      <Skills />
     </div>
   );
 };

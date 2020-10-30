@@ -1,0 +1,62 @@
+@import "helpers/stylings/_index";
+
+.wrapper {
+  .container {
+    @include media-query(pc) {
+      height: 100vh;
+    }
+
+    position: relative;
+    width: 100vw;
+    margin-top: 5px;
+  }
+
+  .skillsBG {
+    @include media-query(pc) {
+      position: absolute;
+      height: 100%;
+    }
+    height: 50vh;
+    width: 100%;
+  }
+
+  .skillsDetailsWrapper {
+    // @include align-center;
+
+    @include media-query(pc) {
+      padding: 30px;
+      position: absolute;
+      background: rgba(0, 0, 0, 0.75);
+    }
+
+    @include media-query(tl) {
+      padding: 30px 60px;
+    }
+
+    padding: 30px 20px;
+    width: 40%;
+    height: 100%;
+    background-color: #000000f5;
+    border-right: 3px solid #00aeff;
+    // bottom: ;
+
+    .skillsDetails {
+      text-align: center;
+      text-transform: uppercase;
+      color: $textDefault;
+      width: 100%;
+
+      & > :first-child {
+        padding: 7px 0px;
+        margin-bottom: 40px;
+
+        span {
+          font-size: 40px;
+          border-bottom: 1px solid $textScrolled;
+          border-top: 1px solid $textScrolled;
+          padding: 5px 10px;
+        }
+      }
+    }
+  }
+}

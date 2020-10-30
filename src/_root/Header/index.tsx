@@ -25,6 +25,17 @@ const Header: React.FC = () => {
   const headerHover = (isHover: boolean) => () =>
     setheaderImg(isHover ? assets.jcgHeaderHover : assets.jcgHeader);
 
+  const handleOnClickMenu = (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => {
+    handleMenuToggle();
+    const key = e.currentTarget.id;
+
+    const menuEl = document.getElementById(`${key}DivId`);
+    if (menuEl) {
+      const curOffset = menuEl.getBoundingClientRect().top + window.pageYOffset - 80;
+      window.scrollTo({ top: curOffset, behavior: "smooth" });
+    }
+  };
+
   return (
     <div className={styles.wrapper}>
       {isMenuToggle && deviceType !== "pc" ? (
@@ -36,7 +47,9 @@ const Header: React.FC = () => {
           <div className={styles.spMenuContainer} onClick={handleMenuToggle} />
           <div className={styles.spMenuList}>
             {menuItems.map((item) => (
-              <div key={item}>{item}</div>
+              <div id={item.key} key={item.key} onClick={handleOnClickMenu}>
+                {item.value}
+              </div>
             ))}
           </div>
         </div>
@@ -67,7 +80,9 @@ const Header: React.FC = () => {
               )}
             >
               {menuItems.map((item) => (
-                <span key={item}>{item}</span>
+                <span id={item.key} key={item.key} onClick={handleOnClickMenu}>
+                  {item.value}
+                </span>
               ))}
             </div>
           )}

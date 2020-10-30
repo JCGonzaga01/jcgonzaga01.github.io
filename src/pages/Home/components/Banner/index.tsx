@@ -2,17 +2,21 @@ import React from "react";
 import { useDeviceType } from "helpers/customHooks";
 import assets from "assets";
 import styles from "./Banner.scss";
+import { off } from "process";
 
 const Banner: React.FC = () => {
   const deviceType = useDeviceType();
 
   const handleGetStartedClick = () => {
     const aboutMeEL = document.getElementById("aboutMeDivId");
-    aboutMeEL?.scrollIntoView({ behavior: "smooth" });
+    if (aboutMeEL) {
+      const curOffset = aboutMeEL.getBoundingClientRect().top + window.pageYOffset;
+      window.scrollTo({ top: curOffset, behavior: "smooth" });
+    }
   };
 
   return (
-    <div className={styles.wrapper}>
+    <div id={"homeDivId"} className={styles.wrapper}>
       <div className={styles.container}>
         <div
           className={styles.bannerBG}
