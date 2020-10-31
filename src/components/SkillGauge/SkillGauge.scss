@@ -1,26 +1,26 @@
 @import "helpers/stylings/_index";
 
 .wrapper {
-  height: 30px;
-  width: 300px;
   background-color: #ffffff70;
   border-radius: 5px;
+  height: 30px;
   margin-bottom: 10px;
+  width: 300px;
 
   & > :first-child {
-    position: absolute;
-    height: 30px;
-    width: 300px;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
+    display: flex;
+    height: 30px;
+    justify-content: space-between;
     padding: 0 10px;
+    position: absolute;
+    width: 300px;
   }
 
   & > :last-child {
-    width: 80%;
-    height: 100%;
     background-color: rgb(210, 71, 255);
     border-radius: 5px;
+    height: 100%;
+    width: 80%;
   }
 }

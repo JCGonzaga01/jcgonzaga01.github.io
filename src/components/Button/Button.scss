@@ -3,14 +3,14 @@
 .wrapper {
   @include align-center;
   font-family: "Poppins";
-  letter-spacing: 0.5px;
   font-size: 20px;
+  letter-spacing: 0.5px;
 
   & > div {
     border: 2px solid $textDefault;
     color: $textDefault;
-    padding: 10px 15px;
     cursor: pointer;
+    padding: 10px 15px;
 
     &:hover {
       border: 2px solid $textDefaultHover;

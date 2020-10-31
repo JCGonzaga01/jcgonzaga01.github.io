@@ -18,38 +18,38 @@
 
   .bannerTextWrapper {
     @include align-center;
-    height: 100%;
-    width: 100%;
-    position: absolute;
     background: rgba(0, 0, 0, 0.75);
+    height: 100%;
+    position: absolute;
+    width: 100%;
 
     .bannerTextContainer {
-      text-align: center;
-      text-transform: uppercase;
       color: $textDefault;
       padding: 0 20px;
+      text-align: center;
+      text-transform: uppercase;
 
       & > :first-child {
-        font-size: 44px;
         border-bottom: 1px solid $textScrolled;
         border-top: 1px solid $textScrolled;
-        padding: 20px;
+        font-size: 44px;
         margin-bottom: 10px;
+        padding: 20px;
       }
 
       & > :not(:first-child) {
         font-family: "Poppins";
+        font-size: 20px;
         letter-spacing: 0.5px;
         line-height: 50px;
-        font-size: 20px;
       }
 
       .textWithImage {
         color: $textScrolled;
         & > img {
-          width: 25px;
           height: 25px;
           margin: 0 8px;
+          width: 25px;
         }
       }
 
@@ -61,8 +61,8 @@
           @include align-center;
           border: 2px solid $textDefault;
           color: $textDefault;
-          padding: 0 15px;
           cursor: pointer;
+          padding: 0 15px;
 
           &:hover {
             border: 2px solid $textDefaultHover;
@@ -74,13 +74,13 @@
           }
 
           & > :last-child {
-            width: 25px;
-            height: 25px;
-            margin-left: 10px;
-            background-image: url("assets/svg/arrowDown.svg");
-            filter: invert(0.95) sepia(1) saturate(5) hue-rotate(170deg);
             -webkit-animation: spin 2s linear infinite;
             animation: spin 2s linear infinite;
+            background-image: url("assets/svg/arrowDown.svg");
+            filter: invert(0.95) sepia(1) saturate(5) hue-rotate(170deg);
+            height: 25px;
+            margin-left: 10px;
+            width: 25px;
           }
         }
       }
