@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import assets from "assets";
-import { Button, SkillGauge } from "components";
+import { Button } from "components";
 import { useDeviceType } from "helpers/customHooks";
 import { classNames } from "helpers/functions";
 import styles from "./Skills.scss";

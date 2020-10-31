@@ -3,7 +3,7 @@
 .wrapper {
   .container {
     @include media-query(pc) {
-      min-height: 765px;
+      min-height: 790px;
     }
 
     margin-top: 5px;
@@ -11,7 +11,7 @@
     width: 100vw;
   }
 
-  .skillsBG {
+  .workExpBG {
     @include media-query(pc) {
       height: 100%;
       position: absolute;
@@ -21,15 +21,14 @@
     width: 100%;
   }
 
-  .skillsDetailsWrapper {
-    // @include align-center;
-
+  .workExpDetailsWrapper {
     @include media-query(pc) {
       background: rgba(0, 0, 0, 0.75);
-      border-right: 3px solid #00aeff;
+      border-left: 3px solid #10e03a;
       border-top: 0px;
       padding: 30px;
       position: absolute;
+      right: 0;
       width: 60%;
     }
 
@@ -38,11 +37,11 @@
     }
 
     background-color: #000000f5;
-    border-top: 3px solid #00aeff;
+    border-top: 3px solid #10e03a;
     height: 100%;
     padding: 30px 20px;
 
-    .skillsDetails {
+    .workExpDetails {
       color: $textDefault;
       text-align: center;
       text-transform: uppercase;
@@ -59,56 +58,44 @@
           padding: 5px 10px;
         }
       }
-      .skillsListWrapper {
-        .skillsListContainer {
-          @include align-center;
+      .workExpListWrapper {
+        @include align-center;
+        flex-direction: column;
 
-          @include media-query(sp) {
-            flex-direction: column;
-          }
-
-          @include media-query(pc, tl) {
-            & > :first-child {
-              margin-right: 100px;
-            }
-          }
-        }
-
-        .skillsList {
+        .workExpList {
           font-family: "Poppins";
           margin-bottom: 30px;
 
-          .title {
-            font-size: 25px;
-            letter-spacing: 1px;
-            margin-bottom: 10px;
-          }
-
           .detail {
-            @include align-center;
-            @include media-query(pc) {
-              background-color: rgba(0, 0, 0, 0.75);
-              color: $textDefault;
-              height: 120px;
-            }
-
-            @include media-query(sp) {
-              max-width: 420px;
-            }
-
-            color: #000000;
-            background-color: $textDefault;
+            background-color: rgba(0, 0, 0, 0.75);
             border-radius: 10px;
+            color: $textDefault;
             margin-bottom: 10px;
-            max-width: 300px;
+            max-width: 450px;
             padding: 10px;
+            text-align: start;
           }
 
           img {
-            filter: invert(0.55) sepia(1) saturate(9) hue-rotate(180deg);
+            background: $textDefault;
+            border-radius: 10px;
             height: 60px;
-            width: 60px;
+            margin-bottom: 10px;
+            padding: 10px;
           }
+        }
+      }
+
+      .linkedin {
+        @include align-center;
+        font-family: "Poppins";
+        font-size: 16px;
+        text-transform: initial;
+
+        img {
+          cursor: pointer;
+          height: 16px;
+          padding: 0 10px;
         }
       }
     }
@@ -126,7 +113,7 @@
 @keyframes fadeLeftIn {
   0% {
     opacity: 0;
-    transform: translateX(-200px);
+    transform: translateX(200px);
   }
   100% {
     opacity: 1;

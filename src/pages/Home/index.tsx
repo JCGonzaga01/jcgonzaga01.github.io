@@ -2,6 +2,7 @@ import React from "react";
 import Banner from "./components/Banner";
 import AboutMe from "./components/AboutMe";
 import Skills from "./components/Skills";
+import WorkExperience from "./components/WorkExperience";
 import styles from "./Home.scss";
 
 const Home: React.FC = () => {
@@ -10,6 +11,7 @@ const Home: React.FC = () => {
       <Banner />
       <AboutMe />
       <Skills />
+      <WorkExperience />
     </div>
   );
 };
