@@ -51,32 +51,37 @@ const Skills: React.FC = () => {
               <span>{"Skills"}</span>
             </div>
             <div className={styles.skillsListWrapper}>
-              <div className={styles.skillsList}>
-                <img src={assets.web} alt={"Web Coding"} />
-                <div className={styles.title}>{"Web Development"}</div>
-                <div className={styles.detail}>
-                  {"Javascript, ReactJS, TypeScript, HTML, CSS, SCSS, Express, NodeJS, and more"}
+              <div className={styles.skillsListContainer}>
+                <div className={styles.skillsList}>
+                  <img src={assets.web} alt={"Web Coding"} />
+                  <div className={styles.title}>{"Web"}</div>
+                  <div className={styles.detail}>
+                    {"Javascript, ReactJS, TypeScript, HTML, CSS, SCSS, Express, NodeJS, and more"}
+                  </div>
+                </div>
+                <div className={styles.skillsList}>
+                  <img src={assets.database} alt={"Database"} />
+                  <div className={styles.title}>{"Database"}</div>
+                  <div className={styles.detail}>
+                    {"MySQL, PostgreSQL, NoSQL (Firebase, MongoDB, Redis)"}
+                  </div>
                 </div>
               </div>
-              <div className={styles.skillsList}>
-                <img src={assets.database} alt={"Database"} />
-                <div className={styles.title}>{"Database"}</div>
-                <div className={styles.detail}>
-                  {"MySQL, PostgreSQL, NoSQL (Firebase, MongoDB, Redis)"}
+
+              <div className={styles.skillsListContainer}>
+                <div className={styles.skillsList}>
+                  <img src={assets.scrum} alt={"Dev Methodologies"} />
+                  <div className={styles.title}>{"Methodologies"}</div>
+                  <div className={styles.detail}>
+                    {"Scrum-Agile && SAFe (Scaled Agile Framework)"}
+                  </div>
                 </div>
-              </div>
-              <div className={styles.skillsList}>
-                <img src={assets.otherTools} alt={"Other Tools"} />
-                <div className={styles.title}>{"Other Tools"}</div>
-                <div className={styles.detail}>
-                  {"GIT, Docker, VS Code Remote Container, Webpack"}
-                </div>
-              </div>
-              <div className={styles.skillsList}>
-                <img src={assets.scrum} alt={"Dev Methodologies"} />
-                <div className={styles.title}>{"Dev Methodologies"}</div>
-                <div className={styles.detail}>
-                  {"Scrum-Agile && SAFe (Scaled Agile Framework)"}
+                <div className={styles.skillsList}>
+                  <img src={assets.otherTools} alt={"Other Tools"} />
+                  <div className={styles.title}>{"Other Tools"}</div>
+                  <div className={styles.detail}>
+                    {"GIT, Docker, VS Code Remote Container, Webpack"}
+                  </div>
                 </div>
               </div>
             </div>

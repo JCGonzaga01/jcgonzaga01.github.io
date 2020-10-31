@@ -60,57 +60,63 @@
       }
 
       .aboutMeListWrapper {
-        @include media-query(pc) {
-          @include align-center;
-          justify-content: space-between;
-          margin-bottom: 50px;
-        }
+        @include align-center;
 
-        @include media-query(tl) {
-          @include align-center;
-          flex-wrap: wrap;
-        }
-
-        & > :not(:last-child) {
-          @include media-query(pc, tl) {
-            margin-right: 30px;
-          }
-        }
-
-        .aboutMeList {
-          @include media-query(tl, sp) {
-            margin-bottom: 50px;
-          }
-
-          font-family: "Poppins";
-
-          .title {
-            font-size: 30px;
-            letter-spacing: 1px;
-          }
-
-          .detail {
+        & > :first-child {
+          @include media-query(pc) {
             @include align-center;
-            @include media-query(pc) {
-              background-color: rgba(0, 0, 0, 0.75);
-              color: $textDefault;
-            }
-            @include media-query(sp) {
-              max-width: 100vw;
-            }
-
-            color: #000000;
-            background-color: $textDefault;
-            min-height: 145px;
-            max-width: 300px;
-            padding: 10px;
-            border-radius: 10px;
+            justify-content: space-between;
+            margin-bottom: 50px;
+            max-width: 1180px;
+            width: 100%;
           }
 
-          img {
-            width: 80px;
-            height: 80px;
-            filter: invert(0.55) sepia(1) saturate(9) hue-rotate(315deg);
+          @include media-query(tl) {
+            @include align-center;
+            flex-wrap: wrap;
+          }
+
+          & > :not(:last-child) {
+            @include media-query(pc, tl) {
+              margin-right: 30px;
+            }
+          }
+
+          .aboutMeList {
+            @include media-query(tl, sp) {
+              margin-bottom: 50px;
+            }
+
+            font-family: "Poppins";
+
+            .title {
+              font-size: 30px;
+              letter-spacing: 1px;
+            }
+
+            .detail {
+              @include align-center;
+              @include media-query(pc) {
+                background-color: rgba(0, 0, 0, 0.75);
+                color: $textDefault;
+              }
+              @include media-query(sp) {
+                max-width: 100vw;
+              }
+
+              color: #000000;
+              background-color: $textDefault;
+              min-height: 145px;
+              max-width: 300px;
+              padding: 10px;
+              border-radius: 10px;
+            }
+
+            img {
+              width: 80px;
+              height: 80px;
+              filter: invert(0.55) sepia(1) saturate(9) hue-rotate(315deg);
+            }
           }
         }
       }

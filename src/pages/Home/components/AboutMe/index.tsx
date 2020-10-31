@@ -51,27 +51,29 @@ const AboutMe: React.FC = () => {
               <span>{"About Me"}</span>
             </div>
             <div className={styles.aboutMeListWrapper}>
-              <div className={styles.aboutMeList}>
-                <img src={assets.education} alt={"Education"} />
-                <div className={styles.title}>{"Education"}</div>
-                <div className={styles.detail}>
-                  {
-                    "Graduated Bachelor of Science in Computer Science at Polytechnic University of the Philippines"
-                  }
+              <div>
+                <div className={styles.aboutMeList}>
+                  <img src={assets.education} alt={"Education"} />
+                  <div className={styles.title}>{"Education"}</div>
+                  <div className={styles.detail}>
+                    {
+                      "Graduated Bachelor of Science in Computer Science at Polytechnic University of the Philippines"
+                    }
+                  </div>
                 </div>
-              </div>
-              <div className={styles.aboutMeList}>
-                <img src={assets.working} alt={"Work"} />
-                <div className={styles.title}>{"Work"}</div>
-                <div className={styles.detail}>
-                  {"Currently work as a Web Developer in Finastra Philippines, Inc."}
+                <div className={styles.aboutMeList}>
+                  <img src={assets.working} alt={"Work"} />
+                  <div className={styles.title}>{"Work"}</div>
+                  <div className={styles.detail}>
+                    {"Currently work as a Web Developer in Finastra Philippines, Inc."}
+                  </div>
                 </div>
-              </div>
-              <div className={styles.aboutMeList}>
-                <img src={assets.guitar} alt={"Guitar"} />
-                <div className={styles.title}>{"Who am i?"}</div>
-                <div className={styles.detail}>
-                  {"I am just a simple guy who loves to play and learn musical instruments"}
+                <div className={styles.aboutMeList}>
+                  <img src={assets.guitar} alt={"Guitar"} />
+                  <div className={styles.title}>{"Who am i?"}</div>
+                  <div className={styles.detail}>
+                    {"I am just a simple guy who loves to play and learn musical instruments"}
+                  </div>
                 </div>
               </div>
             </div>
