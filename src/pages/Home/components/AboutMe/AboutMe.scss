@@ -53,9 +53,10 @@
         padding: 7px 0px;
 
         span {
-          border-bottom: 1px solid $textScrolled;
-          border-top: 1px solid $textScrolled;
+          border-bottom: 1px solid #ff8080;
+          border-top: 1px solid #ff8080;
           font-size: 40px;
+          line-height: 50px;
           padding: 5px 10px;
         }
       }

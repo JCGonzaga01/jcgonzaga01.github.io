@@ -65,7 +65,7 @@ const WorkExperience: React.FC = () => {
                   <li>{"July 2018 ~ Feb 2020: Senior Front End Developer"}</li>
                   <br />
                   <div>{"Accenture Philippines"}</div>
-                  <li>{"July 2017 ~ June 2018: Software Engineer"}</li>
+                  <li>{"July 2017 ~ June 2018: Front End Developer"}</li>
                 </div>
               </div>
 

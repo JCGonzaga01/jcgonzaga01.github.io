@@ -3,6 +3,9 @@ import Banner from "./components/Banner";
 import AboutMe from "./components/AboutMe";
 import Skills from "./components/Skills";
 import WorkExperience from "./components/WorkExperience";
+import Projects from "./components/Projects";
+import FunStuffs from "./components/FunStuffs";
+import Contact from "./components/Contact";
 import styles from "./Home.scss";
 
 const Home: React.FC = () => {
@@ -12,6 +15,9 @@ const Home: React.FC = () => {
       <AboutMe />
       <Skills />
       <WorkExperience />
+      <Projects />
+      <FunStuffs />
+      <Contact />
     </div>
   );
 };

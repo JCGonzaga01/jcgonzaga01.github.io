@@ -1,0 +1,26 @@
+@import "helpers/stylings/_index";
+
+.wrapper {
+  margin-top: 5px;
+
+  .container {
+    background-color: #000000f5;
+    color: $textDefault;
+    height: 100vh;
+    padding: 30px 0;
+
+    & > :first-child {
+      @include align-center;
+      margin-bottom: 40px;
+      padding: 7px 0px;
+
+      span {
+        border-bottom: 1px solid #d4ff01;
+        border-top: 1px solid #d4ff01;
+        font-size: 40px;
+        line-height: 50px;
+        padding: 5px 10px;
+      }
+    }
+  }
+}

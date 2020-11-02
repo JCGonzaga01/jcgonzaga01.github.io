@@ -52,9 +52,10 @@
         padding: 7px 0px;
 
         span {
-          border-bottom: 1px solid $textScrolled;
-          border-top: 1px solid $textScrolled;
+          border-bottom: 1px solid #10e03a;
+          border-top: 1px solid #10e03a;
           font-size: 40px;
+          line-height: 50px;
           padding: 5px 10px;
         }
       }
@@ -68,6 +69,7 @@
 
           .detail {
             background-color: rgba(0, 0, 0, 0.75);
+            border: 1px solid $textDefault;
             border-radius: 10px;
             color: $textDefault;
             margin-bottom: 10px;

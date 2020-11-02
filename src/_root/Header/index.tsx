@@ -16,13 +16,17 @@ const Header: React.FC = () => {
   useEffect(() => {
     const scrolling = () => {
       setIsScrolled(window && window.scrollY > 200);
+      let curviewPort = "home";
       menuItems.some((item, idx) => {
         const menuEl = document.getElementById(`${item.key}DivId`);
         if (menuEl && menuEl.getBoundingClientRect().top - 85 > 0) {
-          setCurDivViewPort(menuItems[idx - 1].key);
+          curviewPort = menuItems[idx - 1].key;
           return true;
+        } else {
+          curviewPort = menuItems[idx].key;
         }
       });
+      setCurDivViewPort(curviewPort);
     };
     window.addEventListener("scroll", scrolling);
 
