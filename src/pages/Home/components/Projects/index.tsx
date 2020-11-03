@@ -31,6 +31,7 @@ const Projects: React.FC = () => {
                   >
                     <div>
                       <div>{item.name}</div>
+                      <hr />
                       <div>{item.description}</div>
                     </div>
                   </div>
@@ -54,6 +55,7 @@ const Projects: React.FC = () => {
                 >
                   <div>
                     <div>{item.name}</div>
+                    <hr />
                     <div>{item.description}</div>
                   </div>
                 </div>

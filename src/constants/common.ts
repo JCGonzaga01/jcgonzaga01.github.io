@@ -28,7 +28,7 @@ export const projectItems = [
       "https://firebasestorage.googleapis.com/v0/b/tlcfm-japan.appspot.com/o/ministry%2FsaturdayBS%2FSaturdayBS1.jpg?alt=media&token=4ec2e620-db2d-4dfa-8386-3a61d2930a85",
   },
   {
-    name: "TLCFM-Admin",
+    name: "TLCFM-ADMIN",
     description: "Tokyo Lighthouse Church Filipino Ministry - Admin",
     url: "https://tlcfm-admin.herokuapp.com",
     color: styles.orangeBG,
@@ -44,6 +44,6 @@ export const prototypeProjectItems = [
     url: "https://jctv-me.web.app",
     color: styles.greenBG,
     bgImg:
-      "https://firebasestorage.googleapis.com/v0/b/tlcfm-japan.appspot.com/o/ministry%2FsaturdayBS%2FSaturdayBS1.jpg?alt=media&token=4ec2e620-db2d-4dfa-8386-3a61d2930a85",
+      "https://firebasestorage.googleapis.com/v0/b/tlcfm-japan.appspot.com/o/home%2FlifeGroupsBG.jpg?alt=media&token=e15dff5f-5894-44a4-9746-544a45f05075",
   },
 ];
