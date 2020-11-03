@@ -30,7 +30,11 @@ import scrum from "./svg/scrum.svg";
 import jeonsoft from "./workExp/jeonsoft.png";
 import accenture from "./workExp/accenture.png";
 import finastra from "./workExp/finastra.png";
-// Icons
+// - Projects
+import live from "./svg/live.svg";
+import prototype from "./svg/prototype.svg";
+
+// ICONS
 import linkedin from "./svg/linkedin.svg";
 
 export default {
@@ -58,4 +62,6 @@ export default {
   accenture,
   finastra,
   linkedin,
+  live,
+  prototype,
 };
