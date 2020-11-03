@@ -1,3 +1,5 @@
+@import "helpers/stylings/_index";
+
 html {
   box-sizing: border-box;
 }
@@ -8,16 +10,12 @@ html {
 }
 
 body {
+  @include media-query(sp) {
+    font-family: "Poppins";
+  }
+
   margin: 0;
   padding: 0;
   font-family: "Concert One", "Poppins";
   background-color: #ffffff;
-
-  // TODOs:
-  // Temporary, to be removed
-  // background: url(./assets/homeBG.jpeg);
-  // background-attachment: fixed;
-  // background-position: center;
-  // background-repeat: no-repeat;
-  // background-size: cover;
 }
