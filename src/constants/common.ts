@@ -13,15 +13,15 @@ export const menuItems = [
 
 export const projectItems = [
   {
-    name: "Personal Website",
-    description: "My Personal Website",
+    name: "jcgonzaga.io",
+    description: "Source code of My Personal Website",
     url: "https://github.com/JCGonzaga01/jcgonzaga01.github.io",
     color: styles.blueBG,
     bgImg: assets.bannerBG,
   },
   {
     name: "TLCFM",
-    description: "Tokyo Lighthouse Church Filipino Ministry",
+    description: "Tokyo Lighthouse Church Filipino Ministry Website",
     url: "https://tlcfm.herokuapp.com",
     color: styles.purpleBG,
     bgImg:
@@ -29,7 +29,7 @@ export const projectItems = [
   },
   {
     name: "TLCFM-ADMIN",
-    description: "Tokyo Lighthouse Church Filipino Ministry - Admin",
+    description: "Tokyo Lighthouse Church Filipino Ministry - Admin Site",
     url: "https://tlcfm-admin.herokuapp.com",
     color: styles.orangeBG,
     bgImg:

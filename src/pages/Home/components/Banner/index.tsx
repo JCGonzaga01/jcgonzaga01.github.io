@@ -36,8 +36,8 @@ const Banner: React.FC = () => {
                 {"Biking,"}
               </span>
               <span className={styles.textWithImage}>
-                <img src={assets.running} alt={"Running"} />
-                {"Running,"}
+                <img src={assets.running} alt={"Jogging"} />
+                {"Jogging,"}
               </span>
               <span className={styles.textWithImage}>
                 {" &&"}

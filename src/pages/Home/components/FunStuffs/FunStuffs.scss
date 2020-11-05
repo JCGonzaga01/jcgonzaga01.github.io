@@ -6,8 +6,7 @@
   .container {
     background-color: #000000f5;
     color: $textDefault;
-    height: 100vh;
-    padding: 30px 0;
+    padding-top: 30px;
 
     & > :first-child {
       @include align-center;
@@ -20,6 +19,57 @@
         font-size: 40px;
         line-height: 50px;
         padding: 5px 10px;
+      }
+    }
+
+    .funStuffsDetailsWrapper {
+      @include align-center;
+      @media (max-width: 499px) {
+        flex-direction: column;
+      }
+
+      @include media-query(pc) {
+        padding: 10px 100px;
+      }
+
+      @include media-query(tl) {
+        padding: 10px 60px;
+      }
+
+      flex-wrap: wrap;
+      padding: 10px 20px;
+
+      & > :not(:last-child) {
+        @media (min-width: 500px) {
+          margin-right: 30px;
+        }
+      }
+
+      .card {
+        @include align-center;
+        flex-direction: column;
+        width: 200px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        background-color: $textDefault;
+
+        img {
+          cursor: pointer;
+          height: 300px;
+          width: 100%;
+          border-radius: 10px 10px 0 0;
+        }
+
+        & > :last-child {
+          border-top: 2px solid #000000;
+          text-align: center;
+          width: 100%;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          font-size: 20px;
+          padding: 10px 0;
+          color: $textScrolled;
+        }
       }
     }
   }
