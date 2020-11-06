@@ -2,11 +2,8 @@
 import jcgHeader from "./jcg_header.png";
 import jcgHeaderHover from "./jcg_header_hover.png";
 
-// BACKGROUND
-import bannerBG from "./bg/banner.jpg";
-import aboutMeBG from "./bg/aboutMe.jpg";
-import skillsBG from "./bg/skills.jpg";
-import workExpBG from "./bg/workExp.jpg";
+// BANNER
+import bannerBG from "./banner.jpg";
 
 // SVG
 // - Banner
@@ -46,9 +43,12 @@ export default {
   jcgHeader,
   jcgHeaderHover,
   bannerBG,
-  aboutMeBG,
-  skillsBG,
-  workExpBG,
+  aboutMeBG:
+    "https://firebasestorage.googleapis.com/v0/b/jcgonzaga01githubio.appspot.com/o/homeBG%2FaboutMe.jpg?alt=media&token=7f1876c7-1bae-45ab-8410-accc4b5319cc",
+  skillsBG:
+    "https://firebasestorage.googleapis.com/v0/b/jcgonzaga01githubio.appspot.com/o/homeBG%2Fskills.jpg?alt=media&token=221713f7-721d-4ac7-83e4-a3248685dade",
+  workExpBG:
+    "https://firebasestorage.googleapis.com/v0/b/jcgonzaga01githubio.appspot.com/o/homeBG%2FworkExp.jpg?alt=media&token=4cc6273f-a0c5-4685-9d39-8b9c887c7e00",
   biking,
   running,
   musicNote1,
