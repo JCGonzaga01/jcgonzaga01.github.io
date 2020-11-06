@@ -63,31 +63,4 @@
       }
     }
   }
-
-  .card {
-    @include align-center;
-    background-color: $textDefault;
-    border-radius: 10px;
-    flex-direction: column;
-    min-width: 200px;
-    width: 200px;
-
-    img {
-      border-radius: 10px 10px 0 0;
-      cursor: pointer;
-      height: 300px;
-      width: 100%;
-    }
-
-    & > :last-child {
-      border-top: 2px solid #000000;
-      color: $textScrolled;
-      font-size: 20px;
-      letter-spacing: 2px;
-      padding: 10px 0;
-      text-align: center;
-      text-transform: uppercase;
-      width: 100%;
-    }
-  }
 }

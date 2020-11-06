@@ -14,8 +14,8 @@
       padding: 7px 0px;
 
       span {
-        border-bottom: 1px solid #d4ff01;
-        border-top: 1px solid #d4ff01;
+        border-bottom: 1px solid #e01010;
+        border-top: 1px solid #e01010;
         font-size: 40px;
         line-height: 50px;
         padding: 5px 10px;
@@ -32,6 +32,27 @@
       }
 
       padding: 0 20px 30px;
+    }
+
+    .fsListWrapper {
+      @include align-center;
+      flex-direction: column;
+
+      .fsListTitle {
+        @include align-center;
+        flex-direction: column;
+        font-family: "Poppins";
+        font-size: 30px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+
+        img {
+          filter: invert(0.5) sepia(1) saturate(50) hue-rotate(330deg);
+          height: 80px;
+          margin-bottom: 10px;
+          width: 80px;
+        }
+      }
     }
   }
 }

@@ -1,13 +1,15 @@
 import React, { useState } from "react";
-import assets, { linkImg } from "assets";
+import assets from "assets";
 import { classNames } from "helpers/functions";
+import { Card } from "components";
 import styles from "./Slider.scss";
 
 type Props = {
   className?: string;
+  cardList: Array<{ banner: string; title: string }>;
 };
 
-const Slider: React.FC<Props> = ({ className = "" }) => {
+const Slider: React.FC<Props> = ({ className = "", cardList }) => {
   const [itemTranslateX, setItemTranslateX] = useState(0);
 
   const handleOnClickLeftBtn = () => {
@@ -29,30 +31,9 @@ const Slider: React.FC<Props> = ({ className = "" }) => {
           className={styles.sliderItemsContainer}
           style={{ transform: `translateX(${itemTranslateX}px)` }}
         >
-          <div className={styles.card}>
-            <img src={linkImg.naganotrip} alt={"Nagano Trip"} />
-            <div>Nagano Trip</div>
-          </div>
-          <div className={styles.card}>
-            <img src={linkImg.osakatrip} alt={"Osaka Trip"} />
-            <div>Osaka Trip</div>
-          </div>
-          <div className={styles.card}>
-            <img src={linkImg.sgtrip} alt={"Singapore Trip"} />
-            <div>Singapore Trip</div>
-          </div>
-          <div className={styles.card}>
-            <img src={linkImg.naganotrip} alt={"Nagano Trip"} />
-            <div>Nagano Trip</div>
-          </div>
-          <div className={styles.card}>
-            <img src={linkImg.osakatrip} alt={"Osaka Trip"} />
-            <div>Osaka Trip</div>
-          </div>
-          <div className={styles.card}>
-            <img src={linkImg.sgtrip} alt={"Singapore Trip"} />
-            <div>Singapore Trip</div>
-          </div>
+          {cardList.map((item) => (
+            <Card banner={item.banner} title={item.title} />
+          ))}
         </div>
       </div>
       <div className={styles.rightBtnShadow} />

@@ -36,19 +36,11 @@ import prototype from "./svg/prototype.svg";
 //  - Fun Stuffs
 import leftArrow from "./svg/leftArrow.svg";
 import rightArrow from "./svg/rightArrow.svg";
+import travels from "./svg/travels.svg";
+import fs_biking from "./svg/fs_biking.svg";
 
 // ICONS
 import linkedin from "./svg/linkedin.svg";
-
-// LINK Images
-export const linkImg = {
-  naganotrip:
-    "https://firebasestorage.googleapis.com/v0/b/jcgonzaga01githubio.appspot.com/o/funstuffs%2Fnagano-trip%2Fbanner.jpg?alt=media&token=29e87f77-da79-4bae-a351-49dcb90bbe13",
-  osakatrip:
-    "https://firebasestorage.googleapis.com/v0/b/jcgonzaga01githubio.appspot.com/o/funstuffs%2Fosaka-trip%2Fbanner.jpg?alt=media&token=0404a6ee-8681-454f-8743-b901f54fc4bc",
-  sgtrip:
-    "https://firebasestorage.googleapis.com/v0/b/jcgonzaga01githubio.appspot.com/o/funstuffs%2Fsg-trip%2Fbanner.jpg?alt=media&token=c3d9acd5-65bf-4679-93b9-39055b962734",
-};
 
 export default {
   jcgHeader,
@@ -79,4 +71,6 @@ export default {
   prototype,
   leftArrow,
   rightArrow,
+  travels,
+  fs_biking,
 };
