@@ -42,8 +42,8 @@
           img {
             filter: invert(0.55) sepia(1) saturate(10) hue-rotate(215deg);
             height: 80px;
-            width: 80px;
             margin-bottom: 10px;
+            width: 80px;
           }
         }
 
@@ -63,19 +63,19 @@
           }
 
           cursor: pointer;
+          color: $textDefault;
           flex-direction: column;
           height: 300px;
-          width: 33.33%;
           position: relative;
-          color: $textDefault;
+          width: 33.33%;
 
           &:before {
             content: "";
-            position: absolute;
             height: 100%;
-            width: 100%;
-            transition: 0.5s ease;
             opacity: 0.9;
+            position: absolute;
+            transition: 0.5s ease;
+            width: 100%;
           }
 
           &:hover:before {
@@ -83,14 +83,14 @@
           }
 
           & > :first-child {
-            text-align: center;
-            position: absolute;
             padding: 0 10px;
+            position: absolute;
+            text-align: center;
 
             & > :first-child {
               font-size: 20px;
-              padding-bottom: 10px;
               margin-bottom: 10px;
+              padding-bottom: 10px;
             }
 
             hr {

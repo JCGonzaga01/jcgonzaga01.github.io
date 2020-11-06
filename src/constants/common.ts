@@ -44,6 +44,6 @@ export const prototypeProjectItems = [
     url: "https://jctv-me.web.app",
     color: styles.greenBG,
     bgImg:
-      "https://firebasestorage.googleapis.com/v0/b/tlcfm-japan.appspot.com/o/home%2FlifeGroupsBG.jpg?alt=media&token=e15dff5f-5894-44a4-9746-544a45f05075",
+      "https://firebasestorage.googleapis.com/v0/b/jcgonzaga01githubio.appspot.com/o/projects%2FjcTV.png?alt=media&token=e402b78f-fc3a-4ce7-8f84-a039c18b29e5",
   },
 ];

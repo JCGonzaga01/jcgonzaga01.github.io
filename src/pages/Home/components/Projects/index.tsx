@@ -17,7 +17,7 @@ const Projects: React.FC = () => {
           <div className={styles.projectsListContainer}>
             <div>
               <img src={assets.live} alt={"Live Projects"} />
-              <span>Live Projects</span>
+              <span>{"Live Projects"}</span>
             </div>
             <div>
               {projectItems.map((item) => {
@@ -42,7 +42,7 @@ const Projects: React.FC = () => {
           <div className={styles.projectsListContainer}>
             <div>
               <img src={assets.prototype} alt={"Prototype Projects"} />
-              <span>Prototype Projects</span>
+              <span>{"Prototype Projects"}</span>
             </div>
             {prototypeProjectItems.map((item) => {
               return (
