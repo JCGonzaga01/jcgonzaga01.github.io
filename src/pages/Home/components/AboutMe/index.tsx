@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import assets from "assets";
 import { useDeviceType } from "helpers/customHooks";
-import { Button } from "components";
 import { classNames } from "helpers/functions";
+import { Button } from "components";
 import styles from "./AboutMe.scss";
 
 const AboutMe: React.FC = () => {

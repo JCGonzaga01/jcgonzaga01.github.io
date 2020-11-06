@@ -1,7 +1,7 @@
 import React from "react";
 import assets from "assets";
-import { classNames } from "helpers/functions";
 import { projectItems, prototypeProjectItems } from "constants/common";
+import { classNames } from "helpers/functions";
 import styles from "./Projects.scss";
 
 const Projects: React.FC = () => {

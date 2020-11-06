@@ -33,6 +33,9 @@ import finastra from "./workExp/finastra.png";
 // - Projects
 import live from "./svg/live.svg";
 import prototype from "./svg/prototype.svg";
+//  - Fun Stuffs
+import leftArrow from "./svg/leftArrow.svg";
+import rightArrow from "./svg/rightArrow.svg";
 
 // ICONS
 import linkedin from "./svg/linkedin.svg";
@@ -74,4 +77,6 @@ export default {
   linkedin,
   live,
   prototype,
+  leftArrow,
+  rightArrow,
 };

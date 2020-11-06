@@ -1,8 +1,7 @@
 import React from "react";
-import { useDeviceType } from "helpers/customHooks";
 import assets from "assets";
+import { useDeviceType } from "helpers/customHooks";
 import styles from "./Banner.scss";
-import { off } from "process";
 
 const Banner: React.FC = () => {
   const deviceType = useDeviceType();
