@@ -70,4 +70,16 @@ export const travelList = [
     banner: linkImg.sgtrip,
     title: "Singapore Trip",
   },
+  {
+    banner: linkImg.naganotrip,
+    title: "Nagano Trip",
+  },
+  {
+    banner: linkImg.osakatrip,
+    title: "Osaka Trip",
+  },
+  {
+    banner: linkImg.sgtrip,
+    title: "Singapore Trip",
+  },
 ];

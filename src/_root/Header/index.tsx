@@ -40,8 +40,12 @@ const Header: React.FC = () => {
   const headerHover = (isHover: boolean) => () =>
     setheaderImg(isHover ? assets.jcgHeaderHover : assets.jcgHeader);
 
+  const handleOnClickLogo = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   const handleOnClickMenu = (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => {
-    handleMenuToggle();
+    setIsMenuToggle(false);
     const key = e.currentTarget.id;
 
     const menuEl = document.getElementById(`${key}DivId`);
@@ -83,6 +87,7 @@ const Header: React.FC = () => {
               alt={"John Christopher Gonzaga"}
               onMouseEnter={headerHover(true)}
               onMouseLeave={headerHover(false)}
+              onClick={handleOnClickLogo}
             />
           </div>
           {deviceType !== "pc" ? (
