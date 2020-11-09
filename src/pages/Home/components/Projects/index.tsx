@@ -20,9 +20,10 @@ const Projects: React.FC = () => {
               <span>{"Live Projects"}</span>
             </div>
             <div>
-              {projectItems.map((item) => {
+              {projectItems.map((item, idx) => {
                 return (
                   <div
+                    key={`${idx}-${item.name}`}
                     className={classNames(styles.projectBG, item.color)}
                     style={{
                       background: `url(${item.bgImg}) center center / cover no-repeat`,
@@ -44,9 +45,10 @@ const Projects: React.FC = () => {
               <img src={assets.prototype} alt={"Prototype Projects"} />
               <span>{"Prototype Projects"}</span>
             </div>
-            {prototypeProjectItems.map((item) => {
+            {prototypeProjectItems.map((item, idx) => {
               return (
                 <div
+                  key={`${idx}-${item.name}`}
                   className={classNames(styles.projectBG, item.color)}
                   style={{
                     background: `url(${item.bgImg}) center center / cover no-repeat`,

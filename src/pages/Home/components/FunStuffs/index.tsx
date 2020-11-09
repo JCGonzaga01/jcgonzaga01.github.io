@@ -18,13 +18,6 @@ const FunStuffs: React.FC = () => {
           </div>
           <Slider className={styles.details} cardList={travelList} />
         </div>
-        <div className={styles.fsListWrapper}>
-          <div className={styles.fsListTitle}>
-            <img src={assets.fs_biking} alt={"Mountain Biking"} />
-            <span>{"Mountain Biking"}</span>
-          </div>
-          <Slider className={styles.details} cardList={travelList} />
-        </div>
       </div>
     </div>
   );

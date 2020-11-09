@@ -13,11 +13,40 @@ const Slider: React.FC<Props> = ({ className = "", cardList }) => {
   const [itemTranslateX, setItemTranslateX] = useState(0);
 
   const handleOnClickLeftBtn = () => {
-    setItemTranslateX(itemTranslateX - 200);
+    let newItemTranslateX = itemTranslateX;
+
+    if (itemTranslateX >= -200) newItemTranslateX += 200;
+    else newItemTranslateX += 230;
+
+    if (newItemTranslateX > 0) setItemTranslateX(0);
+    else setItemTranslateX(newItemTranslateX);
   };
 
   const handleOnClickRightBtn = () => {
-    setItemTranslateX(itemTranslateX + 200);
+    const sliderItemsEL = document.getElementById("sliderItemsDiv");
+
+    if (sliderItemsEL) {
+      const sliderItemsELWidth = sliderItemsEL.getBoundingClientRect().width;
+      const childrenTotalWidth =
+        sliderItemsEL.children[0].getBoundingClientRect().width * sliderItemsEL.children.length +
+        30 * (sliderItemsEL.children.length - 1); // Margin-right computation.
+
+      let newItemTranslateX = itemTranslateX;
+
+      if (itemTranslateX > -200) newItemTranslateX -= 200;
+      else newItemTranslateX -= 230;
+
+      if (sliderItemsELWidth + Math.abs(newItemTranslateX) < childrenTotalWidth) {
+        setItemTranslateX(newItemTranslateX);
+      } else {
+        const offsetWidth = sliderItemsELWidth + Math.abs(newItemTranslateX) - childrenTotalWidth;
+        setItemTranslateX(newItemTranslateX + offsetWidth);
+      }
+    }
+  };
+
+  const handleOnClickBanner = () => {
+    alert("This section is under construction. Check back soon.");
   };
 
   return (
@@ -28,11 +57,17 @@ const Slider: React.FC<Props> = ({ className = "", cardList }) => {
       <div className={styles.leftBtnShadow} />
       <div className={styles.sliderItemsWrapper}>
         <div
+          id={"sliderItemsDiv"}
           className={styles.sliderItemsContainer}
           style={{ transform: `translateX(${itemTranslateX}px)` }}
         >
-          {cardList.map((item) => (
-            <Card banner={item.banner} title={item.title} />
+          {cardList.map((item, idx) => (
+            <Card
+              key={`${idx}-${item.title}`}
+              banner={item.banner}
+              title={item.title}
+              onClickBanner={handleOnClickBanner}
+            />
           ))}
         </div>
       </div>

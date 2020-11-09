@@ -79,7 +79,9 @@ const AboutMe: React.FC = () => {
             </div>
             <Button
               className={styles.custonButton}
-              handleOnClick={() => {}}
+              handleOnClick={() => {
+                alert("This section is under construction. Check back soon");
+              }}
               title={"Wanna know me more ?"}
             />
           </div>

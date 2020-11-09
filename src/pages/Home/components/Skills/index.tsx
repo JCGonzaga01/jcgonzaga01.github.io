@@ -85,7 +85,12 @@ const Skills: React.FC = () => {
                 </div>
               </div>
             </div>
-            <Button handleOnClick={() => {}} title={"View skills rating"} />
+            <Button
+              handleOnClick={() => {
+                alert("This section is under construction. Check back soon");
+              }}
+              title={"View skills rating"}
+            />
           </div>
         </div>
       </div>
