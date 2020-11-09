@@ -58,7 +58,7 @@
       display: flex;
       transition: 0.6s ease-in-out;
 
-      & > div {
+      & > :not(:last-child) {
         margin-right: 30px;
       }
     }
