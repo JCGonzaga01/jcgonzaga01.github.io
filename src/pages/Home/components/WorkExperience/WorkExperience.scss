@@ -6,7 +6,7 @@
       min-height: 790px;
     }
 
-    margin-top: 5px;
+    border-top: 1px solid #10e03a;
     position: relative;
     width: 100vw;
   }
@@ -24,7 +24,7 @@
   .workExpDetailsWrapper {
     @include media-query(pc) {
       background: rgba(0, 0, 0, 0.75);
-      border-left: 3px solid #10e03a;
+      border-left: 7px solid #10e03a;
       border-top: 0px;
       padding: 30px;
       position: absolute;
@@ -36,8 +36,8 @@
       padding: 30px 60px;
     }
 
-    background-color: #000000f5;
-    border-top: 3px solid #10e03a;
+    background-color: #1b2033;
+    border-top: 7px solid #10e03a;
     height: 100%;
     padding: 30px 20px;
 

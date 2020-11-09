@@ -41,7 +41,8 @@ export const prototypeProjectItems = [
   {
     name: "jcTV",
     description: "A Video on Demand application",
-    url: "https://jctv-me.web.app",
+    // url: "https://jctv-me.web.app",
+    url: "https://github.com/JCGonzaga01/jcTV",
     color: styles.greenBG,
     bgImg:
       "https://firebasestorage.googleapis.com/v0/b/jcgonzaga01githubio.appspot.com/o/projects%2FjcTV.png?alt=media&token=e402b78f-fc3a-4ce7-8f84-a039c18b29e5",
@@ -62,18 +63,18 @@ export const linkImg = {
 export const travelList = [
   {
     banner: linkImg.baguiotrip,
-    title: "Baguio Trip",
+    title: "Baguio, PH",
   },
   {
     banner: linkImg.naganotrip,
-    title: "Nagano Trip",
+    title: "Nagano, JP",
   },
   {
     banner: linkImg.osakatrip,
-    title: "Osaka Trip",
+    title: "Osaka, JP",
   },
   {
     banner: linkImg.sgtrip,
-    title: "Singapore Trip",
+    title: "Singapore, SG",
   },
 ];

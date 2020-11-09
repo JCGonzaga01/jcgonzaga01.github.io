@@ -1,17 +1,17 @@
 @import "helpers/stylings/_index";
 
 .wrapper {
-  margin-top: 5px;
+  border-top: 7px solid #d4ff01;
 
   .container {
-    background-color: #000000f5;
+    background-color: #090b13;
     color: $textDefault;
     height: 100vh;
     padding: 30px 0;
 
     & > :first-child {
       @include align-center;
-      margin-bottom: 40px;
+      margin-bottom: 10px;
       padding: 7px 0px;
 
       span {
@@ -21,6 +21,19 @@
         line-height: 50px;
         padding: 5px 10px;
       }
+    }
+
+    .details {
+      @include media-query(pc) {
+        padding: 30px 100px;
+      }
+
+      @include media-query(tl) {
+        padding: 30px 60px;
+      }
+
+      padding: 30px 20px;
+      width: 100%;
     }
   }
 }

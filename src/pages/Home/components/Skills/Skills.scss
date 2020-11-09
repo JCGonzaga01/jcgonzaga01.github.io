@@ -6,7 +6,7 @@
       min-height: 765px;
     }
 
-    margin-top: 5px;
+    border-top: 1px solid #00aeff;
     position: relative;
     width: 100vw;
   }
@@ -22,11 +22,9 @@
   }
 
   .skillsDetailsWrapper {
-    // @include align-center;
-
     @include media-query(pc) {
       background: rgba(0, 0, 0, 0.75);
-      border-right: 3px solid #00aeff;
+      border-right: 7px solid #00aeff;
       border-top: 0px;
       padding: 30px;
       position: absolute;
@@ -37,8 +35,8 @@
       padding: 30px 60px;
     }
 
-    background-color: #000000f5;
-    border-top: 3px solid #00aeff;
+    background-color: #232942;
+    border-top: 7px solid #00aeff;
     height: 100%;
     padding: 30px 20px;
 
