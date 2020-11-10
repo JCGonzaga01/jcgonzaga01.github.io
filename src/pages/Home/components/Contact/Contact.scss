@@ -6,7 +6,6 @@
   .container {
     background-color: #090b13;
     color: $textDefault;
-    // height: 100vh;
     padding: 30px 0;
 
     & > :first-child {
@@ -40,7 +39,7 @@
       width: 100%;
 
       form {
-        max-width: 1024px;
+        max-width: 900px;
         width: 100%;
       }
 
@@ -83,6 +82,12 @@
             }
           }
         }
+
+        .invalidEmailField {
+          transition: border-color 0.2s ease-in-out 0s, box-shadow 0.2s ease-in-out 0s;
+          border-color: #ce6d6d;
+          box-shadow: #c55454 0px 0px 0px 2px;
+        }
       }
 
       .message {
@@ -116,17 +121,20 @@
       .btnContainer {
         @include align-center;
 
-        & > :first-child {
-          background: $textDefault;
+        .btnStyle {
           border-radius: 2px;
-          border-style: none;
-          color: #090b14;
           cursor: pointer;
           font-size: 15px;
           margin-right: 20px;
           letter-spacing: 1px;
           padding: 15px 20px;
           text-transform: uppercase;
+        }
+
+        & > :first-child {
+          background: $textDefault;
+          border-style: none;
+          color: #090b14;
           transition: 0.2s ease-in-out;
 
           &:hover {
@@ -137,19 +145,12 @@
         & > :last-child {
           background: none;
           border: 1px solid $textDefault;
-          border-radius: 2px;
           color: $textDefault;
-          cursor: pointer;
-          font-size: 15px;
-          margin-right: 20px;
-          letter-spacing: 1px;
-          padding: 15px 20px;
-          text-transform: uppercase;
           transition: border-color 0.2s ease-in-out 0s, color 0.2s ease-in-out 0s;
 
           &:hover {
-            color: rgb(155, 241, 255);
             border-color: rgb(155, 241, 255);
+            color: rgb(155, 241, 255);
           }
         }
       }

@@ -1,37 +1,63 @@
-import { validate } from "json-schema";
 import React, { FormEvent, useRef, useState } from "react";
+import { SnackBar } from "components";
 import styles from "./Contact.scss";
 
 const Contact: React.FC = () => {
   const formRef = useRef(null);
-  const [validateEmail, setValidateEmail] = useState({ valid: true, email: "" });
+  const [isInvalidEmail, setIsInvalidEmail] = useState(false);
+  const [snackBarData, setSnackBarData] = useState({
+    isOpen: false,
+    isSuccess: false,
+    message: "",
+  });
 
   const handleOnSubmitForm = (e: FormEvent) => {
     e.preventDefault();
-    setValidateEmail({ valid: true, email: "" });
+    setIsInvalidEmail(false);
+    let newSnackBarData = snackBarData;
     const form: any = formRef.current;
     const emailRx = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
     const checkInvalidEmail = !emailRx.test(form["contactEmail"].value);
 
-    if (checkInvalidEmail) setValidateEmail({ valid: false, email: form["contactEmail"].value });
-    else {
+    if (checkInvalidEmail) {
+      newSnackBarData = {
+        isOpen: true,
+        isSuccess: false,
+        message: form["contactEmail"].value + " is not a valid email address.",
+      };
+      setIsInvalidEmail(true);
+    } else {
       const formValues = {
         name: form["contactName"].value,
         email: form["contactEmail"].value,
         message: form["contactMessage"].value,
       };
       handleOnClickClear(e);
+      newSnackBarData = {
+        isOpen: true,
+        isSuccess: true,
+        message: "Message successfully sent!",
+      };
 
       console.log(formValues);
     }
+    setSnackBarData(newSnackBarData);
   };
 
   const handleOnClickClear = (e: FormEvent) => {
     e.preventDefault();
+    setIsInvalidEmail(false);
     const form: any = formRef.current;
     const formfields = ["contactName", "contactEmail", "contactMessage"];
     formfields.forEach((item) => (form[item].value = ""));
   };
+
+  const handleOnCloseSnackBar = () =>
+    setSnackBarData({
+      isOpen: false,
+      isSuccess: false,
+      message: "",
+    });
 
   return (
     <div id={"contactDivId"} className={styles.wrapper}>
@@ -40,11 +66,6 @@ const Contact: React.FC = () => {
           <span>{"Contact"}</span>
         </div>
         <div className={styles.details}>
-          {!validateEmail.valid && (
-            <div className={styles.invalidForm}>
-              <div>{`'${validateEmail.email}' is not a valid email address.`}</div>
-            </div>
-          )}
           <form ref={formRef} onSubmit={handleOnSubmitForm}>
             <div className={styles.nameNemail}>
               <div className={styles.textField}>
@@ -53,7 +74,12 @@ const Contact: React.FC = () => {
               </div>
               <div className={styles.textField}>
                 <span>{"Email"}</span>
-                <input name={"contactEmail"} type={"email"} required />
+                <input
+                  className={isInvalidEmail ? styles.invalidEmailField : ""}
+                  name={"contactEmail"}
+                  type={"email"}
+                  required
+                />
               </div>
             </div>
             <div className={styles.message}>
@@ -61,14 +87,22 @@ const Contact: React.FC = () => {
               <textarea name={"contactMessage"} rows={8} style={{ resize: "none" }} required />
             </div>
             <div className={styles.btnContainer}>
-              <button type={"submit"}>{"Send Message"}</button>
-              <button type={"button"} onClick={handleOnClickClear}>
+              <button type={"submit"} className={styles.btnStyle}>
+                {"Send Message"}
+              </button>
+              <button type={"button"} onClick={handleOnClickClear} className={styles.btnStyle}>
                 {"Clear"}
               </button>
             </div>
           </form>
         </div>
       </div>
+      <SnackBar
+        open={snackBarData.isOpen}
+        message={snackBarData.message}
+        isSuccess={snackBarData.isSuccess}
+        onClose={handleOnCloseSnackBar}
+      />
     </div>
   );
 };

@@ -35,9 +35,14 @@ import leftArrow from "./svg/leftArrow.svg";
 import rightArrow from "./svg/rightArrow.svg";
 import travels from "./svg/travels.svg";
 import fs_biking from "./svg/fs_biking.svg";
+//  - Contact
+import error from "./svg/error.svg";
+import check from "./svg/check.svg";
 
 // ICONS
+import github from "./svg/github.svg";
 import linkedin from "./svg/linkedin.svg";
+import email from "./svg/email.svg";
 
 export default {
   jcgHeader,
@@ -73,4 +78,8 @@ export default {
   rightArrow,
   travels,
   fs_biking,
+  error,
+  check,
+  github,
+  email,
 };
