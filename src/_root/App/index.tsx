@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../Header";
+import Footer from "../Footer";
 import styles from "./App.scss";
 
 class App extends React.Component {
@@ -14,6 +15,7 @@ class App extends React.Component {
         <div>
           <Header />
           <div>{this.props.children}</div>
+          <Footer />
         </div>
       </div>
     );
