@@ -18,7 +18,8 @@
 
   .bannerTextWrapper {
     @include align-center;
-    background: rgba(10, 13, 21, 0.75);
+    animation: fadeShadow 2.5s ease-in-out forwards 1s;
+    background-color: #05060a;
     height: 100%;
     position: absolute;
     width: 100%;
@@ -104,5 +105,14 @@
   }
   100% {
     transform: rotateY(360deg);
+  }
+}
+
+@keyframes fadeShadow {
+  from {
+    background-color: #05060a;
+  }
+  to {
+    background-color: rgba(10, 13, 21, 0.75);
   }
 }

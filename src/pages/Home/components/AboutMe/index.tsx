@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router";
 import assets from "assets";
 import { useDeviceType } from "helpers/customHooks";
 import { classNames } from "helpers/functions";
@@ -7,6 +8,7 @@ import styles from "./AboutMe.scss";
 
 const AboutMe: React.FC = () => {
   const deviceType = useDeviceType();
+  const history = useHistory();
   const [isShowDetails, setIsShowDetails] = useState(false);
 
   useEffect(() => {
@@ -25,6 +27,11 @@ const AboutMe: React.FC = () => {
       window.removeEventListener("scroll", scrolling);
     };
   }, []);
+
+  const handleOnClickKnowMeMore = () =>
+    history.push({
+      pathname: `/aboutMe`,
+    });
 
   return (
     <div id={"aboutMeDivId"} className={styles.wrapper}>
@@ -79,9 +86,7 @@ const AboutMe: React.FC = () => {
             </div>
             <Button
               className={styles.custonButton}
-              handleOnClick={() => {
-                alert("This section is under construction. Check back soon");
-              }}
+              handleOnClick={handleOnClickKnowMeMore}
               title={"Wanna know me more ?"}
             />
           </div>
