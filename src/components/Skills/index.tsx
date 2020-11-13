@@ -12,56 +12,49 @@ const Skills: React.FC = () => {
   const isShowDetails = useVisibleInViewport("skillsDetailsWrapperDivId", 400);
 
   return (
-    <div id={"skillsDivId"} className={styles.wrapper}>
-      <div className={styles.container}>
+    <div
+      id={"skillsDivId"}
+      className={styles.wrapper}
+      style={{
+        background: `url(${componentBG.skills}) center center / cover no-repeat fixed`,
+      }}
+    >
+      {deviceType !== "pc" && (
         <div
           className={styles.skillsBG}
           style={{
-            background: `url(${componentBG.skills}) ${
-              deviceType !== "pc" ? "bottom" : "center center"
-            } / cover no-repeat`,
-            // Parallex is not supported in tl and sp
-            backgroundAttachment: deviceType === "pc" ? "fixed" : "initial",
+            background: `url(${componentBG.skills}) center bottom / cover no-repeat fixed`,
           }}
         />
-        <div
-          id={"skillsDetailsWrapperDivId"}
-          className={classNames(
-            styles.skillsDetailsWrapper,
-            deviceType === "pc" ? (isShowDetails ? styles.showDetails : styles.hideDetails) : ""
-          )}
-        >
-          <div className={styles.skillsDetails}>
-            <div>
-              <span>{skillsDetails.title}</span>
-            </div>
-            <div className={styles.skillsListWrapper}>
-              <div className={styles.skillsListContainer}>
-                {skillsDetails.firstRow.map((item) => (
-                  <div key={item.title} className={styles.skillsList}>
-                    <img src={item.icon} alt={item.title} />
-                    <div className={styles.title}>{item.title}</div>
-                    <div className={styles.detail}>{item.description}</div>
-                  </div>
-                ))}
-              </div>
-              <div className={styles.skillsListContainer}>
-                {skillsDetails.secondRow.map((item) => (
-                  <div key={item.title} className={styles.skillsList}>
-                    <img src={item.icon} alt={item.title} />
-                    <div className={styles.title}>{item.title}</div>
-                    <div className={styles.detail}>{item.description}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <Button
-              handleOnClick={() => {
-                alert("This section is under construction. Check back soon");
-              }}
-              title={"View skills rating"}
-            />
+      )}
+      <div
+        id={"skillsDetailsWrapperDivId"}
+        className={classNames(
+          styles.skillsDetailsWrapper,
+          deviceType === "pc" ? (isShowDetails ? styles.showDetails : styles.hideDetails) : ""
+        )}
+      >
+        <div className={styles.skillsDetails}>
+          <div>
+            <span>{skillsDetails.title}</span>
           </div>
+          <div className={styles.skillsListWrapper}>
+            <div className={styles.skillsListContainer}>
+              {skillsDetails.details.map((item, idx) => (
+                <div key={`${idx}-${item.title}`} className={styles.skillsList}>
+                  <img src={item.icon} alt={item.title} />
+                  <div className={styles.title}>{item.title}</div>
+                  <div className={styles.detail}>{item.description}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <Button
+            handleOnClick={() => {
+              alert("This section is under construction. Check back soon");
+            }}
+            title={"View skills rating"}
+          />
         </div>
       </div>
     </div>

@@ -14,46 +14,48 @@ const AboutMe: React.FC = () => {
   const handleOnClickKnowMeMore = () => alert("This section is currently under construction.");
 
   return (
-    <div id={"aboutMeDivId"} className={styles.wrapper}>
-      <div className={styles.container}>
+    <div
+      id={"aboutMeDivId"}
+      className={styles.wrapper}
+      style={{
+        background: `url(${componentBG.aboutMe}) center top / cover no-repeat fixed`,
+      }}
+    >
+      {deviceType !== "pc" && (
         <div
           className={styles.aboutMeBG}
           style={{
-            background: `url(${componentBG.aboutMe}) ${
-              deviceType !== "pc" ? "top" : "center center"
-            } / cover no-repeat`,
-            // Parallex is not supported in tl and sp
-            backgroundAttachment: deviceType === "pc" ? "fixed" : "initial",
+            background: `url(${componentBG.aboutMe}) center top / cover no-repeat fixed`,
           }}
         />
-        <div
-          id={"aboutMeDetailsWrapperDivId"}
-          className={classNames(
-            styles.aboutMeDetailsWrapper,
-            deviceType === "pc" ? (isShowDetails ? styles.showDetails : styles.hideDetails) : ""
-          )}
-        >
-          <div className={styles.aboutMeDetails}>
-            <div>
-              <span>{aboutMeDetails.title}</span>
-            </div>
-            <div className={styles.aboutMeListWrapper}>
-              <div>
-                {aboutMeDetails.details.map((item) => (
-                  <div key={item.title} className={styles.aboutMeList}>
-                    <img src={item.icon} alt={item.title} />
-                    <div className={styles.title}>{item.title}</div>
-                    <div className={styles.detail}>{item.description}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <Button
-              className={styles.custonButton}
-              handleOnClick={handleOnClickKnowMeMore}
-              title={"Wanna know me more ?"}
-            />
+      )}
+      <div
+        id={"aboutMeDetailsWrapperDivId"}
+        className={classNames(
+          styles.aboutMeDetailsWrapper,
+          deviceType === "pc" ? (isShowDetails ? styles.showDetails : styles.hideDetails) : ""
+        )}
+      >
+        <div className={styles.aboutMeDetails}>
+          <div>
+            <span>{aboutMeDetails.title}</span>
           </div>
+          <div className={styles.aboutMeListWrapper}>
+            <div>
+              {aboutMeDetails.details.map((item, idx) => (
+                <div key={`${idx}-${item.title}`} className={styles.aboutMeList}>
+                  <img src={item.icon} alt={item.title} />
+                  <div className={styles.title}>{item.title}</div>
+                  <div className={styles.detail}>{item.description}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <Button
+            className={styles.custonButton}
+            handleOnClick={handleOnClickKnowMeMore}
+            title={"Wanna know me more ?"}
+          />
         </div>
       </div>
     </div>

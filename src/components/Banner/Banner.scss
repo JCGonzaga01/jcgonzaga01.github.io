@@ -1,42 +1,44 @@
 @import "helpers/stylings/_index";
 
 .wrapper {
-  .container {
-    @include align-center;
-    height: 100vh;
-    min-height: 600px;
-    position: relative;
-    width: 100vw;
-  }
-
-  .bannerBG {
-    height: 100%;
-    position: absolute;
-    width: 100%;
-    // will-change: opacity;
-  }
+  @include align-center;
+  height: 100vh;
+  min-height: 600px;
+  width: 100vw;
 
   .bannerTextWrapper {
     @include align-center;
-    animation: fadeShadow 2.5s ease-in-out forwards 0.5s;
+    animation: fadeShadow 2s ease-in-out forwards 0.5s;
     background-color: #05060a;
     height: 100%;
-    position: absolute;
     width: 100%;
 
     .bannerTextContainer {
+      @include media-query(pc) {
+        padding: 0 100px;
+      }
+
+      @include media-query(tl) {
+        padding: 0 60px;
+      }
+
       color: $textDefault;
       padding: 0 20px;
       text-align: center;
       text-transform: uppercase;
 
       & > :first-child {
-        border-bottom: 1px solid $textScrolled;
-        border-top: 1px solid $textScrolled;
-        font-size: 44px;
-        line-height: 50px;
-        margin-bottom: 10px;
-        padding: 20px;
+        @include align-center;
+
+        & > div {
+          border-bottom: 1px solid $textScrolled;
+          border-top: 1px solid $textScrolled;
+          font-size: 44px;
+          line-height: 50px;
+          margin-bottom: 10px;
+          padding: 20px;
+          width: fit-content;
+        }
       }
 
       & > :not(:first-child) {

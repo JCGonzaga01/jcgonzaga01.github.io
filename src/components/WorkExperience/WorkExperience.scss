@@ -1,22 +1,16 @@
 @import "helpers/stylings/_index";
 
 .wrapper {
-  .container {
-    @include media-query(pc) {
-      min-height: 790px;
-    }
-
-    border-top: 1px solid #10e03a;
-    position: relative;
-    width: 100vw;
+  @include media-query(tl, sp) {
+    flex-direction: column;
   }
 
-  .workExpBG {
-    @include media-query(pc) {
-      height: 100%;
-      position: absolute;
-    }
+  border-top: 1px solid #10e03a;
+  display: flex;
+  justify-content: flex-end;
+  width: 100vw;
 
+  .workExpBG {
     height: 50vh;
     width: 100%;
   }
@@ -25,9 +19,8 @@
     @include media-query(pc) {
       background: rgba(10, 13, 21, 0.75);
       border-left: 7px solid #10e03a;
-      border-top: 0px;
+      border-top: 0;
       padding: 30px;
-      position: absolute;
       right: 0;
       width: 60%;
     }

@@ -1,24 +1,20 @@
 @import "helpers/stylings/_index";
 
 .wrapper {
-  .container {
-    @include media-query(pc) {
-      @include align-center;
-      height: 100vh;
-      min-height: 600px;
-    }
-
-    position: relative;
-    border-top: 1px solid #ff8080;
-    width: 100vw;
+  @include media-query(tl, sp) {
+    flex-direction: column;
   }
 
-  .aboutMeBG {
-    @include media-query(pc) {
-      height: 100%;
-      position: absolute;
-    }
+  @include media-query(pc) {
+    padding-top: 50vh;
+  }
 
+  border-top: 1px solid #ff8080;
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100vw;
+
+  .aboutMeBG {
     height: 50vh;
     width: 100%;
   }
@@ -29,7 +25,6 @@
     @include media-query(pc) {
       background: rgba(10, 13, 21, 0.75);
       padding: 30px 100px;
-      position: absolute;
     }
 
     @include media-query(tl) {
@@ -65,31 +60,16 @@
         @include align-center;
 
         & > :first-child {
-          @include media-query(pc) {
-            @include align-center;
-            justify-content: space-between;
-            margin-bottom: 50px;
-            max-width: 1180px;
-            width: 100%;
-          }
-
-          @include media-query(tl) {
-            @include align-center;
-            flex-wrap: wrap;
-          }
-
-          & > :not(:last-child) {
-            @include media-query(pc, tl) {
-              margin-right: 30px;
-            }
-          }
+          @include align-center;
+          flex-wrap: wrap;
+          width: 100%;
 
           .aboutMeList {
-            @include media-query(tl, sp) {
-              margin-bottom: 30px;
+            @include media-query(pc, tl) {
+              padding: 0 15px;
             }
-
             font-family: "Poppins";
+            margin-bottom: 30px;
 
             .title {
               font-size: 30px;
@@ -112,6 +92,7 @@
               border-radius: 10px;
               color: #000000;
               min-height: 145px;
+              min-width: 300px;
               max-width: 300px;
               padding: 10px;
             }

@@ -1,22 +1,15 @@
 @import "helpers/stylings/_index";
 
 .wrapper {
-  .container {
-    @include media-query(pc) {
-      min-height: 765px;
-    }
-
-    border-top: 1px solid #00aeff;
-    position: relative;
-    width: 100vw;
+  @include media-query(tl, sp) {
+    flex-direction: column;
   }
 
-  .skillsBG {
-    @include media-query(pc) {
-      height: 100%;
-      position: absolute;
-    }
+  border-top: 1px solid #00aeff;
+  display: flex;
+  width: 100vw;
 
+  .skillsBG {
     height: 50vh;
     width: 100%;
   }
@@ -25,9 +18,8 @@
     @include media-query(pc) {
       background: rgba(10, 13, 21, 0.75);
       border-right: 7px solid #00aeff;
-      border-top: 0px;
+      border-top: 0;
       padding: 30px;
-      position: absolute;
       width: 60%;
     }
 
@@ -61,19 +53,14 @@
       .skillsListWrapper {
         .skillsListContainer {
           @include align-center;
-
-          @include media-query(sp) {
-            flex-direction: column;
-          }
-
-          @include media-query(pc, tl) {
-            & > :first-child {
-              margin-right: 100px;
-            }
-          }
+          flex-wrap: wrap;
         }
 
         .skillsList {
+          @include media-query(pc, tl) {
+            padding: 0 10px;
+          }
+
           font-family: "Poppins";
           margin-bottom: 30px;
 
@@ -89,16 +76,20 @@
               background-color: rgba(0, 0, 0, 0.75);
               color: $textDefault;
               height: 120px;
+              min-width: 200px;
             }
 
             @include media-query(sp) {
               max-width: 420px;
+              min-height: 0;
             }
 
             color: #000000;
             background-color: $textDefault;
             border-radius: 10px;
             margin-bottom: 10px;
+            min-height: 100px;
+            min-width: 300px;
             max-width: 300px;
             padding: 10px;
           }

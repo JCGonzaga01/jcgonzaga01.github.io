@@ -16,33 +16,33 @@ const Banner: React.FC = () => {
   };
 
   return (
-    <div id={"homeDivId"} className={styles.wrapper}>
-      <div className={styles.container}>
-        <div
-          className={styles.bannerBG}
-          style={{
-            background: `url(${componentBG.banner}) center center / cover no-repeat`,
-            // Parallex is not supported in tl and sp
-            backgroundAttachment: deviceType === "pc" ? "fixed" : "initial",
-          }}
-        />
-        <div className={styles.bannerTextWrapper}>
-          <div className={styles.bannerTextContainer}>
+    <div
+      id={"homeDivId"}
+      className={styles.wrapper}
+      style={{
+        background: `url(${componentBG.banner}) center center / cover no-repeat`,
+        // Parallex is not supported in tl and sp
+        backgroundAttachment: deviceType === "pc" ? "fixed" : "initial",
+      }}
+    >
+      <div className={styles.bannerTextWrapper}>
+        <div className={styles.bannerTextContainer}>
+          <div>
             <div>{bannerDetails.name}</div>
-            <div>{bannerDetails.description}</div>
-            <div>
-              {bannerDetails.hobbies.map((item, idx) => (
-                <span key={`${idx}-${item.title}`} className={styles.textWithImage}>
-                  <img src={item.icon} alt={item.title} />
-                  {item.title}
-                </span>
-              ))}
-            </div>
-            <div>
-              <div onClick={handleGetStartedClick}>
-                <span>{"Get Started"}</span>
-                <div />
-              </div>
+          </div>
+          <div>{bannerDetails.description}</div>
+          <div>
+            {bannerDetails.hobbies.map((item, idx) => (
+              <span key={`${idx}-${item.title}`} className={styles.textWithImage}>
+                <img src={item.icon} alt={item.title} />
+                {item.title}
+              </span>
+            ))}
+          </div>
+          <div>
+            <div onClick={handleGetStartedClick}>
+              <span>{"Get Started"}</span>
+              <div />
             </div>
           </div>
         </div>

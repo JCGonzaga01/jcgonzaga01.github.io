@@ -2,7 +2,7 @@ import assets from "assets";
 
 export const skillsDetails = {
   title: "Skills",
-  firstRow: [
+  details: [
     {
       icon: assets.web,
       title: "WEB",
@@ -13,8 +13,6 @@ export const skillsDetails = {
       title: "Database",
       description: "MySQL, PostgreSQL, NoSQL (Firebase, MongoDB, Redis)",
     },
-  ],
-  secondRow: [
     {
       icon: assets.scrum,
       title: "Methodologies",
