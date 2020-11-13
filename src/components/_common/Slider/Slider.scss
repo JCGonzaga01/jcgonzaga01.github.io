@@ -61,6 +61,15 @@
       & > :not(:last-child) {
         margin-right: 30px;
       }
+
+      .hideDiv {
+        height: 300px;
+        opacity: 0;
+      }
+
+      .showDiv {
+        opacity: 1;
+      }
     }
   }
 }

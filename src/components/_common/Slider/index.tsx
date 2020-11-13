@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import assets from "assets";
+import { useVisibleInViewport } from "helpers/customHooks";
 import { classNames } from "helpers/functions";
 import Card from "../Card";
 import styles from "./Slider.scss";
@@ -7,9 +8,11 @@ import styles from "./Slider.scss";
 type Props = {
   className?: string;
   cardList: Array<{ banner: string; title: string }>;
+  animate?: boolean;
 };
 
-const Slider: React.FC<Props> = ({ className = "", cardList }) => {
+const Slider: React.FC<Props> = ({ className = "", cardList, animate = false }) => {
+  const animateCard = useVisibleInViewport("sliderItemsDiv", 250);
   const [itemTranslateX, setItemTranslateX] = useState(0);
 
   const handleOnClickLeftBtn = () => {
@@ -62,12 +65,15 @@ const Slider: React.FC<Props> = ({ className = "", cardList }) => {
           style={{ transform: `translateX(${itemTranslateX}px)` }}
         >
           {cardList.map((item, idx) => (
-            <Card
+            <div
               key={`${idx}-${item.title}`}
-              banner={item.banner}
-              title={item.title}
-              onClickBanner={handleOnClickBanner}
-            />
+              className={animate ? (animateCard ? styles.showDiv : styles.hideDiv) : styles.showDiv}
+              style={{
+                transition: `opacity 1s ease-in-out ${idx * 0.4}s`,
+              }}
+            >
+              <Card banner={item.banner} title={item.title} onClickBanner={handleOnClickBanner} />
+            </div>
           ))}
         </div>
       </div>

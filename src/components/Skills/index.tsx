@@ -1,31 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import assets from "assets";
 import { Button } from "../_common";
 import { componentBG } from "constants/common";
-import { useDeviceType } from "helpers/customHooks";
+import { useDeviceType, useVisibleInViewport } from "helpers/customHooks";
 import { classNames } from "helpers/functions";
 import styles from "./Skills.scss";
 
 const Skills: React.FC = () => {
   const deviceType = useDeviceType();
-  const [isShowDetails, setIsShowDetails] = useState(false);
-
-  useEffect(() => {
-    const scrolling = () => {
-      const detailsEl = document.getElementById("skillsDetailsWrapperDivId");
-      if (
-        !isShowDetails &&
-        detailsEl &&
-        detailsEl.getBoundingClientRect().top + 200 < window.innerHeight
-      )
-        setIsShowDetails(true);
-    };
-    window.addEventListener("scroll", scrolling);
-
-    return () => {
-      window.removeEventListener("scroll", scrolling);
-    };
-  }, []);
+  const isShowDetails = useVisibleInViewport("skillsDetailsWrapperDivId", 400);
 
   return (
     <div id={"skillsDivId"} className={styles.wrapper}>

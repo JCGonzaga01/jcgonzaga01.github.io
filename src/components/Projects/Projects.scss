@@ -55,6 +55,11 @@
           width: 100%;
         }
 
+        .hideDiv {
+          height: 300px;
+          opacity: 0;
+        }
+
         .projectBG {
           @include align-center;
 
@@ -66,6 +71,7 @@
           color: $textDefault;
           flex-direction: column;
           height: 300px;
+          opacity: 1;
           position: relative;
           width: 33.33%;
 

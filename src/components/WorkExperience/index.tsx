@@ -1,30 +1,13 @@
 import React, { useEffect, useState } from "react";
 import assets from "assets";
 import { componentBG } from "constants/common";
-import { useDeviceType } from "helpers/customHooks";
+import { useDeviceType, useVisibleInViewport } from "helpers/customHooks";
 import { classNames } from "helpers/functions";
 import styles from "./WorkExperience.scss";
 
 const WorkExperience: React.FC = () => {
   const deviceType = useDeviceType();
-  const [isShowDetails, setIsShowDetails] = useState(false);
-
-  useEffect(() => {
-    const scrolling = () => {
-      const detailsEl = document.getElementById("workExpDetailsWrapperDivId");
-      if (
-        !isShowDetails &&
-        detailsEl &&
-        detailsEl.getBoundingClientRect().top + 200 < window.innerHeight
-      )
-        setIsShowDetails(true);
-    };
-    window.addEventListener("scroll", scrolling);
-
-    return () => {
-      window.removeEventListener("scroll", scrolling);
-    };
-  }, []);
+  const isShowDetails = useVisibleInViewport("workExpDetailsWrapperDivId", 400);
 
   const handleLinkedinClick = () => window.open("https://www.linkedin.com/in/jc-gonzaga/");
 
