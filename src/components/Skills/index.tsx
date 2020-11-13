@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import assets from "assets";
+import { Button } from "../_common";
+import { componentBG } from "constants/common";
 import { useDeviceType } from "helpers/customHooks";
 import { classNames } from "helpers/functions";
-import { Button } from "components";
 import styles from "./Skills.scss";
 
 const Skills: React.FC = () => {
@@ -32,7 +33,7 @@ const Skills: React.FC = () => {
         <div
           className={styles.skillsBG}
           style={{
-            background: `url(${assets.skillsBG}) ${
+            background: `url(${componentBG.skills}) ${
               deviceType !== "pc" ? "bottom" : "center center"
             } / cover no-repeat`,
             // Parallex is not supported in tl and sp

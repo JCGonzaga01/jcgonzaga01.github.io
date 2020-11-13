@@ -4,16 +4,14 @@ var TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
-var BUILD_DIR = path.join(__dirname, "dist");
+var BUILD_DIR = path.join(__dirname, "build");
 var APP_DIR = path.join(__dirname, "src");
-
-const VENDOR_LIBS = ["react", "react-dom", "react-router-dom"];
 
 var config = {
   entry: APP_DIR + "/index.tsx",
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "[name].[hash].js",
+    path: path.resolve(__dirname, "build"),
+    filename: "[name].[hash].min.js",
     publicPath: "/",
   },
   resolve: {
@@ -41,6 +39,19 @@ var config = {
     hot: true,
     historyApiFallback: true,
   },
+  plugins: [
+    new CleanWebpackPlugin({
+      dry: true,
+    }),
+    new HtmlWebpackPlugin({
+      favicon: "./src/assets/favicon.ico",
+      template: APP_DIR + "/index.html",
+    }),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.DefinePlugin({
+      "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV),
+    }),
+  ],
   module: {
     rules: [
       {
@@ -83,18 +94,6 @@ var config = {
       },
     ],
   },
-  plugins: [
-    new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin({
-      favicon: "./src/assets/favicon.ico",
-      template: APP_DIR + "/index.html",
-    }),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.DefinePlugin({
-      "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV),
-    }),
-    // new TsconfigPathsPlugin({ configFile: "tsconfig.json" }),
-  ],
   optimization: {
     splitChunks: {
       cacheGroups: {

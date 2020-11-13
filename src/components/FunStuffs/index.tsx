@@ -1,7 +1,7 @@
 import React from "react";
 import assets from "assets";
-import { Slider } from "components";
-import { travelList } from "constants/common";
+import { Slider } from "../_common";
+import { travelList } from "constants/funStuffs";
 import styles from "./FunStuffs.scss";
 
 const FunStuffs: React.FC = () => {

@@ -1,6 +1,6 @@
 import React from "react";
 import assets from "assets";
-import { projectItems, prototypeProjectItems } from "constants/common";
+import { projectItems, prototypeProjectItems } from "constants/project";
 import { classNames } from "helpers/functions";
 import styles from "./Projects.scss";
 

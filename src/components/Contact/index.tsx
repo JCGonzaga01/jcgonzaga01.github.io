@@ -1,5 +1,5 @@
 import React, { FormEvent, useRef, useState } from "react";
-import { SnackBar } from "components";
+import { SnackBar } from "../_common";
 import styles from "./Contact.scss";
 
 const Contact: React.FC = () => {

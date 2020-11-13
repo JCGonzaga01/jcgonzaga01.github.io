@@ -1,15 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { useHistory, useLocation } from "react-router";
 import assets from "assets";
+import { menuItems } from "constants/common";
 import { classNames } from "helpers/functions";
 import { useDeviceType } from "helpers/customHooks";
-import { menuItems } from "constants/common";
 import styles from "./Header.scss";
 
 const Header: React.FC = () => {
   const deviceType = useDeviceType();
-  const history = useHistory();
-  const location = useLocation();
   const [curDivViewPort, setCurDivViewPort] = useState("home");
   const [isMenuToggle, setIsMenuToggle] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -43,7 +40,6 @@ const Header: React.FC = () => {
     setheaderImg(isHover ? assets.jcgHeaderHover : assets.jcgHeader);
 
   const handleOnClickLogo = () => {
-    if (location.pathname !== "/") history.push("/");
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 

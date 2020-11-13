@@ -9,10 +9,10 @@ if (process.env.NODE_ENV !== "production") {
   const webpackConfig = require("./webpack.config.js");
   app.use(WebpackDevMiddleware(webpack(webpackConfig)));
 } else {
-  // This is for running the build project in 'dist' folder.
-  // app.use(express.static("dist"));
+  // This is for running the build project in 'build' folder.
+  // app.use(express.static("build"));
   // app.get("*", (req, res) => {
-  //   res.sendFile(path.join(__dirname, "dist/index.html"));
+  //   res.sendFile(path.join(__dirname, "build/index.html"));
   // });
 }
 

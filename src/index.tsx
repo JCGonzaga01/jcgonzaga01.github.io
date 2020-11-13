@@ -1,21 +1,13 @@
 import React, { Suspense } from "react";
 import ReactDOM from "react-dom";
-import Spinner from "components/Spinner";
-import router from "_root/router";
+import { Spinner } from "components/_common";
+import App from "components/App";
 import "./index.scss";
 
-// Firebase initialization
-// Create this config with the same directory of index.tsx
-// import { firebaseConfig } from "firebaseConfig";
-
-// import * as firebase from "firebase/app";
-// import "firebase/analytics";
-// import "firebase/auth";
-// import "firebase/firestore";
-
-// // Initialize Firebase
-// firebase.initializeApp(firebaseConfig);
-
-const app = <Suspense fallback={<Spinner />}>{router}</Suspense>;
+const app = (
+  <Suspense fallback={<Spinner />}>
+    <App />
+  </Suspense>
+);
 
 ReactDOM.render(app, document.getElementById("root"));

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import assets from "assets";
+import { componentBG } from "constants/common";
 import { useDeviceType } from "helpers/customHooks";
 import { classNames } from "helpers/functions";
 import styles from "./WorkExperience.scss";
@@ -33,7 +34,7 @@ const WorkExperience: React.FC = () => {
         <div
           className={styles.workExpBG}
           style={{
-            background: `url(${assets.workExpBG}) ${
+            background: `url(${componentBG.workExp}) ${
               deviceType !== "pc" ? "top" : "center center"
             } / cover no-repeat`,
             // Parallex is not supported in tl and sp

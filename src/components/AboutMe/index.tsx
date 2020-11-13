@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { useHistory } from "react-router";
 import assets from "assets";
+import { Button } from "../_common";
+import { componentBG } from "constants/common";
 import { useDeviceType } from "helpers/customHooks";
 import { classNames } from "helpers/functions";
-import { Button } from "components";
 import styles from "./AboutMe.scss";
 
 const AboutMe: React.FC = () => {
   const deviceType = useDeviceType();
-  const history = useHistory();
   const [isShowDetails, setIsShowDetails] = useState(false);
 
   useEffect(() => {
@@ -28,10 +27,7 @@ const AboutMe: React.FC = () => {
     };
   }, []);
 
-  const handleOnClickKnowMeMore = () =>
-    history.push({
-      pathname: `/aboutMe`,
-    });
+  const handleOnClickKnowMeMore = () => alert("This section is currently under construction.");
 
   return (
     <div id={"aboutMeDivId"} className={styles.wrapper}>
@@ -39,7 +35,7 @@ const AboutMe: React.FC = () => {
         <div
           className={styles.aboutMeBG}
           style={{
-            background: `url(${assets.aboutMeBG}) ${
+            background: `url(${componentBG.aboutMe}) ${
               deviceType !== "pc" ? "top" : "center center"
             } / cover no-repeat`,
             // Parallex is not supported in tl and sp

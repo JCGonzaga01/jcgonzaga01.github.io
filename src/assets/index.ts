@@ -2,17 +2,11 @@
 import jcgHeader from "./jcg_header.png";
 import jcgHeaderHover from "./jcg_header_hover.png";
 
-// BANNER
-import bannerBG from "./banner.jpg";
-
 // SVG
 // - Banner
 import biking from "./svg/biking.svg";
 import running from "./svg/running.svg";
-import musicNote1 from "./svg/music-note1.svg";
-import keyboard from "./svg/keyboard.svg";
-import cajon from "./svg/cajon.svg";
-import drums from "./svg/drums.svg";
+import musicNote from "./svg/music-note.svg";
 import arrowDown from "./svg/arrowDown.svg";
 // - About Me
 import education from "./svg/education.svg";
@@ -47,39 +41,37 @@ import email from "./svg/email.svg";
 export default {
   jcgHeader,
   jcgHeaderHover,
-  bannerBG,
-  aboutMeBG:
-    "https://firebasestorage.googleapis.com/v0/b/jcgonzaga01githubio.appspot.com/o/homeBG%2FaboutMe.jpg?alt=media&token=7f1876c7-1bae-45ab-8410-accc4b5319cc",
-  skillsBG:
-    "https://firebasestorage.googleapis.com/v0/b/jcgonzaga01githubio.appspot.com/o/homeBG%2Fskills.jpg?alt=media&token=221713f7-721d-4ac7-83e4-a3248685dade",
-  workExpBG:
-    "https://firebasestorage.googleapis.com/v0/b/jcgonzaga01githubio.appspot.com/o/homeBG%2FworkExp.jpg?alt=media&token=4cc6273f-a0c5-4685-9d39-8b9c887c7e00",
+  // BANNER
   biking,
   running,
-  musicNote1,
-  guitar,
-  keyboard,
-  cajon,
-  drums,
+  musicNote,
   arrowDown,
+  // ABOUT ME
+  guitar,
   education,
   working,
+  // SKILLS
   web,
   database,
   otherTools,
   scrum,
+  // WORK EXPERIENCE
   jeonsoft,
   accenture,
   finastra,
-  linkedin,
+  // PROJECTS
   live,
   prototype,
+  // FUN STUFFS
   leftArrow,
   rightArrow,
   travels,
   fs_biking,
+  // CONTACT
   error,
   check,
+  // ICONS
+  linkedin,
   github,
   email,
 };

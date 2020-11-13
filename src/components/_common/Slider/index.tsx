@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import assets from "assets";
 import { classNames } from "helpers/functions";
-import { Card } from "components";
+import Card from "../Card";
 import styles from "./Slider.scss";
 
 type Props = {
