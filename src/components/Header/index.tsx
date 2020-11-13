@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import assets from "assets";
-import { menuItems } from "constants/common";
+import { menuItems } from "constants/_common";
 import { classNames } from "helpers/functions";
 import { useDeviceType } from "helpers/customHooks";
 import styles from "./Header.scss";

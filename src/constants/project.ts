@@ -1,5 +1,5 @@
 import styles from "helpers/stylings/global.scss";
-import { componentBG } from "./common";
+import { componentBG } from "./_common";
 
 export const projectItems = [
   {

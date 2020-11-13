@@ -1,6 +1,6 @@
 import React from "react";
-import assets from "assets";
-import { componentBG } from "constants/common";
+import { componentBG } from "constants/_common";
+import { bannerDetails } from "constants/banner";
 import { useDeviceType } from "helpers/customHooks";
 import styles from "./Banner.scss";
 
@@ -28,22 +28,15 @@ const Banner: React.FC = () => {
         />
         <div className={styles.bannerTextWrapper}>
           <div className={styles.bannerTextContainer}>
-            <div>{"John Christopher Gonzaga"}</div>
-            <div>{"A Web Developer who loves:"}</div>
+            <div>{bannerDetails.name}</div>
+            <div>{bannerDetails.description}</div>
             <div>
-              <span className={styles.textWithImage}>
-                <img src={assets.biking} alt={"Biking"} />
-                {"Biking,"}
-              </span>
-              <span className={styles.textWithImage}>
-                <img src={assets.running} alt={"Jogging"} />
-                {"Jogging,"}
-              </span>
-              <span className={styles.textWithImage}>
-                {" &&"}
-                <img src={assets.musicNote} alt={"Music Note 1"} />
-                {"Playing musical instruments"}
-              </span>
+              {bannerDetails.hobbies.map((item, idx) => (
+                <span key={`${idx}-${item.title}`} className={styles.textWithImage}>
+                  <img src={item.icon} alt={item.title} />
+                  {item.title}
+                </span>
+              ))}
             </div>
             <div>
               <div onClick={handleGetStartedClick}>

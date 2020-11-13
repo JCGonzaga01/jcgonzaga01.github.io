@@ -18,7 +18,7 @@
 
   .bannerTextWrapper {
     @include align-center;
-    animation: fadeShadow 2.5s ease-in-out forwards 1s;
+    animation: fadeShadow 2.5s ease-in-out forwards 0.5s;
     background-color: #05060a;
     height: 100%;
     position: absolute;

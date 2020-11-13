@@ -1,7 +1,8 @@
 import React from "react";
 import assets from "assets";
 import { Button } from "../_common";
-import { componentBG } from "constants/common";
+import { componentBG } from "constants/_common";
+import { skillsDetails } from "constants/skills";
 import { useDeviceType, useVisibleInViewport } from "helpers/customHooks";
 import { classNames } from "helpers/functions";
 import styles from "./Skills.scss";
@@ -32,41 +33,26 @@ const Skills: React.FC = () => {
         >
           <div className={styles.skillsDetails}>
             <div>
-              <span>{"Skills"}</span>
+              <span>{skillsDetails.title}</span>
             </div>
             <div className={styles.skillsListWrapper}>
               <div className={styles.skillsListContainer}>
-                <div className={styles.skillsList}>
-                  <img src={assets.web} alt={"Web Coding"} />
-                  <div className={styles.title}>{"Web"}</div>
-                  <div className={styles.detail}>
-                    {"Javascript, ReactJS, TypeScript, HTML, CSS, SCSS, Express, NodeJS, and more"}
+                {skillsDetails.firstRow.map((item) => (
+                  <div key={item.title} className={styles.skillsList}>
+                    <img src={item.icon} alt={item.title} />
+                    <div className={styles.title}>{item.title}</div>
+                    <div className={styles.detail}>{item.description}</div>
                   </div>
-                </div>
-                <div className={styles.skillsList}>
-                  <img src={assets.database} alt={"Database"} />
-                  <div className={styles.title}>{"Database"}</div>
-                  <div className={styles.detail}>
-                    {"MySQL, PostgreSQL, NoSQL (Firebase, MongoDB, Redis)"}
-                  </div>
-                </div>
+                ))}
               </div>
-
               <div className={styles.skillsListContainer}>
-                <div className={styles.skillsList}>
-                  <img src={assets.scrum} alt={"Dev Methodologies"} />
-                  <div className={styles.title}>{"Methodologies"}</div>
-                  <div className={styles.detail}>
-                    {"Scrum-Agile && SAFe (Scaled Agile Framework)"}
+                {skillsDetails.secondRow.map((item) => (
+                  <div key={item.title} className={styles.skillsList}>
+                    <img src={item.icon} alt={item.title} />
+                    <div className={styles.title}>{item.title}</div>
+                    <div className={styles.detail}>{item.description}</div>
                   </div>
-                </div>
-                <div className={styles.skillsList}>
-                  <img src={assets.otherTools} alt={"Other Tools"} />
-                  <div className={styles.title}>{"Other Tools"}</div>
-                  <div className={styles.detail}>
-                    {"GIT, Docker, VS Code Remote Container, Webpack"}
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
             <Button

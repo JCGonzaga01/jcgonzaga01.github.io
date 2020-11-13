@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import assets from "assets";
-import { componentBG } from "constants/common";
+import { componentBG } from "constants/_common";
+import { workExpDetails } from "constants/workExperience";
 import { useDeviceType, useVisibleInViewport } from "helpers/customHooks";
 import { classNames } from "helpers/functions";
 import styles from "./WorkExperience.scss";
@@ -33,33 +34,23 @@ const WorkExperience: React.FC = () => {
         >
           <div className={styles.workExpDetails}>
             <div>
-              <span>{"Work Experience"}</span>
+              <span>{workExpDetails.title}</span>
             </div>
             <div className={styles.workExpListWrapper}>
-              <div className={styles.workExpList}>
-                <img src={assets.finastra} alt={"Finastra"} />
-                <div className={styles.detail}>
-                  <li>{"August 2020 ~ Present: Senior Web Engineer"}</li>
+              {workExpDetails.details.map((item) => (
+                <div key={item.title} className={styles.workExpList}>
+                  <img src={item.icon} alt={item.title} />
+                  <div className={styles.detail}>
+                    {item.records.map((record, idx) => (
+                      <div key={`${idx}-${record.title}`}>
+                        <div>{record.title}</div>
+                        <li>{record.description}</li>
+                        {idx + 1 < item.records.length && record.title && <br />}
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
-              <div className={styles.workExpList}>
-                <img src={assets.accenture} alt={"Accenture"} />
-                <div className={styles.detail}>
-                  <div>{"Accenture Japan"}</div>
-                  <li>{"July 2018 ~ Feb 2020: Senior Front End Developer"}</li>
-                  <br />
-                  <div>{"Accenture Philippines"}</div>
-                  <li>{"July 2017 ~ June 2018: Front End Developer"}</li>
-                </div>
-              </div>
-
-              <div className={styles.workExpList}>
-                <img src={assets.jeonsoft} alt={"JeonSoft"} />
-                <div className={styles.detail}>
-                  <li>{"July 2015 ~ May 2017: Senior Software Engineer"}</li>
-                  <li>{"July 2014 ~ July 2015: Software Engineer"}</li>
-                </div>
-              </div>
+              ))}
             </div>
             <div className={styles.linkedin}>
               <span>Click</span>
