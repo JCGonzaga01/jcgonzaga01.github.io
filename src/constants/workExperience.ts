@@ -1,5 +1,8 @@
 import assets from "assets";
 
+export const workExpBG =
+  "https://firebasestorage.googleapis.com/v0/b/jcgonzaga01githubio.appspot.com/o/homeBG%2FworkExp.jpg?alt=media&token=4cc6273f-a0c5-4685-9d39-8b9c887c7e00";
+
 export const workExpDetails = {
   title: "Work Experience",
   details: [
@@ -42,4 +45,5 @@ export const workExpDetails = {
       ],
     },
   ],
+  linkedInURL: "https://www.linkedin.com/in/jc-gonzaga/",
 };

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import assets from "assets";
-import { componentBG } from "constants/_common";
-import { workExpDetails } from "constants/workExperience";
+import { workExpBG, workExpDetails } from "constants/workExperience";
 import { useDeviceType, useVisibleInViewport } from "helpers/customHooks";
 import { classNames } from "helpers/functions";
 import styles from "./WorkExperience.scss";
@@ -10,21 +9,21 @@ const WorkExperience: React.FC = () => {
   const deviceType = useDeviceType();
   const isShowDetails = useVisibleInViewport("workExpDetailsWrapperDivId", 400);
 
-  const handleLinkedinClick = () => window.open("https://www.linkedin.com/in/jc-gonzaga/");
+  const handleLinkedinClick = () => window.open(workExpDetails.linkedInURL);
 
   return (
     <div
       id={"workExpDivId"}
       className={styles.wrapper}
       style={{
-        background: `url(${componentBG.workExp}) center top / cover no-repeat fixed`,
+        background: `url(${workExpBG}) center top / cover no-repeat fixed`,
       }}
     >
       {deviceType !== "pc" && (
         <div
           className={styles.workExpBG}
           style={{
-            background: `url(${componentBG.workExp}) center top / cover no-repeat fixed`,
+            background: `url(${workExpBG}) center top / cover no-repeat fixed`,
           }}
         />
       )}

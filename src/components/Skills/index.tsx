@@ -1,8 +1,6 @@
 import React from "react";
-import assets from "assets";
 import { Button } from "../_common";
-import { componentBG } from "constants/_common";
-import { skillsDetails } from "constants/skills";
+import { skillsBG, skillsDetails } from "constants/skills";
 import { useDeviceType, useVisibleInViewport } from "helpers/customHooks";
 import { classNames } from "helpers/functions";
 import styles from "./Skills.scss";
@@ -16,14 +14,14 @@ const Skills: React.FC = () => {
       id={"skillsDivId"}
       className={styles.wrapper}
       style={{
-        background: `url(${componentBG.skills}) center center / cover no-repeat fixed`,
+        background: `url(${skillsBG}) center center / cover no-repeat fixed`,
       }}
     >
       {deviceType !== "pc" && (
         <div
           className={styles.skillsBG}
           style={{
-            background: `url(${componentBG.skills}) center bottom / cover no-repeat fixed`,
+            background: `url(${skillsBG}) center bottom / cover no-repeat fixed`,
           }}
         />
       )}

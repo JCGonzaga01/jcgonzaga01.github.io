@@ -1,6 +1,5 @@
 import React from "react";
-import { componentBG } from "constants/_common";
-import { bannerDetails } from "constants/banner";
+import { bannerBG, bannerDetails } from "constants/banner";
 import { useDeviceType } from "helpers/customHooks";
 import styles from "./Banner.scss";
 
@@ -20,7 +19,7 @@ const Banner: React.FC = () => {
       id={"homeDivId"}
       className={styles.wrapper}
       style={{
-        background: `url(${componentBG.banner}) center center / cover no-repeat`,
+        background: `url(${bannerBG}) center center / cover no-repeat`,
         // Parallex is not supported in tl and sp
         backgroundAttachment: deviceType === "pc" ? "fixed" : "initial",
       }}

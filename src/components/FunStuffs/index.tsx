@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import assets from "assets";
 import { Slider } from "../_common";
-import { travelList } from "constants/funStuffs";
+import { travelItems } from "constants/funStuffs";
 import styles from "./FunStuffs.scss";
 
 const FunStuffs: React.FC = () => {
@@ -16,7 +16,7 @@ const FunStuffs: React.FC = () => {
             <img src={assets.travels} alt={"Travels"} />
             <span>{"Travels"}</span>
           </div>
-          <Slider className={styles.details} cardList={travelList} animate />
+          <Slider className={styles.details} cardList={travelItems} animate />
         </div>
       </div>
     </div>

@@ -1,13 +1,13 @@
 import styles from "helpers/stylings/global.scss";
-import { componentBG } from "./_common";
+import { bannerBG } from "./banner";
 
-export const projectItems = [
+export const liveProjectItems = [
   {
     name: "jcgonzaga.io",
     description: "Source code of My Personal Website",
     url: "https://github.com/JCGonzaga01/jcgonzaga01.github.io",
     color: styles.blueBG,
-    bgImg: componentBG.banner,
+    bgImg: bannerBG,
   },
   {
     name: "TLCFM",

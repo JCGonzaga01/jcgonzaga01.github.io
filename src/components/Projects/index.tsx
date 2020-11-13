@@ -1,6 +1,6 @@
 import React from "react";
 import assets from "assets";
-import { projectItems, prototypeProjectItems } from "constants/project";
+import { liveProjectItems, prototypeProjectItems } from "constants/project";
 import { useVisibleInViewport } from "helpers/customHooks";
 import { classNames } from "helpers/functions";
 import styles from "./Projects.scss";
@@ -24,46 +24,16 @@ const Projects: React.FC = () => {
               <span>{"Live Projects"}</span>
             </div>
             <div>
-              {projectItems.map((item, idx) => {
-                return (
-                  <div
-                    key={`${idx}-${item.name}`}
-                    className={classNames(
-                      isLPVisible ? styles.projectBG : styles.hideDiv,
-                      item.color
-                    )}
-                    style={{
-                      background: `url(${item.bgImg}) center center / cover no-repeat`,
-                      transition: `opacity 1s ease-in-out ${idx * 0.4}s`,
-                    }}
-                    onClick={handleProjectItemOnClick(item.url)}
-                  >
-                    <div>
-                      <div>{item.name}</div>
-                      <hr />
-                      <div>{item.description}</div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-          <div id={"prototypeProjectsDivId"} className={styles.projectsListContainer}>
-            <div>
-              <img src={assets.prototype} alt={"Prototype Projects"} />
-              <span>{"Prototype Projects"}</span>
-            </div>
-            {prototypeProjectItems.map((item, idx) => {
-              return (
+              {liveProjectItems.map((item, idx) => (
                 <div
                   key={`${idx}-${item.name}`}
                   className={classNames(
-                    isPPVisible ? styles.projectBG : styles.hideDiv,
+                    isLPVisible ? styles.projectBG : styles.hideDiv,
                     item.color
                   )}
                   style={{
                     background: `url(${item.bgImg}) center center / cover no-repeat`,
-                    transition: `opacity 1s ease-in-out ${idx * 0.5}s`,
+                    transition: `opacity 1s ease-in-out ${idx * 0.4}s`,
                   }}
                   onClick={handleProjectItemOnClick(item.url)}
                 >
@@ -73,8 +43,31 @@ const Projects: React.FC = () => {
                     <div>{item.description}</div>
                   </div>
                 </div>
-              );
-            })}
+              ))}
+            </div>
+          </div>
+          <div id={"prototypeProjectsDivId"} className={styles.projectsListContainer}>
+            <div>
+              <img src={assets.prototype} alt={"Prototype Projects"} />
+              <span>{"Prototype Projects"}</span>
+            </div>
+            {prototypeProjectItems.map((item, idx) => (
+              <div
+                key={`${idx}-${item.name}`}
+                className={classNames(isPPVisible ? styles.projectBG : styles.hideDiv, item.color)}
+                style={{
+                  background: `url(${item.bgImg}) center center / cover no-repeat`,
+                  transition: `opacity 1s ease-in-out ${idx * 0.5}s`,
+                }}
+                onClick={handleProjectItemOnClick(item.url)}
+              >
+                <div>
+                  <div>{item.name}</div>
+                  <hr />
+                  <div>{item.description}</div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

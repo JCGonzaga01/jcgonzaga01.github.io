@@ -1,4 +1,7 @@
 import assets from "assets";
+import banner from "assets/banner.jpg";
+
+export const bannerBG = banner;
 
 export const bannerDetails = {
   name: "John Christopher Gonzaga",

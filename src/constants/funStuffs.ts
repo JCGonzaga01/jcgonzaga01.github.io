@@ -9,7 +9,7 @@ export const linkImg = {
     "https://firebasestorage.googleapis.com/v0/b/jcgonzaga01githubio.appspot.com/o/funstuffs%2Ftravels%2Fsg-trip%2Fbanner.jpg?alt=media&token=c09977cb-1bca-4491-82fd-32cb086d771c",
 };
 
-export const travelList = [
+export const travelItems = [
   {
     banner: linkImg.baguiotrip,
     title: "Baguio, PH",

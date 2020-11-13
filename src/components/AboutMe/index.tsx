@@ -1,8 +1,6 @@
 import React from "react";
-import assets from "assets";
 import { Button } from "../_common";
-import { componentBG } from "constants/_common";
-import { aboutMeDetails } from "constants/aboutMe";
+import { aboutMeBG, aboutMeDetails } from "constants/aboutMe";
 import { useDeviceType, useVisibleInViewport } from "helpers/customHooks";
 import { classNames } from "helpers/functions";
 import styles from "./AboutMe.scss";
@@ -18,14 +16,14 @@ const AboutMe: React.FC = () => {
       id={"aboutMeDivId"}
       className={styles.wrapper}
       style={{
-        background: `url(${componentBG.aboutMe}) center top / cover no-repeat fixed`,
+        background: `url(${aboutMeBG}) center top / cover no-repeat fixed`,
       }}
     >
       {deviceType !== "pc" && (
         <div
           className={styles.aboutMeBG}
           style={{
-            background: `url(${componentBG.aboutMe}) center top / cover no-repeat fixed`,
+            background: `url(${aboutMeBG}) center top / cover no-repeat fixed`,
           }}
         />
       )}
