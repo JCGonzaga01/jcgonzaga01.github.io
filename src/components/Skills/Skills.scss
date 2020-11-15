@@ -1,7 +1,7 @@
 @import "helpers/stylings/_index";
 
 .wrapper {
-  @include media-query(tl, sp) {
+  @include media-query(sp) {
     flex-direction: column;
   }
 
@@ -15,22 +15,19 @@
   }
 
   .skillsDetailsWrapper {
-    @include media-query(pc) {
-      background: rgba(10, 13, 21, 0.75);
-      border-right: 7px solid #00aeff;
-      border-top: 0;
-      padding: 30px;
-      width: 60%;
+    @include media-query(sp) {
+      background-color: #232942;
+      border-top: 7px solid #00aeff;
+      border-right: 0;
+      height: 100%;
+      padding: 30px 20px;
+      width: 100%;
     }
 
-    @include media-query(tl) {
-      padding: 30px 60px;
-    }
-
-    background-color: #232942;
-    border-top: 7px solid #00aeff;
-    height: 100%;
-    padding: 30px 20px;
+    background: rgba(10, 13, 21, 0.75);
+    border-right: 7px solid #00aeff;
+    padding: 30px;
+    width: 60%;
 
     .skillsDetails {
       color: $textDefault;
@@ -72,8 +69,6 @@
           .detail {
             @include align-center;
             @include media-query(pc) {
-              background-color: rgba(0, 0, 0, 0.75);
-              color: $textDefault;
               height: 120px;
               min-width: 200px;
             }
@@ -83,9 +78,10 @@
               min-height: 0;
             }
 
-            color: #000000;
-            background-color: $textDefault;
+            background-color: rgba(0, 0, 0, 0.75);
+            border: 1px solid $textScrolled;
             border-radius: 10px;
+            color: $textDefault;
             min-height: 100px;
             min-width: 300px;
             max-width: 300px;
@@ -96,6 +92,18 @@
             filter: invert(0.55) sepia(1) saturate(9) hue-rotate(180deg);
             height: 60px;
             width: 60px;
+          }
+        }
+      }
+
+      .custonButton {
+        & > div {
+          transition: 0.2s ease-in-out;
+
+          &:hover {
+            border: 2px solid $textScrolled;
+            color: $textScrolled;
+            transition: 0.2s ease-in-out;
           }
         }
       }

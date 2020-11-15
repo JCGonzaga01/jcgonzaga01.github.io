@@ -1,11 +1,11 @@
 @import "helpers/stylings/_index";
 
 .wrapper {
-  @include media-query(tl, sp) {
+  @include media-query(sp) {
     flex-direction: column;
   }
 
-  border-top: 1px solid #10e03a;
+  border-top: 1px solid #a951de;
   display: flex;
   justify-content: flex-end;
   width: 100vw;
@@ -16,23 +16,19 @@
   }
 
   .workExpDetailsWrapper {
-    @include media-query(pc) {
-      background: rgba(10, 13, 21, 0.75);
-      border-left: 7px solid #10e03a;
-      border-top: 0;
-      padding: 30px;
-      right: 0;
-      width: 60%;
+    @include media-query(sp) {
+      background-color: #1b2033;
+      border-top: 7px solid #a951de;
+      border-left: 0;
+      height: 100%;
+      padding: 30px 20px;
+      width: 100%;
     }
 
-    @include media-query(tl) {
-      padding: 30px 60px;
-    }
-
-    background-color: #1b2033;
-    border-top: 7px solid #10e03a;
-    height: 100%;
-    padding: 30px 20px;
+    background: rgba(10, 13, 21, 0.75);
+    border-left: 7px solid #a951de;
+    padding: 30px;
+    width: 60%;
 
     .workExpDetails {
       color: $textDefault;
@@ -45,8 +41,8 @@
         padding: 7px 0px;
 
         span {
-          border-bottom: 1px solid #10e03a;
-          border-top: 1px solid #10e03a;
+          border-bottom: 1px solid #a951de;
+          border-top: 1px solid #a951de;
           font-size: 40px;
           line-height: 50px;
           padding: 5px 10px;
@@ -62,7 +58,7 @@
 
           .detail {
             background-color: rgba(0, 0, 0, 0.75);
-            border: 1px solid $textDefault;
+            border: 1px solid #a951de;
             border-radius: 10px;
             color: $textDefault;
             margin-bottom: 10px;

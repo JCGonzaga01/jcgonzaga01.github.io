@@ -1,7 +1,7 @@
 @import "helpers/stylings/_index";
 
 .wrapper {
-  border-top: 7px solid #d4ff01;
+  border-top: 7px solid #ffb92b;
 
   .container {
     background-color: #090b13;
@@ -15,8 +15,8 @@
       text-transform: uppercase;
 
       span {
-        border-bottom: 1px solid #d4ff01;
-        border-top: 1px solid #d4ff01;
+        border-bottom: 1px solid #ffb92b;
+        border-top: 1px solid #ffb92b;
         font-size: 40px;
         line-height: 50px;
         padding: 5px 10px;
@@ -75,11 +75,6 @@
             color: $textDefault;
             font-size: 18px;
             padding: 10px 15px;
-
-            &:focus {
-              border-color: rgb(155, 241, 255);
-              box-shadow: rgb(155, 241, 255) 0px 0px 0px 2px;
-            }
           }
         }
 
@@ -110,11 +105,6 @@
           font-family: "Poppins";
           font-size: 18px;
           padding: 10px 15px;
-
-          &:focus {
-            border-color: rgb(155, 241, 255);
-            box-shadow: rgb(155, 241, 255) 0px 0px 0px 2px;
-          }
         }
       }
 
@@ -138,7 +128,7 @@
           transition: 0.2s ease-in-out;
 
           &:hover {
-            background: rgb(155, 241, 255);
+            background: #ffb92b;
           }
         }
 
@@ -146,11 +136,11 @@
           background: none;
           border: 1px solid $textDefault;
           color: $textDefault;
-          transition: border-color 0.2s ease-in-out 0s, color 0.2s ease-in-out 0s;
+          transition: 0.2s ease-in-out;
 
           &:hover {
-            border-color: rgb(155, 241, 255);
-            color: rgb(155, 241, 255);
+            border-color: #ffb92b;
+            color: #ffb92b;
           }
         }
       }

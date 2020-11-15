@@ -1,27 +1,31 @@
 import React from "react";
+import assets from "assets";
 import { Button } from "../_common";
-import { skillsBG, skillsDetails } from "constants/skills";
+import { skillsDetails } from "constants/skills";
 import { useDeviceType, useVisibleInViewport } from "helpers/customHooks";
 import { classNames } from "helpers/functions";
 import styles from "./Skills.scss";
 
 const Skills: React.FC = () => {
   const deviceType = useDeviceType();
-  const isShowDetails = useVisibleInViewport("skillsDetailsWrapperDivId", 400);
+  const isShowDetails = useVisibleInViewport(
+    "skillsDetailsWrapperDivId",
+    deviceType === "sp" ? 200 : 400
+  );
 
   return (
     <div
       id={"skillsDivId"}
       className={styles.wrapper}
       style={{
-        background: `url(${skillsBG}) center center / cover no-repeat fixed`,
+        background: `url(${assets.skillsBG}) center center / cover no-repeat fixed`,
       }}
     >
-      {deviceType !== "pc" && (
+      {deviceType === "sp" && (
         <div
           className={styles.skillsBG}
           style={{
-            background: `url(${skillsBG}) center bottom / cover no-repeat fixed`,
+            background: `url(${assets.skillsBG}) center bottom / cover no-repeat fixed`,
           }}
         />
       )}
@@ -29,7 +33,11 @@ const Skills: React.FC = () => {
         id={"skillsDetailsWrapperDivId"}
         className={classNames(
           styles.skillsDetailsWrapper,
-          deviceType === "pc" ? (isShowDetails ? styles.showDetails : styles.hideDetails) : ""
+          isShowDetails
+            ? deviceType === "sp"
+              ? styles.showFadeUp
+              : styles.showDetails
+            : styles.hideDetails
         )}
       >
         <div className={styles.skillsDetails}>
@@ -48,6 +56,7 @@ const Skills: React.FC = () => {
             </div>
           </div>
           <Button
+            className={styles.custonButton}
             handleOnClick={() => {
               alert("This section is under construction. Check back soon");
             }}

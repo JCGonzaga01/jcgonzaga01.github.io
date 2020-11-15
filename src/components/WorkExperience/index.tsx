@@ -1,13 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import assets from "assets";
-import { workExpBG, workExpDetails } from "constants/workExperience";
+import { workExpDetails } from "constants/workExperience";
 import { useDeviceType, useVisibleInViewport } from "helpers/customHooks";
 import { classNames } from "helpers/functions";
 import styles from "./WorkExperience.scss";
 
 const WorkExperience: React.FC = () => {
   const deviceType = useDeviceType();
-  const isShowDetails = useVisibleInViewport("workExpDetailsWrapperDivId", 400);
+  const isShowDetails = useVisibleInViewport(
+    "workExpDetailsWrapperDivId",
+    deviceType === "sp" ? 200 : 400
+  );
 
   const handleLinkedinClick = () => window.open(workExpDetails.linkedInURL);
 
@@ -16,14 +19,14 @@ const WorkExperience: React.FC = () => {
       id={"workExpDivId"}
       className={styles.wrapper}
       style={{
-        background: `url(${workExpBG}) center top / cover no-repeat fixed`,
+        background: `url(${assets.workExpBG}) center center / cover no-repeat fixed`,
       }}
     >
-      {deviceType !== "pc" && (
+      {deviceType === "sp" && (
         <div
           className={styles.workExpBG}
           style={{
-            background: `url(${workExpBG}) center top / cover no-repeat fixed`,
+            background: `url(${assets.workExpBG}) center center / cover no-repeat fixed`,
           }}
         />
       )}
@@ -31,7 +34,11 @@ const WorkExperience: React.FC = () => {
         id={"workExpDetailsWrapperDivId"}
         className={classNames(
           styles.workExpDetailsWrapper,
-          deviceType === "pc" ? (isShowDetails ? styles.showDetails : styles.hideDetails) : ""
+          isShowDetails
+            ? deviceType === "sp"
+              ? styles.showFadeUp
+              : styles.showDetails
+            : styles.hideDetails
         )}
       >
         <div className={styles.workExpDetails}>

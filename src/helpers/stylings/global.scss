@@ -23,3 +23,18 @@ $fontSubTitle: 30px;
 .greenBG:before {
   background-color: #87c5a4;
 }
+
+.showFadeUp {
+  animation: fadeUp 1.5s ease-in-out;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

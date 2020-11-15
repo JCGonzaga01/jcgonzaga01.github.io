@@ -1,7 +1,5 @@
 import React from "react";
-// HELPERS
 import { classNames } from "helpers/functions";
-// STYLES
 import styles from "./Spinner.module.scss";
 
 type Props = {

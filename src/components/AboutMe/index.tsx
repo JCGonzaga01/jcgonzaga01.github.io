@@ -1,6 +1,7 @@
 import React from "react";
+import assets from "assets";
 import { Button } from "../_common";
-import { aboutMeBG, aboutMeDetails } from "constants/aboutMe";
+import { aboutMeDetails } from "constants/aboutMe";
 import { useDeviceType, useVisibleInViewport } from "helpers/customHooks";
 import { classNames } from "helpers/functions";
 import styles from "./AboutMe.scss";
@@ -16,14 +17,14 @@ const AboutMe: React.FC = () => {
       id={"aboutMeDivId"}
       className={styles.wrapper}
       style={{
-        background: `url(${aboutMeBG}) center top / cover no-repeat fixed`,
+        background: `url(${assets.aboutMeBG}) center center / cover no-repeat fixed`,
       }}
     >
-      {deviceType !== "pc" && (
+      {deviceType === "sp" && (
         <div
           className={styles.aboutMeBG}
           style={{
-            background: `url(${aboutMeBG}) center top / cover no-repeat fixed`,
+            background: `url(${assets.aboutMeBG}) center top / cover no-repeat fixed`,
           }}
         />
       )}
@@ -31,7 +32,7 @@ const AboutMe: React.FC = () => {
         id={"aboutMeDetailsWrapperDivId"}
         className={classNames(
           styles.aboutMeDetailsWrapper,
-          deviceType === "pc" ? (isShowDetails ? styles.showDetails : styles.hideDetails) : ""
+          isShowDetails ? styles.showDetails : styles.hideDetails
         )}
       >
         <div className={styles.aboutMeDetails}>

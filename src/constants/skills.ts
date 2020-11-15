@@ -1,8 +1,5 @@
 import assets from "assets";
 
-export const skillsBG =
-  "https://firebasestorage.googleapis.com/v0/b/jcgonzaga01githubio.appspot.com/o/homeBG%2Fskills.jpg?alt=media&token=221713f7-721d-4ac7-83e4-a3248685dade";
-
 export const skillsDetails = {
   title: "Skills",
   details: [

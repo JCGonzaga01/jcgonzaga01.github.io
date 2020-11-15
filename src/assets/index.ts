@@ -2,6 +2,12 @@
 import jcgHeader from "./jcg_header.png";
 import jcgHeaderHover from "./jcg_header_hover.png";
 
+// BG
+import bannerBG from "./bg/banner.jpg";
+import aboutMeBG from "./bg/aboutMe.jpg";
+import skillsBG from "./bg/skills.jpg";
+import workExpBG from "./bg/workExp.jpg";
+
 // SVG
 // - Banner
 import biking from "./svg/biking.svg";
@@ -39,8 +45,14 @@ import linkedin from "./svg/linkedin.svg";
 import email from "./svg/email.svg";
 
 export default {
+  // HEADER
   jcgHeader,
   jcgHeaderHover,
+  // BG
+  bannerBG,
+  aboutMeBG,
+  skillsBG,
+  workExpBG,
   // BANNER
   biking,
   running,

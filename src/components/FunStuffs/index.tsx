@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import assets from "assets";
 import { Slider } from "../_common";
 import { travelItems } from "constants/funStuffs";
