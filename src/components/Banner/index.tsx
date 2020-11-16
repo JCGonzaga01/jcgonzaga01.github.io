@@ -28,7 +28,7 @@ const Banner: React.FC = () => {
       <div className={styles.bannerTextWrapper}>
         <div className={styles.bannerTextContainer}>
           <div>{bannerDetails.name}</div>
-          <div className={styles.description}>{bannerDetails.description}</div>
+          <div>{bannerDetails.description}</div>
           <div>
             {bannerDetails.hobbies.map((item, idx) => (
               <span key={`${idx}-${item.title}`} className={styles.textWithImage}>
