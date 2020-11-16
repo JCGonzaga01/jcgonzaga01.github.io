@@ -62,9 +62,7 @@ const Contact: React.FC = () => {
   return (
     <div id={"contactDivId"} className={styles.wrapper}>
       <div className={styles.container}>
-        <div>
-          <span>{"Contact"}</span>
-        </div>
+        <div>{"Contact"}</div>
         <div className={styles.details}>
           <form ref={formRef} onSubmit={handleOnSubmitForm}>
             <div className={styles.nameNemail}>

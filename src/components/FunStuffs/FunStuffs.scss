@@ -4,43 +4,41 @@
   border-top: 7px solid #8cff9c;
 
   .container {
+    @include align-center;
     background-color: #0c0f19;
     color: $textDefault;
-    padding-top: 30px;
+    flex-direction: column;
+    padding-top: 50px;
 
     & > :first-child {
-      @include align-center;
-      margin-bottom: 40px;
-      padding: 7px 0px;
+      border-bottom: 1px solid #8cff9c;
+      border-top: 1px solid #8cff9c;
+      font-size: 40px;
+      line-height: 50px;
+      padding: 5px 10px;
       text-transform: uppercase;
-
-      span {
-        border-bottom: 1px solid #8cff9c;
-        border-top: 1px solid #8cff9c;
-        font-size: 40px;
-        line-height: 50px;
-        padding: 5px 10px;
-      }
+      width: fit-content;
     }
 
     .details {
       @include media-query(pc) {
-        padding: 0 100px 30px;
+        padding: 0 100px 50px;
       }
 
       @include media-query(tl) {
-        padding: 0 60px 30px;
+        padding: 0 60px 50px;
       }
 
       display: flex;
       justify-content: center;
-      padding: 0 20px 30px;
-      width: 100%;
+      padding: 0 20px 50px;
+      width: 100vw;
     }
 
     .fsListWrapper {
       @include align-center;
       flex-direction: column;
+      margin-top: 40px;
 
       .fsListTitle {
         @include align-center;

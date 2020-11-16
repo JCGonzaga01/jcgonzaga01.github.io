@@ -14,9 +14,7 @@ const Projects: React.FC = () => {
   return (
     <div id={"projectsDivId"} className={styles.wrapper}>
       <div className={styles.container}>
-        <div>
-          <span>{"Projects"}</span>
-        </div>
+        <div>{"Projects"}</div>
         <div className={styles.projectsListWrapper}>
           <div id={"liveProjectsDivId"} className={styles.projectsListContainer}>
             <div>

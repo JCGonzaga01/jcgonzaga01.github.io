@@ -36,9 +36,7 @@ const AboutMe: React.FC = () => {
         )}
       >
         <div className={styles.aboutMeDetails}>
-          <div>
-            <span>{aboutMeDetails.title}</span>
-          </div>
+          <div>{aboutMeDetails.title}</div>
           <div className={styles.aboutMeListWrapper}>
             <div>
               {aboutMeDetails.details.map((item, idx) => (

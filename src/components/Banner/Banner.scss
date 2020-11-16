@@ -14,6 +14,8 @@
     width: 100%;
 
     .bannerTextContainer {
+      @include align-center;
+      flex-direction: column;
       @include media-query(pc) {
         padding: 0 100px;
       }
@@ -28,17 +30,13 @@
       text-transform: uppercase;
 
       & > :first-child {
-        @include align-center;
-
-        & > div {
-          border-bottom: 1px solid $textScrolled;
-          border-top: 1px solid $textScrolled;
-          font-size: 44px;
-          line-height: 50px;
-          margin-bottom: 10px;
-          padding: 20px;
-          width: fit-content;
-        }
+        border-bottom: 1px solid $textScrolled;
+        border-top: 1px solid $textScrolled;
+        font-size: 44px;
+        line-height: 50px;
+        margin-bottom: 10px;
+        padding: 20px;
+        width: fit-content;
       }
 
       & > :not(:first-child) {
@@ -46,6 +44,10 @@
         font-size: 20px;
         letter-spacing: 0.5px;
         line-height: 50px;
+      }
+
+      .description {
+        margin-top: 30px;
       }
 
       .textWithImage {
@@ -59,36 +61,33 @@
 
       & > :last-child {
         @include align-center;
-        margin-top: 15px;
+        border: 2px solid $textDefault;
+        color: $textDefault;
+        cursor: pointer;
+        margin: 15px auto 0;
+        padding: 0 15px;
+        transition: 0.2s ease-in-out;
+        width: fit-content;
 
-        & > div {
-          @include align-center;
-          border: 2px solid $textDefault;
-          color: $textDefault;
-          cursor: pointer;
-          padding: 0 15px;
+        &:hover {
+          border: 2px solid $textDefaultHover;
+          color: $textDefaultHover;
           transition: 0.2s ease-in-out;
 
-          &:hover {
-            border: 2px solid $textDefaultHover;
-            color: $textDefaultHover;
-            transition: 0.2s ease-in-out;
-
-            & > :last-child {
-              filter: invert(0.65) sepia(1) saturate(5) hue-rotate(175deg);
-            }
-          }
-
           & > :last-child {
-            -webkit-animation: spin 2s linear infinite;
-            animation: spin 2s linear infinite;
-            background-image: url("assets/svg/arrowDown.svg");
-            filter: invert(0.95) sepia(1) saturate(5) hue-rotate(170deg);
-            height: 25px;
-            margin-left: 10px;
-            transition: 0.2s ease-in-out;
-            width: 25px;
+            filter: invert(0.65) sepia(1) saturate(5) hue-rotate(175deg);
           }
+        }
+
+        & > :last-child {
+          -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+          background-image: url("assets/svg/arrowDown.svg");
+          filter: invert(0.95) sepia(1) saturate(5) hue-rotate(170deg);
+          height: 25px;
+          margin-left: 10px;
+          transition: 0.2s ease-in-out;
+          width: 25px;
         }
       }
     }

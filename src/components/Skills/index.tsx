@@ -41,9 +41,7 @@ const Skills: React.FC = () => {
         )}
       >
         <div className={styles.skillsDetails}>
-          <div>
-            <span>{skillsDetails.title}</span>
-          </div>
+          <div>{skillsDetails.title}</div>
           <div className={styles.skillsListWrapper}>
             <div className={styles.skillsListContainer}>
               {skillsDetails.details.map((item, idx) => (

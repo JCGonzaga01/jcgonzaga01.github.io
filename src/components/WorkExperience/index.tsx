@@ -42,9 +42,7 @@ const WorkExperience: React.FC = () => {
         )}
       >
         <div className={styles.workExpDetails}>
-          <div>
-            <span>{workExpDetails.title}</span>
-          </div>
+          <div>{workExpDetails.title}</div>
           <div className={styles.workExpListWrapper}>
             {workExpDetails.details.map((item) => (
               <div key={item.title} className={styles.workExpList}>

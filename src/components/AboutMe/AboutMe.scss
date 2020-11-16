@@ -30,30 +30,29 @@
     background: rgba(10, 13, 21, 0.75);
     border-top: 7px solid #ff8080;
     bottom: 0;
-    padding: 30px 10px;
+    padding: 50px 10px 30px;
     width: 100%;
 
     .aboutMeDetails {
+      @include align-center;
       color: $textDefault;
+      flex-direction: column;
       text-align: center;
       text-transform: uppercase;
       width: 100%;
 
       & > :first-child {
-        margin-bottom: 40px;
-        padding: 7px 0px;
-
-        span {
-          border-bottom: 1px solid #ff8080;
-          border-top: 1px solid #ff8080;
-          font-size: 40px;
-          line-height: 50px;
-          padding: 5px 10px;
-        }
+        border-bottom: 1px solid #ff8080;
+        border-top: 1px solid #ff8080;
+        font-size: 40px;
+        line-height: 50px;
+        padding: 5px 10px;
+        width: fit-content;
       }
 
       .aboutMeListWrapper {
         @include align-center;
+        margin-top: 40px;
 
         & > :first-child {
           @include align-center;
