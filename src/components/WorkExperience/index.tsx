@@ -59,7 +59,7 @@ const WorkExperience: React.FC = () => {
           </div>
           <div className={styles.linkedin}>
             <span>Click</span>
-            <a href={workExpDetails.linkedInURL} target={"_blank"}>
+            <a href={workExpDetails.linkedInURL} target={"_blank"} rel={"noreferrer"}>
               <img src={assets.linkedin} alt={"LinkedIn"} />
             </a>
             <span>for more details</span>

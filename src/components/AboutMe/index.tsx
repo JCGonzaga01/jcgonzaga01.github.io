@@ -46,7 +46,12 @@ const AboutMe: React.FC = () => {
               ))}
             </div>
           </div>
-          <a className={styles.link} href={"https://jcgonzaga01.github.io/info/"} target={"_self"}>
+          <a
+            className={styles.link}
+            href={"https://jcgonzaga01.github.io/info/"}
+            target={"_self"}
+            rel={"noreferrer"}
+          >
             <Button className={styles.custonButton} title={"Wanna know me more ?"} />
           </a>
         </div>

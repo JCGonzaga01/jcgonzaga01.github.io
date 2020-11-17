@@ -6,10 +6,10 @@ const Footer: React.FC = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.imgContainer}>
-        <a href={"https://github.com/JCGonzaga01"} target={"_blank"}>
+        <a href={"https://github.com/JCGonzaga01"} target={"_blank"} rel={"noreferrer"}>
           <img src={assets.github} alt={"Github"} />
         </a>
-        <a href={"https://www.linkedin.com/in/jc-gonzaga/"} target={"_blank"}>
+        <a href={"https://www.linkedin.com/in/jc-gonzaga/"} target={"_blank"} rel={"noreferrer"}>
           <img src={assets.linkedin} alt={"LinkedIn"} />
         </a>
         <a href={"mailto:gonzaga.jc1993@gmail.com"} target={"_blank"}>

@@ -24,6 +24,7 @@ const Projects: React.FC = () => {
                 <a
                   href={item.url}
                   target={"_blank"}
+                  rel={"noreferrer"}
                   key={`${idx}-${item.name}`}
                   className={classNames(
                     isLPVisible ? styles.projectBG : styles.hideDiv,
@@ -52,6 +53,7 @@ const Projects: React.FC = () => {
               <a
                 href={item.url}
                 target={"_blank"}
+                rel={"noreferrer"}
                 key={`${idx}-${item.name}`}
                 className={classNames(isPPVisible ? styles.projectBG : styles.hideDiv, item.color)}
                 style={{

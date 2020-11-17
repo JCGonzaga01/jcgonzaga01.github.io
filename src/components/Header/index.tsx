@@ -77,7 +77,7 @@ const Header: React.FC = () => {
       ) : (
         <div className={classNames(styles.container, isScrolled && styles.scrolled)}>
           <div className={styles.myName}>
-            <a href={"https://jcgonzaga01.github.io/"} target={"_self"}>
+            <a href={"https://jcgonzaga01.github.io/"} target={"_self"} rel={"noreferrer"}>
               <img
                 src={headerImg}
                 alt={"John Christopher Gonzaga"}
