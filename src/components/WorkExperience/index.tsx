@@ -12,8 +12,6 @@ const WorkExperience: React.FC = () => {
     deviceType === "sp" ? 200 : 400
   );
 
-  const handleLinkedinClick = () => window.open(workExpDetails.linkedInURL);
-
   return (
     <div
       id={"workExpDivId"}
@@ -61,7 +59,9 @@ const WorkExperience: React.FC = () => {
           </div>
           <div className={styles.linkedin}>
             <span>Click</span>
-            <img src={assets.linkedin} alt={"LinkedIn"} onClick={handleLinkedinClick} />
+            <a href={workExpDetails.linkedInURL} target={"_blank"}>
+              <img src={assets.linkedin} alt={"LinkedIn"} />
+            </a>
             <span>for more details</span>
           </div>
         </div>

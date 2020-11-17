@@ -39,10 +39,6 @@ const Header: React.FC = () => {
   const headerHover = (isHover: boolean) => () =>
     setheaderImg(isHover ? assets.jcgHeaderHover : assets.jcgHeader);
 
-  const handleOnClickLogo = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   const handleOnClickMenu = (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => {
     setIsMenuToggle(false);
     const key = e.currentTarget.id;
@@ -81,13 +77,14 @@ const Header: React.FC = () => {
       ) : (
         <div className={classNames(styles.container, isScrolled && styles.scrolled)}>
           <div className={styles.myName}>
-            <img
-              src={headerImg}
-              alt={"John Christopher Gonzaga"}
-              onMouseEnter={headerHover(true)}
-              onMouseLeave={headerHover(false)}
-              onClick={handleOnClickLogo}
-            />
+            <a href={"https://jcgonzaga01.github.io/"} target={"_self"}>
+              <img
+                src={headerImg}
+                alt={"John Christopher Gonzaga"}
+                onMouseEnter={headerHover(true)}
+                onMouseLeave={headerHover(false)}
+              />
+            </a>
           </div>
           {deviceType !== "pc" ? (
             <div className={styles.menuContainer} onClick={handleMenuToggle}>

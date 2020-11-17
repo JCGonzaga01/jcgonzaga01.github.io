@@ -97,14 +97,18 @@
         }
       }
 
-      .custonButton {
-        & > div {
-          transition: 0.2s ease-in-out;
+      .link {
+        text-decoration: none;
 
-          &:hover {
-            border: 2px solid $textScrolled;
-            color: $textScrolled;
+        .custonButton {
+          & > div {
             transition: 0.2s ease-in-out;
+
+            &:hover {
+              border: 2px solid $textScrolled;
+              color: $textScrolled;
+              transition: 0.2s ease-in-out;
+            }
           }
         }
       }

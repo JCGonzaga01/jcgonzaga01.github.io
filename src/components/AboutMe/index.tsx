@@ -10,8 +10,6 @@ const AboutMe: React.FC = () => {
   const deviceType = useDeviceType();
   const isShowDetails = useVisibleInViewport("aboutMeDetailsWrapperDivId", 200);
 
-  const handleOnClickKnowMeMore = () => alert("This section is currently under construction.");
-
   return (
     <div
       id={"aboutMeDivId"}
@@ -48,11 +46,9 @@ const AboutMe: React.FC = () => {
               ))}
             </div>
           </div>
-          <Button
-            className={styles.custonButton}
-            handleOnClick={handleOnClickKnowMeMore}
-            title={"Wanna know me more ?"}
-          />
+          <a className={styles.link} href={"https://jcgonzaga01.github.io/info/"} target={"_self"}>
+            <Button className={styles.custonButton} title={"Wanna know me more ?"} />
+          </a>
         </div>
       </div>
     </div>

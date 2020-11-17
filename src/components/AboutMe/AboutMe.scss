@@ -98,14 +98,18 @@
         }
       }
 
-      .custonButton {
-        & > div {
-          transition: 0.2s ease-in-out;
+      .link {
+        text-decoration: none;
 
-          &:hover {
-            border: 2px solid #ff8080;
-            color: #ff8080;
+        .custonButton {
+          & > div {
             transition: 0.2s ease-in-out;
+
+            &:hover {
+              border: 2px solid #ff8080;
+              color: #ff8080;
+              transition: 0.2s ease-in-out;
+            }
           }
         }
       }

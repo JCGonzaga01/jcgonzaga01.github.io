@@ -9,8 +9,6 @@ const Projects: React.FC = () => {
   const isLPVisible = useVisibleInViewport("liveProjectsDivId", 400);
   const isPPVisible = useVisibleInViewport("prototypeProjectsDivId", 400);
 
-  const handleProjectItemOnClick = (url: string) => () => window.open(url);
-
   return (
     <div id={"projectsDivId"} className={styles.wrapper}>
       <div className={styles.container}>
@@ -23,7 +21,9 @@ const Projects: React.FC = () => {
             </div>
             <div>
               {liveProjectItems.map((item, idx) => (
-                <div
+                <a
+                  href={item.url}
+                  target={"_blank"}
                   key={`${idx}-${item.name}`}
                   className={classNames(
                     isLPVisible ? styles.projectBG : styles.hideDiv,
@@ -33,14 +33,13 @@ const Projects: React.FC = () => {
                     background: `url(${item.bgImg}) center center / cover no-repeat`,
                     transition: `opacity 1s ease-in-out ${idx * 0.4}s`,
                   }}
-                  onClick={handleProjectItemOnClick(item.url)}
                 >
                   <div>
                     <div>{item.name}</div>
                     <hr />
                     <div>{item.description}</div>
                   </div>
-                </div>
+                </a>
               ))}
             </div>
           </div>
@@ -50,21 +49,22 @@ const Projects: React.FC = () => {
               <span>{"Prototype Projects"}</span>
             </div>
             {prototypeProjectItems.map((item, idx) => (
-              <div
+              <a
+                href={item.url}
+                target={"_blank"}
                 key={`${idx}-${item.name}`}
                 className={classNames(isPPVisible ? styles.projectBG : styles.hideDiv, item.color)}
                 style={{
                   background: `url(${item.bgImg}) center center / cover no-repeat`,
                   transition: `opacity 1s ease-in-out ${idx * 0.5}s`,
                 }}
-                onClick={handleProjectItemOnClick(item.url)}
               >
                 <div>
                   <div>{item.name}</div>
                   <hr />
                   <div>{item.description}</div>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>

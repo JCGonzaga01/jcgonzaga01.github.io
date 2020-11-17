@@ -52,8 +52,7 @@
     .myName {
       height: 60px;
 
-      & > img {
-        cursor: pointer;
+      img {
         height: 100%;
         transition: 0.25s ease-in-out;
       }

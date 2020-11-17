@@ -53,13 +53,9 @@ const Skills: React.FC = () => {
               ))}
             </div>
           </div>
-          <Button
-            className={styles.custonButton}
-            handleOnClick={() => {
-              alert("This section is under construction. Check back soon");
-            }}
-            title={"View skills rating"}
-          />
+          <a className={styles.link} href={"https://jcgonzaga01.github.io/info/"} target={"_self"}>
+            <Button className={styles.custonButton} title={"View skills rating"} />
+          </a>
         </div>
       </div>
     </div>
