@@ -11,7 +11,7 @@ export const liveProjectItems = [
   },
   {
     name: "TLCFM",
-    description: "Tokyo Lighthouse Church Filipino Ministry Website",
+    description: "Tokyo Lighthouse Church Filipino Ministry - Website",
     url: "https://tlcfm.herokuapp.com",
     color: styles.greenBG,
     bgImg:

@@ -35,7 +35,6 @@
       color: $textDefault;
       flex-direction: column;
       text-align: center;
-      text-transform: uppercase;
       width: 100%;
 
       & > :first-child {
@@ -82,7 +81,6 @@
         @include align-center;
         font-family: "Poppins";
         font-size: 16px;
-        text-transform: initial;
 
         img {
           height: 16px;

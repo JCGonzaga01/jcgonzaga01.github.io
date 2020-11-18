@@ -1,15 +1,15 @@
 import assets from "assets";
 
 export const bannerDetails = {
-  name: "John Christopher Gonzaga",
-  description: "A Web Developers who loves:",
+  name: "JOHN CHRISTOPHER GONZAGA",
+  description: "A web developer who loves:",
   hobbies: [
     {
-      title: "Biking,",
+      title: "Biking",
       icon: assets.biking,
     },
     {
-      title: "Jogging, &&",
+      title: "Jogging",
       icon: assets.running,
     },
     {

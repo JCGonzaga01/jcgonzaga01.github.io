@@ -1,7 +1,7 @@
 import assets from "assets";
 
 export const workExpDetails = {
-  title: "Work Experience",
+  title: "WORK EXPERIENCE",
   details: [
     {
       title: "Finastra",

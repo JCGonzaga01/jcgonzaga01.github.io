@@ -8,11 +8,11 @@ const FunStuffs: React.FC = () => {
   return (
     <div id={"funStuffsDivId"} className={styles.wrapper}>
       <div className={styles.container}>
-        <div>{"Fun Stuffs"}</div>
+        <div>{"FUN STUFFS"}</div>
         <div className={styles.fsListWrapper}>
           <div className={styles.fsListTitle}>
             <img src={assets.travels} alt={"Travels"} />
-            <span>{"Travels"}</span>
+            <span>{"TRAVELS"}</span>
           </div>
           <Slider className={styles.details} cardList={travelItems} animate />
         </div>

@@ -12,12 +12,12 @@ const Projects: React.FC = () => {
   return (
     <div id={"projectsDivId"} className={styles.wrapper}>
       <div className={styles.container}>
-        <div>{"Projects"}</div>
+        <div>{"PROJECTS"}</div>
         <div className={styles.projectsListWrapper}>
           <div id={"liveProjectsDivId"} className={styles.projectsListContainer}>
             <div>
               <img src={assets.live} alt={"Live Projects"} />
-              <span>{"Live Projects"}</span>
+              <span>{"LIVE PROJECTS"}</span>
             </div>
             <div>
               {liveProjectItems.map((item, idx) => (
@@ -47,7 +47,7 @@ const Projects: React.FC = () => {
           <div id={"prototypeProjectsDivId"} className={styles.projectsListContainer}>
             <div>
               <img src={assets.prototype} alt={"Prototype Projects"} />
-              <span>{"Prototype Projects"}</span>
+              <span>{"PROTOTYPE PROJECTS"}</span>
             </div>
             {prototypeProjectItems.map((item, idx) => (
               <a

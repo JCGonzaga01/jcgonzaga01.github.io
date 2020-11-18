@@ -38,7 +38,6 @@
       color: $textDefault;
       flex-direction: column;
       text-align: center;
-      text-transform: uppercase;
       width: 100%;
 
       & > :first-child {
@@ -83,6 +82,7 @@
               border: 1px solid #ff8080;
               border-radius: 10px;
               color: $textDefault;
+              letter-spacing: 1px;
               min-height: 145px;
               min-width: 250px;
               max-width: 250px;
@@ -103,6 +103,7 @@
 
         .custonButton {
           & > div {
+            text-transform: uppercase;
             transition: 0.2s ease-in-out;
 
             &:hover {

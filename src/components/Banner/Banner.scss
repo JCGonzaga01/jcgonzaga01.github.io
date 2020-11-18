@@ -27,7 +27,6 @@
       color: $textDefault;
       padding: 0 20px;
       text-align: center;
-      text-transform: uppercase;
 
       & > :first-child {
         border-bottom: 1px solid $textScrolled;
@@ -62,6 +61,7 @@
         cursor: pointer;
         margin: 15px auto 0;
         padding: 0 15px;
+        text-transform: uppercase;
         transition: 0.2s ease-in-out;
         width: fit-content;
 
