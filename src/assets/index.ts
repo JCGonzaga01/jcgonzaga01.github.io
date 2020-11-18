@@ -10,9 +10,6 @@ import workExpBG from "./bg/workExp.jpg";
 
 // SVG
 // - Banner
-import biking from "./svg/biking.svg";
-import running from "./svg/running.svg";
-import musicNote from "./svg/music-note.svg";
 import arrowDown from "./svg/arrowDown.svg";
 // - About Me
 import education from "./svg/education.svg";
@@ -34,7 +31,7 @@ import prototype from "./svg/prototype.svg";
 import leftArrow from "./svg/leftArrow.svg";
 import rightArrow from "./svg/rightArrow.svg";
 import travels from "./svg/travels.svg";
-import fs_biking from "./svg/fs_biking.svg";
+import biking from "./svg/biking.svg";
 //  - Contact
 import error from "./svg/error.svg";
 import check from "./svg/check.svg";
@@ -54,9 +51,6 @@ export default {
   skillsBG,
   workExpBG,
   // BANNER
-  biking,
-  running,
-  musicNote,
   arrowDown,
   // ABOUT ME
   guitar,
@@ -78,7 +72,7 @@ export default {
   leftArrow,
   rightArrow,
   travels,
-  fs_biking,
+  biking,
   // CONTACT
   error,
   check,

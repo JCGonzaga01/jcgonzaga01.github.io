@@ -3,6 +3,7 @@ import assets from "assets";
 import { bannerDetails } from "constants/banner";
 import { useDeviceType } from "helpers/customHooks";
 import styles from "./Banner.scss";
+import { parseInt } from "lodash";
 
 const Banner: React.FC = () => {
   const deviceType = useDeviceType();
@@ -30,10 +31,9 @@ const Banner: React.FC = () => {
           <div>{bannerDetails.name}</div>
           <div>{bannerDetails.description}</div>
           <div>
-            {bannerDetails.hobbies.map((item, idx) => (
+            {bannerDetails.list.map((item, idx) => (
               <span key={`${idx}-${item.title}`} className={styles.textWithImage}>
-                <img src={item.icon} alt={item.title} />
-                {item.title}
+                {`${item.emoji ? String.fromCodePoint(parseInt(item.emoji)) : ""} ${item.title}`}
               </span>
             ))}
           </div>

@@ -1,20 +1,21 @@
-import assets from "assets";
+// For emoji reference, kindly refer to: https://www.w3schools.com/charsets/ref_emoji.asp
+// 'emoji' field is not required
 
 export const bannerDetails = {
   name: "JOHN CHRISTOPHER GONZAGA",
-  description: "A web developer who loves:",
-  hobbies: [
+  description: "A software developer who loves doing W.E.B.",
+  list: [
     {
-      title: "Biking",
-      icon: assets.biking,
+      title: "Work",
+      emoji: "128736",
     },
     {
-      title: "Jogging",
-      icon: assets.running,
+      title: "Efficiently",
+      emoji: "128373",
     },
     {
-      title: "Playing Musical Instruments",
-      icon: assets.musicNote,
+      title: "Beyond compare",
+      emoji: "128640",
     },
   ],
 };
