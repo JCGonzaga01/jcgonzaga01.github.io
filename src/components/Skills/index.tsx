@@ -13,6 +13,8 @@ const Skills: React.FC = () => {
     deviceType === "sp" ? 200 : 400
   );
 
+  const handleOnClickBtn = () => window.localStorage.setItem("infoType", skillsDetails.key);
+
   return (
     <div
       id={"skillsDivId"}
@@ -55,9 +57,10 @@ const Skills: React.FC = () => {
           </div>
           <a
             className={styles.link}
-            href={"https://jcgonzaga01.github.io/info/"}
+            href={"/info"}
             target={"_self"}
             rel={"noreferrer"}
+            onClick={handleOnClickBtn}
           >
             <Button className={styles.custonButton} title={"View skills rating"} />
           </a>

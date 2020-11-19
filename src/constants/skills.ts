@@ -2,6 +2,7 @@ import assets from "assets";
 
 export const skillsDetails = {
   title: "SKILLS",
+  key: "skills",
   details: [
     {
       icon: assets.web,

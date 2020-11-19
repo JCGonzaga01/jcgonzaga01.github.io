@@ -2,6 +2,7 @@ import assets from "assets";
 
 export const aboutMeDetails = {
   title: "ABOUT ME",
+  key: "aboutMe",
   details: [
     {
       icon: assets.education,

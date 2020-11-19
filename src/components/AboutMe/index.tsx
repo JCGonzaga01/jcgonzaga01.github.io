@@ -10,6 +10,8 @@ const AboutMe: React.FC = () => {
   const deviceType = useDeviceType();
   const isShowDetails = useVisibleInViewport("aboutMeDetailsWrapperDivId", 200);
 
+  const handleOnClickBtn = () => window.localStorage.setItem("infoType", aboutMeDetails.key);
+
   return (
     <div
       id={"aboutMeDivId"}
@@ -48,9 +50,10 @@ const AboutMe: React.FC = () => {
           </div>
           <a
             className={styles.link}
-            href={"https://jcgonzaga01.github.io/info/"}
+            href={"/info"}
             target={"_self"}
             rel={"noreferrer"}
+            onClick={handleOnClickBtn}
           >
             <Button className={styles.custonButton} title={"Wanna know me more ?"} />
           </a>
