@@ -5,7 +5,7 @@
     flex-direction: column;
   }
 
-  border-top: 1px solid #a951de;
+  border-top: 1px solid #8cff9c;
   display: flex;
   justify-content: flex-end;
   width: 100vw;
@@ -18,7 +18,7 @@
   .workExpDetailsWrapper {
     @include media-query(sp) {
       background-color: #1b2033;
-      border-top: 7px solid #a951de;
+      border-top: 7px solid #8cff9c;
       border-left: 0;
       height: 100%;
       padding: 50px 20px 30px;
@@ -26,7 +26,7 @@
     }
 
     background: rgba(10, 13, 21, 0.75);
-    border-left: 7px solid #a951de;
+    border-left: 7px solid #8cff9c;
     padding: 50px 30px 30px;
     width: 60%;
 
@@ -38,8 +38,8 @@
       width: 100%;
 
       & > :first-child {
-        border-bottom: 1px solid #a951de;
-        border-top: 1px solid #a951de;
+        border-bottom: 1px solid #8cff9c;
+        border-top: 1px solid #8cff9c;
         font-size: 40px;
         line-height: 50px;
         padding: 5px 10px;
@@ -58,7 +58,7 @@
 
           .detail {
             background-color: rgba(0, 0, 0, 0.75);
-            border: 1px solid #a951de;
+            border: 1px solid #8cff9c;
             border-radius: 10px;
             color: $textDefault;
             margin-bottom: 10px;

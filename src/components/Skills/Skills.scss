@@ -5,7 +5,7 @@
     flex-direction: column;
   }
 
-  border-top: 1px solid #00aeff;
+  border-top: 1px solid #0083ff;
   display: flex;
   width: 100vw;
 
@@ -17,7 +17,7 @@
   .skillsDetailsWrapper {
     @include media-query(sp) {
       background-color: #232942;
-      border-top: 7px solid #00aeff;
+      border-top: 7px solid #0083ff;
       border-right: 0;
       height: 100%;
       padding: 50px 20px 30px;
@@ -25,7 +25,7 @@
     }
 
     background: rgba(10, 13, 21, 0.75);
-    border-right: 7px solid #00aeff;
+    border-right: 7px solid #0083ff;
     padding: 50px 30px 30px;
     width: 60%;
 
@@ -37,8 +37,8 @@
       width: 100%;
 
       & > :first-child {
-        border-bottom: 1px solid $textScrolled;
-        border-top: 1px solid $textScrolled;
+        border-bottom: 1px solid #0083ff;
+        border-top: 1px solid #0083ff;
         font-size: 40px;
         line-height: 50px;
         padding: 5px 10px;
@@ -79,7 +79,7 @@
             }
 
             background-color: rgba(0, 0, 0, 0.75);
-            border: 1px solid $textScrolled;
+            border: 1px solid #0083ff;
             border-radius: 10px;
             color: $textDefault;
             min-height: 100px;
@@ -89,7 +89,7 @@
           }
 
           img {
-            filter: invert(0.55) sepia(1) saturate(9) hue-rotate(180deg);
+            filter: invert(0.4) sepia(1) saturate(20) hue-rotate(199deg);
             height: 60px;
             width: 60px;
           }
@@ -105,8 +105,8 @@
             transition: 0.2s ease-in-out;
 
             &:hover {
-              border: 2px solid $textScrolled;
-              color: $textScrolled;
+              border: 2px solid #0083ff;
+              color: #0083ff;
               transition: 0.2s ease-in-out;
             }
           }

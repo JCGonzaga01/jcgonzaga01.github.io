@@ -54,7 +54,7 @@ const Slider: React.FC<Props> = ({ className = "", cardList, animate = false }) 
 
   return (
     <div className={classNames(className, styles.wrapper)}>
-      <div className={classNames(styles.leftBtn, styles.arrowBtn)} onClick={handleOnClickLeftBtn}>
+      <div className={styles.arrowBtn} onClick={handleOnClickLeftBtn}>
         <img src={assets.leftArrow} alt={"Left Button"} />
       </div>
       <div className={styles.leftBtnShadow} />
@@ -78,7 +78,7 @@ const Slider: React.FC<Props> = ({ className = "", cardList, animate = false }) 
         </div>
       </div>
       <div className={styles.rightBtnShadow} />
-      <div className={classNames(styles.rightBtn, styles.arrowBtn)} onClick={handleOnClickRightBtn}>
+      <div className={styles.arrowBtn} onClick={handleOnClickRightBtn}>
         <img src={assets.rightArrow} alt={"Right Button"} />
       </div>
     </div>
