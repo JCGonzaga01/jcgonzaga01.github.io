@@ -45,10 +45,13 @@
           }
         }
 
-        & > :last-child {
+        .projectItems {
           @include media-query(pc, tl) {
             @include align-center;
+            flex-wrap: wrap;
+            max-width: 1500px;
           }
+
           height: 100%;
           width: 100%;
         }

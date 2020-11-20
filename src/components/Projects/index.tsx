@@ -19,7 +19,7 @@ const Projects: React.FC = () => {
               <img src={assets.live} alt={"Live Projects"} />
               <span>{"LIVE PROJECTS"}</span>
             </div>
-            <div>
+            <div className={styles.projectItems}>
               {liveProjectItems.map((item, idx) => (
                 <a
                   href={item.url}
@@ -49,25 +49,30 @@ const Projects: React.FC = () => {
               <img src={assets.prototype} alt={"Prototype Projects"} />
               <span>{"PROTOTYPE PROJECTS"}</span>
             </div>
-            {prototypeProjectItems.map((item, idx) => (
-              <a
-                href={item.url}
-                target={"_blank"}
-                rel={"noreferrer"}
-                key={`${idx}-${item.name}`}
-                className={classNames(isPPVisible ? styles.projectBG : styles.hideDiv, item.color)}
-                style={{
-                  background: `url(${item.bgImg}) center center / cover no-repeat`,
-                  transition: `opacity 1s ease-in-out ${idx * 0.5}s`,
-                }}
-              >
-                <div>
-                  <div>{item.name}</div>
-                  <hr />
-                  <div>{item.description}</div>
-                </div>
-              </a>
-            ))}
+            <div className={styles.projectItems}>
+              {prototypeProjectItems.map((item, idx) => (
+                <a
+                  href={item.url}
+                  target={"_blank"}
+                  rel={"noreferrer"}
+                  key={`${idx}-${item.name}`}
+                  className={classNames(
+                    isPPVisible ? styles.projectBG : styles.hideDiv,
+                    item.color
+                  )}
+                  style={{
+                    background: `url(${item.bgImg}) center center / cover no-repeat`,
+                    transition: `opacity 1s ease-in-out ${idx * 0.5}s`,
+                  }}
+                >
+                  <div>
+                    <div>{item.name}</div>
+                    <hr />
+                    <div>{item.description}</div>
+                  </div>
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>
