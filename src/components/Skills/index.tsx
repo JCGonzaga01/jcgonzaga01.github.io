@@ -20,14 +20,16 @@ const Skills: React.FC = () => {
       id={"skillsDivId"}
       className={styles.wrapper}
       style={{
-        background: `url(${assets.skillsBG}) center center / cover no-repeat fixed`,
+        background: `url(${assets.skillsBG}) center center / cover no-repeat`,
+        // Parallex is not supported in tl and sp
+        backgroundAttachment: deviceType === "pc" ? "fixed" : "initial",
       }}
     >
       {deviceType === "sp" && (
         <div
           className={styles.skillsBG}
           style={{
-            background: `url(${assets.skillsBG}) center bottom / cover no-repeat fixed`,
+            background: `url(${assets.skillsBG}) center bottom / cover no-repeat`,
           }}
         />
       )}
