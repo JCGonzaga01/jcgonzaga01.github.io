@@ -1,6 +1,6 @@
 // HEADER
-import jcgHeader from "./jcg_header.png";
-import jcgHeaderHover from "./jcg_header_hover.png";
+import headerLogo from "./header.png";
+import headerLogoHover from "./header_hover.png";
 
 // BG
 import bannerBG from "./bg/banner.jpg";
@@ -43,8 +43,8 @@ import email from "./svg/email.svg";
 
 export default {
   // HEADER
-  jcgHeader,
-  jcgHeaderHover,
+  headerLogo,
+  headerLogoHover,
   // BG
   bannerBG,
   aboutMeBG,

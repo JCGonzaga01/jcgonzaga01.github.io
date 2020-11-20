@@ -16,11 +16,15 @@ const AboutMe: React.FC = () => {
     <div
       id={"aboutMeDivId"}
       className={styles.wrapper}
-      style={{
-        background: `url(${assets.aboutMeBG}) center center / cover no-repeat`,
-        // Parallex is not supported in tl and sp
-        backgroundAttachment: deviceType === "pc" ? "fixed" : "initial",
-      }}
+      style={
+        deviceType !== "sp"
+          ? {
+              background: `url(${assets.aboutMeBG}) left center / cover no-repeat`,
+              // Parallex is not supported in tl and sp
+              backgroundAttachment: deviceType === "pc" ? "fixed" : "initial",
+            }
+          : { backgroundColor: "#6375A6" }
+      }
     >
       {deviceType === "sp" && (
         <div

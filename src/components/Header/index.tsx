@@ -10,7 +10,7 @@ const Header: React.FC = () => {
   const [curDivViewPort, setCurDivViewPort] = useState("home");
   const [isMenuToggle, setIsMenuToggle] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [headerImg, setheaderImg] = useState(assets.jcgHeader);
+  const [headerImg, setheaderImg] = useState(assets.headerLogo);
 
   useEffect(() => {
     const scrolling = () => {
@@ -37,7 +37,7 @@ const Header: React.FC = () => {
   const handleMenuToggle = () => setIsMenuToggle(!isMenuToggle);
 
   const headerHover = (isHover: boolean) => () =>
-    setheaderImg(isHover ? assets.jcgHeaderHover : assets.jcgHeader);
+    setheaderImg(isHover ? assets.headerLogoHover : assets.headerLogo);
 
   const handleOnClickMenu = (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => {
     setIsMenuToggle(false);

@@ -31,7 +31,6 @@ export const prototypeProjectItems = [
   {
     name: "jcTV",
     description: "A Video on Demand application",
-    // url: "https://jctv-me.web.app",
     url: "https://github.com/JCGonzaga01/jcTV",
     color: styles.orangeBG,
     bgImg:

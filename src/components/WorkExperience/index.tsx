@@ -16,11 +16,15 @@ const WorkExperience: React.FC = () => {
     <div
       id={"workExpDivId"}
       className={styles.wrapper}
-      style={{
-        background: `url(${assets.workExpBG}) left center / cover no-repeat`,
-        // Parallex is not supported in tl and sp
-        backgroundAttachment: deviceType === "pc" ? "fixed" : "initial",
-      }}
+      style={
+        deviceType !== "sp"
+          ? {
+              background: `url(${assets.workExpBG}) left center / cover no-repeat`,
+              // Parallex is not supported in tl and sp
+              backgroundAttachment: deviceType === "pc" ? "fixed" : "initial",
+            }
+          : { backgroundColor: "#4B9FBC" }
+      }
     >
       {deviceType === "sp" && (
         <div
