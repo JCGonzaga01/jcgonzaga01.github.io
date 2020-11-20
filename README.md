@@ -6,7 +6,7 @@ I built this website not just to create a portfolio of my projects but also to h
 
 #### Note when adapting this project
 
-If you happen to encounter some not so non-programmer friendly configuration upon following the below instructions, kindly drop me a message using the **_Contact_** section of [my personal website](https://jcgonzaga01.github.io/) or send me an email at [my personal email](mailto:gonzaga.jc1993@gmail.com).
+If you happen to encounter some not so non-programmer friendly configuration upon following the below instructions, kindly drop me a message using the **_Contact_** section of [my personal website](https://jcgonzaga01.github.io/) or send me an email at [my personal email](mailto:gonzaga.jc1993@gmail.com) or file an issue ticket in this repo.
 
 ## Project Structure
 
