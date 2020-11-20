@@ -65,12 +65,12 @@ Most of the data displayed in this project was already centralized into one loca
 
    - Go to `src/assets/workExp` folder
    - Delete the existing images here and paste here all your company logo images.
-   - Then, open `src/assets/index.ts` and find all `Work Experience` comment and update the import and the declaration to your new company image name.
-   - Finally, at the `src/constants/workExperience.ts`, make sure you use the correct declared image name as your icon in the _details > icon_ property.
+   - Then, open `src/assets/index.ts` and find all `Work Experience` comment and update the import and the export images to your new company image name.
+   - Finally, at the `src/constants/workExperience.ts`, make sure you use the correct exported image name as your icon in the **details > icon** property.
 
-5. For the **Projects** and the **FunStuffs > Travel** images, you can either point it to url or you can do the same process with **Work Experience** in updating the company logo by using the `assets` folder.
+5. For the **Projects** and the **FunStuffs > Travel** images, you can either point it to url or you can do the same process with **Work Experience** in updating the company logo by using the `assets` folder and then export those images so you can import it back to `projects.ts` or `funStuffs.ts`.
 
-6. For the **Contact** section, I currently use the firebase messaging in here. This is quite complicated for non-programmers. For now, kindly comment out or remove the declaration temporarily of the `<Contact / >` at `src/components/App/index/tsx` until I updated this instruction to include on how to set-up firebase messaging. Or you can update this now with your own messaging implementation.
+6. For the **Contact** section, I currently use the firebase messaging in here. This is quite complicated for non-programmers. For now, kindly comment out or remove the declaration temporarily of the `<Contact / >` at `src/components/App/index/tsx` until I update this instruction to include on how to set-up firebase messaging. Or you can update this component now with your own messaging implementation.
 
 ## Build and Deploy
 
@@ -80,7 +80,7 @@ Most of the data displayed in this project was already centralized into one loca
 yarn build
 ```
 
-2. If you happen to fork this repository, you auto deploy this project to your github repo by running the below command.
+2. If you happen to fork this repository, you can auto deploy this project to your github repo by running the below command.
 
 ```bash
 yarn deploy
