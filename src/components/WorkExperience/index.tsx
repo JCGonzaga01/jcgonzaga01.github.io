@@ -17,14 +17,14 @@ const WorkExperience: React.FC = () => {
       id={"workExpDivId"}
       className={styles.wrapper}
       style={{
-        background: `url(${assets.workExpBG}) center center / cover no-repeat fixed`,
+        background: `url(${assets.workExpBG}) left center / cover no-repeat fixed`,
       }}
     >
       {deviceType === "sp" && (
         <div
           className={styles.workExpBG}
           style={{
-            background: `url(${assets.workExpBG}) center center / cover no-repeat fixed`,
+            background: `url(${assets.workExpBG}) left center / cover no-repeat fixed`,
           }}
         />
       )}
