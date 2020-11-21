@@ -4,7 +4,7 @@
 
 I built this website not just to create a portfolio of my projects but also to help others, especially non-programmers, in creating and building their own website. The project itself is built to be easily modifiable so even you don't know much about web development, you can still use this project as your template in building one.
 
-#### Note when adapting this project
+#### Note when adapting using this project as your template
 
 If you happen to encounter some not so non-programmer friendly configuration upon following the below instructions, kindly drop me a message using the **_Contact_** section of [my personal website](https://jcgonzaga01.github.io/) or send me an email at [my personal email](mailto:gonzaga.jc1993@gmail.com) or file an issue ticket in this repo.
 
@@ -70,7 +70,7 @@ Most of the data displayed in this project was already centralized into one loca
 
 5. For the **Projects** and the **FunStuffs > Travel** images, you can either point it to url or you can do the same process with **Work Experience** in updating the company logo by using the `assets` folder and then export those images so you can import it back to `projects.ts` or `funStuffs.ts`.
 
-6. For the **Contact** section, I currently use the firebase messaging in here. This is quite complicated for non-programmers. For now, kindly comment out or remove the declaration temporarily of the `<Contact / >` at `src/components/App/index/tsx` until I update this instruction to include on how to set-up firebase messaging. Or you can update this component now with your own messaging implementation.
+6. **Contact** section is under constructions
 
 ## Build and Deploy
 
