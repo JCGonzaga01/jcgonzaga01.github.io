@@ -1,79 +1,54 @@
 import React from "react";
-import assets from "assets";
-import { liveProjectItems, prototypeProjectItems } from "constants/project";
+import { projectDetails } from "constants/project";
 import { useVisibleInViewport } from "helpers/customHooks";
 import { classNames } from "helpers/functions";
 import styles from "./Projects.scss";
 
 const Projects: React.FC = () => {
-  const isLPVisible = useVisibleInViewport("liveProjectsDivId", 400);
-  const isPPVisible = useVisibleInViewport("prototypeProjectsDivId", 400);
-
   return (
     <div id={"projectsDivId"} className={styles.wrapper}>
       <div className={styles.container}>
-        <div>{"PROJECTS"}</div>
+        <div>{projectDetails.title}</div>
         <div className={styles.projectsListWrapper}>
-          <div id={"liveProjectsDivId"} className={styles.projectsListContainer}>
-            <div>
-              <img src={assets.live} alt={"Live Projects"} />
-              <span>{"LIVE PROJECTS"}</span>
-            </div>
-            <div className={styles.projectItems}>
-              {liveProjectItems.map((item, idx) => (
-                <a
-                  href={item.url}
-                  target={"_blank"}
-                  rel={"noreferrer"}
-                  key={`${idx}-${item.name}`}
-                  className={classNames(
-                    isLPVisible ? styles.projectBG : styles.hideDiv,
-                    item.color
-                  )}
-                  style={{
-                    background: `url(${item.bgImg}) center center / cover no-repeat`,
-                    transition: `opacity 1s ease-in-out ${idx * 0.4}s`,
-                  }}
-                >
-                  <div>
-                    <div>{item.name}</div>
-                    <hr />
-                    <div>{item.description}</div>
-                  </div>
-                </a>
-              ))}
-            </div>
-          </div>
-          <div id={"prototypeProjectsDivId"} className={styles.projectsListContainer}>
-            <div>
-              <img src={assets.prototype} alt={"Prototype Projects"} />
-              <span>{"PROTOTYPE PROJECTS"}</span>
-            </div>
-            <div className={styles.projectItems}>
-              {prototypeProjectItems.map((item, idx) => (
-                <a
-                  href={item.url}
-                  target={"_blank"}
-                  rel={"noreferrer"}
-                  key={`${idx}-${item.name}`}
-                  className={classNames(
-                    isPPVisible ? styles.projectBG : styles.hideDiv,
-                    item.color
-                  )}
-                  style={{
-                    background: `url(${item.bgImg}) center center / cover no-repeat`,
-                    transition: `opacity 1s ease-in-out ${idx * 0.5}s`,
-                  }}
-                >
-                  <div>
-                    <div>{item.name}</div>
-                    <hr />
-                    <div>{item.description}</div>
-                  </div>
-                </a>
-              ))}
-            </div>
-          </div>
+          {projectDetails.details.map((project) => {
+            const isElementVisible = useVisibleInViewport(project.elementId, 400);
+            return (
+              <div
+                key={project.elementId}
+                id={project.elementId}
+                className={styles.projectsListContainer}
+              >
+                <div>
+                  <img src={project.icon} alt={project.name} />
+                  <span>{project.name}</span>
+                </div>
+                <div className={styles.projectItems}>
+                  {project.items.map((item, idx) => (
+                    <a
+                      href={item.url}
+                      target={item.target}
+                      rel={"noreferrer"}
+                      key={`${idx}-${item.name}`}
+                      className={classNames(
+                        isElementVisible ? styles.projectBG : styles.hideDiv,
+                        item.color
+                      )}
+                      style={{
+                        background: `url(${item.bgImg}) center center / cover no-repeat`,
+                        transition: `opacity 1s ease-in-out ${idx * 0.4}s`,
+                      }}
+                    >
+                      <div>
+                        <div>{item.name}</div>
+                        <hr />
+                        <div>{item.description}</div>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>

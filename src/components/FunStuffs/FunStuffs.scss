@@ -1,7 +1,7 @@
 @import "helpers/stylings/_index";
 
 .wrapper {
-  border-top: 7px solid #009688;
+  border-top: 7px solid #00b781;
 
   .container {
     @include align-center;
@@ -11,8 +11,8 @@
     padding-top: 50px;
 
     & > :first-child {
-      border-bottom: 1px solid #009688;
-      border-top: 1px solid #009688;
+      border-bottom: 1px solid #00b781;
+      border-top: 1px solid #00b781;
       font-size: 40px;
       line-height: 50px;
       padding: 5px 10px;

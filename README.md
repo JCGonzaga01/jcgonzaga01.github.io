@@ -1,12 +1,16 @@
 # [ON-GOING] My Personal Website
 
+Remaining Items:
+
+1. FunStuffs Page > Travels's Gallery Page
+
 ## Project Overview
 
-I built this website not just to create a portfolio of my projects but also to help others, especially non-programmers, in creating and building their own website. The project itself is built to be easily modifiable so even you don't know much about web development, you can still use this project as your template in building one.
+The project was built to be easily modifiable so even you don't know much about Javascript or ReactJS, you can still use this project as your template in building your own personal website.
 
-#### Note when adapting using this project as your template
+#### Note when using this project as your template
 
-If you happen to encounter some not so non-programmer friendly configuration upon following the below instructions, kindly drop me a message using the **_Contact_** section of [my personal website](https://jcgonzaga01.github.io/) or send me an email at [my personal email](mailto:gonzaga.jc1993@gmail.com) or file an issue ticket in this repo.
+If you happen to encounter some not so programmer friendly configuration upon following the below instructions, kindly send me an email at [my personal email](mailto:gonzaga.jc1993@gmail.com) or file an issue ticket in this repo.
 
 ## Project Structure
 
@@ -27,7 +31,7 @@ Make sure you have installed the ff. in your local machine:
 2.  [NodeJS](https://nodejs.org/en/download/)
 3.  [Yarn](https://classic.yarnpkg.com/en/docs/install/#mac-stable)
 
-## How to set up?
+## How to set up the project?
 
 You may wish to fork this repository or remove my remote origin and add your own. Go [here](https://help.github.com/articles/changing-a-remote-s-url/) for more information on how to change remotes.
 
@@ -41,7 +45,7 @@ cd [YOUR_PREFERRED_REPO_NAME]
 yarn install
 ```
 
-2. Once installed, run the following command to build the react application and serve it with hot module reloading:
+2. Once installed, run the following command to build the application and serve it with hot module reloading:
 
 ```bash
 yarn dev
@@ -53,50 +57,48 @@ This completes the set up instructions. Please continue reading below to learn o
 
 ## Checklist
 
-Most of the data displayed in this project was already centralized into one location `src/constants`.
-
 1. Start by changing the Logo of this site, go to `src/assets` folder then update `header.png` and `header_hover.png` to your own logo.
 
-2. All information of this website was already centralized to ease the modification. You can see the centralized information in `src/constants`. Kindly update each constant files in this folder to your own information except the `src/constants/_common` file.
+2. All the informations and data displayed in this website was already centralized to ease the modification. You can see the centralized information at `src/constants` folder. Kindly update each constant files in this folder to your own information except the `src/constants/_common` file.
 
-3. To update the background image per section, kindly go to `src/assets/bg` and update all images in here. **NOTE** Make sure to use the same image file name to avoid issues.
+3. To update the background image per section, kindly go to `src/assets/bg` and update all images in here. **\*Note:** Make sure to use the same image file name to avoid issues.\*
 
-4. To update the **Work Experience** image per company, kindly do the following:
+4. To update the **Work Experience**, **Projects** && **FunStuffs** images, you can save all your own images at the assets folder and export it using the `src/assets/index.ts` file or assign the image URL directly to their respective constant file.
 
-   - Go to `src/assets/workExp` folder
-   - Delete the existing images here and paste here all your company logo images.
-   - Then, open `src/assets/index.ts` and find all `Work Experience` comment and update the import and the export images to your new company image name.
-   - Finally, at the `src/constants/workExperience.ts`, make sure you use the correct exported image name as your icon in the **details > icon** property.
+### Notes:
 
-5. For the **Projects** and the **FunStuffs > Travel** images, you can either point it to url or you can do the same process with **Work Experience** in updating the company logo by using the `assets` folder and then export those images so you can import it back to `projects.ts` or `funStuffs.ts`.
-
-6. **Contact** section is under constructions
+1. To make the **About Me** and **Skill** page button work, you can either point the url of this page to your own aboutme/skill page implementation OR you can check and fork my [info](https://github.com/JCGonzaga01/info) page implementation for this.
 
 ## Build and Deploy
 
-1. To build the project, run the below command.
+1. To build the project, just run the below command.
 
 ```bash
 yarn build
 ```
 
-2. If you happen to fork this repository, you can auto deploy this project to your github repo by running the below command.
+2. If you fork this repository in your own github account and wants to deploy it in github hosting, you can just run the below command to auto deploy and host your project.
 
 ```bash
 yarn deploy
 ```
 
-This will create new git branch named `gh-pages`.
-To know more on how to host repo project in Github, kindly read this [article](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) for more information.
+Running the above command will create new git branch named `gh-pages`.
+To know more on how to host repo project in Github properly, kindly read this [article](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) for more information.
 
 ## Acknowledgements
 
-- Special thanks to the following site in my providing my resources:
+1. Special thanks to the following sites in providing my resources:
 
-  - [FlatIcon](https://www.flaticon.com/) for my icons.
-  - [Unsplash](https://unsplash.com/) for my background images.
+- [FlatIcon](https://www.flaticon.com/) for my icons.
+- [Unsplash](https://unsplash.com/) for my background images.
 
-- Template was based on [Landed](https://html5up.net/landed) by [@ajlkn](https://github.com/ajlkn)
+2. Template was based on [Landed](https://html5up.net/landed) by [@ajlkn](https://github.com/ajlkn)
+
+## Reminder
+
+- Please don't forget to send love and support by giving star to this project.
+- If you encounter some issues or would like to add some enhancement, never hesitate to file an issue ticket and send PR.
 
 ## License
 

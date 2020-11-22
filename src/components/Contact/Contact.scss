@@ -1,144 +1,39 @@
 @import "helpers/stylings/_index";
 
 .wrapper {
-  border-top: 7px solid #ffb92b;
+  @include align-center;
+  @include media-query(pc) {
+    padding: 30px 100px 60px;
+  }
 
-  .container {
+  @include media-query(tl) {
+    padding: 30px 60px 60px;
+  }
+
+  background-color: #05060a;
+  border-top: 7px solid #709bc3;
+  color: $textDefault;
+  flex-direction: column;
+  padding: 30px 20px 60px;
+
+  .title {
+    border-bottom: 1px solid #709bc3;
+    border-top: 1px solid #709bc3;
+    font-size: 40px;
+    margin-bottom: 40px;
+    padding: 5px 10px;
+  }
+
+  .content {
     @include align-center;
-    background-color: #090b13;
-    color: $textDefault;
     flex-direction: column;
-    padding: 50px 0 30px;
+    font-family: "Poppins";
+    font-size: 20px;
+    max-width: 550px;
+    text-align: center;
 
-    & > :first-child {
-      border-bottom: 1px solid #ffb92b;
-      border-top: 1px solid #ffb92b;
-      font-size: 40px;
-      line-height: 50px;
-      padding: 5px 10px;
-      width: fit-content;
-    }
-
-    .details {
-      @include align-center;
-      @include media-query(pc) {
-        padding: 30px 100px;
-      }
-
-      @include media-query(tl) {
-        padding: 30px 60px;
-      }
-
-      flex-direction: column;
-      font-family: "Poppins";
-      margin-top: 20px;
-      padding: 30px 20px;
-      width: 100%;
-
-      form {
-        max-width: 900px;
-        width: 100%;
-      }
-
-      .nameNemail {
-        @include media-query(sp) {
-          flex-direction: column;
-        }
-
-        display: flex;
-
-        & > :first-child {
-          @include media-query(pc, tl) {
-            margin-right: 20px;
-          }
-        }
-
-        .textField {
-          display: flex;
-          flex-direction: column;
-          margin-bottom: 20px;
-          width: 100%;
-
-          span {
-            font-size: 20px;
-            margin-bottom: 20px;
-          }
-
-          input {
-            background: #1b2133;
-            border-color: #242b43;
-            border-style: double;
-            color: $textDefault;
-            font-size: 18px;
-            padding: 10px 15px;
-          }
-        }
-
-        .invalidEmailField {
-          transition: border-color 0.2s ease-in-out 0s, box-shadow 0.2s ease-in-out 0s;
-          border-color: #ce6d6d;
-          box-shadow: #c55454 0px 0px 0px 2px;
-        }
-      }
-
-      .message {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 20px;
-        width: 100%;
-
-        span {
-          font-size: 20px;
-          margin-bottom: 20px;
-        }
-
-        textarea {
-          background: #1b2133;
-          border-color: #242b43;
-          border-style: double;
-          color: $textDefault;
-          font-family: "Poppins";
-          font-size: 18px;
-          padding: 10px 15px;
-        }
-      }
-
-      .btnContainer {
-        @include align-center;
-
-        .btnStyle {
-          border-radius: 2px;
-          cursor: pointer;
-          font-size: 15px;
-          margin-right: 20px;
-          letter-spacing: 1px;
-          padding: 15px 20px;
-          text-transform: uppercase;
-        }
-
-        & > :first-child {
-          background: $textDefault;
-          border-style: none;
-          color: #090b14;
-          transition: 0.2s ease-in-out;
-
-          &:hover {
-            background: #ffb92b;
-          }
-        }
-
-        & > :last-child {
-          background: none;
-          border: 1px solid $textDefault;
-          color: $textDefault;
-          transition: 0.2s ease-in-out;
-
-          &:hover {
-            border-color: #ffb92b;
-            color: #ffb92b;
-          }
-        }
-      }
+    a {
+      color: $textScrolled;
     }
   }
 }

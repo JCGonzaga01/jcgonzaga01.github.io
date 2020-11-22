@@ -1,7 +1,7 @@
 @import "helpers/stylings/_index";
 
 .wrapper {
-  border-top: 7px solid #a951de;
+  border-top: 7px solid #9b75ff;
 
   .container {
     @include align-center;
@@ -12,8 +12,8 @@
     text-align: center;
 
     & > :first-child {
-      border-bottom: 1px solid #a951de;
-      border-top: 1px solid #a951de;
+      border-bottom: 1px solid #9b75ff;
+      border-top: 1px solid #9b75ff;
       font-size: 40px;
       line-height: 50px;
       padding: 5px 10px;
@@ -38,7 +38,7 @@
           margin-bottom: 20px;
 
           img {
-            filter: invert(0.5) sepia(1) saturate(20) hue-rotate(230deg);
+            filter: invert(0.5) sepia(1) saturate(20) hue-rotate(220deg);
             height: 80px;
             margin-bottom: 10px;
             width: 80px;

@@ -2,6 +2,7 @@ import assets from "assets";
 
 export const workExpDetails = {
   title: "WORK EXPERIENCE",
+  linkedInURL: "https://www.linkedin.com/in/jc-gonzaga/",
   details: [
     {
       title: "Finastra",
@@ -42,5 +43,4 @@ export const workExpDetails = {
       ],
     },
   ],
-  linkedInURL: "https://www.linkedin.com/in/jc-gonzaga/",
 };
