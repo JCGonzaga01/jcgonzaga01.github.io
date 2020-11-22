@@ -54,7 +54,10 @@
 
       img {
         height: 100%;
-        transition: 0.25s ease-in-out;
+
+        &:hover {
+          filter: invert(0.4) sepia(1) saturate(15) hue-rotate(180deg);
+        }
       }
     }
 

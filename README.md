@@ -1,8 +1,8 @@
 # [ON-GOING] My Personal Website
 
-Remaining Items:
+Remaining Item:
 
-1. FunStuffs Page > Travels's Gallery Page
+1. FunStuffs Page > Travel's Gallery Page
 
 ## Project Overview
 
@@ -57,17 +57,17 @@ This completes the set up instructions. Please continue reading below to learn o
 
 ## Checklist
 
-1. Start by changing the Logo of this site, go to `src/assets` folder then update `header.png` and `header_hover.png` to your own logo.
+1. Start by changing the Logo of this site, go to `src/assets` folder then update `headerLogo.png` to your own logo.
 
-2. All the informations and data displayed in this website was already centralized to ease the modification. You can see the centralized information at `src/constants` folder. Kindly update each constant files in this folder to your own information except the `src/constants/_common` file.
+2. All the informations and data displayed in this website were already centralized to ease the modification. You can see the centralized information at `src/constants` folder. Kindly update each constant files in this folder to your own information except the `src/constants/_common` file.
 
-3. To update the background image per section, kindly go to `src/assets/bg` and update all images in here. **\*Note:** Make sure to use the same image file name to avoid issues.\*
+3. To update the background image per section, kindly go to `src/assets/bg` and update all images in here. **Note:** Make sure to use the same image file name to avoid issues.
 
-4. To update the **Work Experience**, **Projects** && **FunStuffs** images, you can save all your own images at the assets folder and export it using the `src/assets/index.ts` file or assign the image URL directly to their respective constant file.
+4. To update the **Work Experience**, **Projects** && **FunStuffs** images, you can save all your own images to the assets folder and export it using the `src/assets/index.ts` file or assign the image URL directly to their respective constant file.
 
 ### Notes:
 
-1. To make the **About Me** and **Skill** page button work, you can either point the url of this page to your own aboutme/skill page implementation OR you can check and fork my [info](https://github.com/JCGonzaga01/info) page implementation for this.
+1. To make the **About Me** and **Skill** page button work, you can either point the url of this button page to your own aboutme/skill page implementation OR you can check and fork my [info](https://github.com/JCGonzaga01/info) page implementation for this.
 
 ## Build and Deploy
 

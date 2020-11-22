@@ -10,7 +10,6 @@ const Header: React.FC = () => {
   const [curDivViewPort, setCurDivViewPort] = useState("home");
   const [isMenuToggle, setIsMenuToggle] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [headerImg, setheaderImg] = useState(assets.headerLogo);
 
   useEffect(() => {
     const scrolling = () => {
@@ -35,9 +34,6 @@ const Header: React.FC = () => {
   }, []);
 
   const handleMenuToggle = () => setIsMenuToggle(!isMenuToggle);
-
-  const headerHover = (isHover: boolean) => () =>
-    setheaderImg(isHover ? assets.headerLogoHover : assets.headerLogo);
 
   const handleOnClickMenu = (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => {
     setIsMenuToggle(false);
@@ -77,13 +73,8 @@ const Header: React.FC = () => {
       ) : (
         <div className={classNames(styles.container, isScrolled && styles.scrolled)}>
           <div className={styles.myName}>
-            <a href={"https://jcgonzaga01.github.io/"} target={"_self"} rel={"noreferrer"}>
-              <img
-                src={headerImg}
-                alt={"John Christopher Gonzaga"}
-                onMouseEnter={headerHover(true)}
-                onMouseLeave={headerHover(false)}
-              />
+            <a href={"/"} target={"_self"} rel={"noreferrer"}>
+              <img src={assets.headerLogo} alt={"Header Logo"} />
             </a>
           </div>
           {deviceType !== "pc" ? (
