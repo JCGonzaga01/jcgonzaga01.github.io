@@ -41,6 +41,15 @@ const liveProjectItems: Array<ProjectItemProps> = [
     bgImg:
       "https://firebasestorage.googleapis.com/v0/b/tlcfm-japan.appspot.com/o/home%2FbannerBG.jpg?alt=media&token=0ec30dd8-3f0e-488a-a3a6-fe6a30b213c3",
   },
+  {
+    name: "JC REACT BOILERPLATE",
+    description: "A React Boilerplate alternative for CRA.",
+    url: "https://github.com/JCGonzaga01/jc-react-boilerplate",
+    target: "_blank",
+    color: styles.orangeBG,
+    bgImg:
+      "https://firebasestorage.googleapis.com/v0/b/jcgonzaga01githubio.appspot.com/o/projects%2FjcReactBoilerplate.png?alt=media&token=5f90182e-400d-4d61-aea0-2f770690aba7",
+  },
 ];
 
 const prototypeProjectItems: Array<ProjectItemProps> = [
@@ -49,7 +58,7 @@ const prototypeProjectItems: Array<ProjectItemProps> = [
     description: "A Video on Demand application",
     url: "https://github.com/JCGonzaga01/jcTV",
     target: "_blank",
-    color: styles.orangeBG,
+    color: styles.blueBG,
     bgImg:
       "https://firebasestorage.googleapis.com/v0/b/jcgonzaga01githubio.appspot.com/o/projects%2FjcTV.png?alt=media&token=e402b78f-fc3a-4ce7-8f84-a039c18b29e5",
   },
