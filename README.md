@@ -61,6 +61,8 @@ This completes the set up instructions. Please continue reading below to learn o
 
 4. To update the **Work Experience**, **Projects** && **FunStuffs** images, you can save all your own images to the assets folder and export it using the `src/assets/index.ts` file or assign the image URL directly to their respective constant file.
 
+5. You can also change the website color theming at src/helpers/stylings/global.scss.
+
 ### Notes:
 
 1. To make the **About Me** and **Skill** page button work, you can either point the url of this button page to your own aboutme/skill page implementation OR you can check and fork my [info](https://github.com/JCGonzaga01/info) page implementation for this.
