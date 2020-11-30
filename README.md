@@ -1,8 +1,4 @@
-# [ON-GOING] My Personal Website
-
-Remaining Item:
-
-1. FunStuffs Page > Travel's Gallery Page
+# My Personal Website
 
 ## Project Overview
 

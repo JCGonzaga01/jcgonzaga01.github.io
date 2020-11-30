@@ -1,18 +1,20 @@
-import React from "react";
+import React, { FormEvent } from "react";
 import styles from "./Card.scss";
 
 type Props = {
-  banner: string;
   title: string;
-  onClickBanner?: () => void;
+  banner: string;
+  url: string;
 };
 
-const Card: React.FC<Props> = ({ banner, title, onClickBanner }) => {
+const Card: React.FC<Props> = ({ title, banner, url }) => {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.banner} onClick={onClickBanner}>
-        <img src={banner} alt={title} />
-      </div>
+      <a href={url} target={"_self"} rel={"noreferrer"}>
+        <div className={styles.banner}>
+          <img src={banner} alt={title} />
+        </div>
+      </a>
       <div className={styles.title}>{title}</div>
     </div>
   );

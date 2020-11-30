@@ -7,7 +7,7 @@ import styles from "./Slider.scss";
 
 type Props = {
   className?: string;
-  cardList: Array<{ banner: string; title: string }>;
+  cardList: Array<{ title: string; banner: string; url: string }>;
   animate?: boolean;
 };
 
@@ -48,10 +48,6 @@ const Slider: React.FC<Props> = ({ className = "", cardList, animate = false }) 
     }
   };
 
-  const handleOnClickBanner = () => {
-    alert("This section is under construction. Check back soon.");
-  };
-
   return (
     <div className={classNames(className, styles.wrapper)}>
       <div className={styles.arrowBtn} onClick={handleOnClickLeftBtn}>
@@ -72,7 +68,7 @@ const Slider: React.FC<Props> = ({ className = "", cardList, animate = false }) 
                 transition: `opacity 1s ease-in-out ${idx * 0.4}s`,
               }}
             >
-              <Card banner={item.banner} title={item.title} onClickBanner={handleOnClickBanner} />
+              <Card banner={item.banner} title={item.title} url={item.url} />
             </div>
           ))}
         </div>
