@@ -50,6 +50,24 @@ const liveProjectItems: Array<ProjectItemProps> = [
     bgImg:
       "https://firebasestorage.googleapis.com/v0/b/jcgonzaga01githubio.appspot.com/o/projects%2FjcReactBoilerplate.png?alt=media&token=5f90182e-400d-4d61-aea0-2f770690aba7",
   },
+  {
+    name: "Info Page",
+    description: "An Easily Modifiable Information Page",
+    url: "https://github.com/JCGonzaga01/info",
+    target: "_blank",
+    color: styles.yellowBG,
+    bgImg:
+      "https://firebasestorage.googleapis.com/v0/b/jcgonzaga01githubio.appspot.com/o/projects%2FinfoPage.jpg?alt=media&token=0fd0f14e-f77d-42e6-accf-221ce736b9ff",
+  },
+  {
+    name: "Gallery Page",
+    description: "An Easily Modifiable Gallery Page",
+    url: "https://github.com/JCGonzaga01/gallery",
+    target: "_blank",
+    color: styles.redBG,
+    bgImg:
+      "https://firebasestorage.googleapis.com/v0/b/jcgonzaga01githubio.appspot.com/o/projects%2Fgallery.jpg?alt=media&token=f4e22462-f5b0-45f4-913b-30c65371778f",
+  },
 ];
 
 const prototypeProjectItems: Array<ProjectItemProps> = [

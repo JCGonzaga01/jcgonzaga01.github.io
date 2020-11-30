@@ -24,6 +24,14 @@ $fontSubTitle: 30px;
   background-color: #87c5a4;
 }
 
+.yellowBG:before {
+  background-color: #b4ce4b;
+}
+
+.redBG:before {
+  background-color: #b30808;
+}
+
 .showFadeUp {
   animation: fadeUp 1.5s ease-in-out;
 }
