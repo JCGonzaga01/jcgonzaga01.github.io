@@ -25,6 +25,7 @@ import accenture from "./workExp/accenture.png";
 import finastra from "./workExp/finastra.png";
 // - Projects
 import live from "./svg/live.svg";
+import openSource from "./svg/openSource.svg";
 import prototype from "./svg/prototype.svg";
 //  - Fun Stuffs
 import leftArrow from "./svg/leftArrow.svg";
@@ -65,6 +66,7 @@ export default {
   finastra,
   // PROJECTS
   live,
+  openSource,
   prototype,
   // FUN STUFFS
   leftArrow,

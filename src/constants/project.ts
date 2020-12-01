@@ -41,12 +41,15 @@ const liveProjectItems: Array<ProjectItemProps> = [
     bgImg:
       "https://firebasestorage.googleapis.com/v0/b/tlcfm-japan.appspot.com/o/home%2FbannerBG.jpg?alt=media&token=0ec30dd8-3f0e-488a-a3a6-fe6a30b213c3",
   },
+];
+
+const osProjectItems: Array<ProjectItemProps> = [
   {
     name: "JC REACT BOILERPLATE",
-    description: "A React Boilerplate alternative for CRA.",
+    description: "A Simple React Boilerplate alternative for CRA.",
     url: "https://github.com/JCGonzaga01/jc-react-boilerplate",
     target: "_blank",
-    color: styles.orangeBG,
+    color: styles.blueBG,
     bgImg:
       "https://firebasestorage.googleapis.com/v0/b/jcgonzaga01githubio.appspot.com/o/projects%2FjcReactBoilerplate.png?alt=media&token=5f90182e-400d-4d61-aea0-2f770690aba7",
   },
@@ -55,7 +58,7 @@ const liveProjectItems: Array<ProjectItemProps> = [
     description: "An Easily Modifiable Information Page",
     url: "https://github.com/JCGonzaga01/info",
     target: "_blank",
-    color: styles.yellowBG,
+    color: styles.greenBG,
     bgImg:
       "https://firebasestorage.googleapis.com/v0/b/jcgonzaga01githubio.appspot.com/o/projects%2FinfoPage.jpg?alt=media&token=0fd0f14e-f77d-42e6-accf-221ce736b9ff",
   },
@@ -64,7 +67,7 @@ const liveProjectItems: Array<ProjectItemProps> = [
     description: "An Easily Modifiable Gallery Page",
     url: "https://github.com/JCGonzaga01/gallery",
     target: "_blank",
-    color: styles.redBG,
+    color: styles.purpleBG,
     bgImg:
       "https://firebasestorage.googleapis.com/v0/b/jcgonzaga01githubio.appspot.com/o/projects%2Fgallery.jpg?alt=media&token=f4e22462-f5b0-45f4-913b-30c65371778f",
   },
@@ -90,6 +93,12 @@ export const projectDetails = {
       name: "LIVE PROJECTS",
       icon: assets.live,
       items: liveProjectItems,
+    },
+    {
+      elementId: "osProjectsDivId",
+      name: "OPEN SOURCE PROJECTS",
+      icon: assets.openSource,
+      items: osProjectItems,
     },
     {
       elementId: "prototypeProjectsDivId",
