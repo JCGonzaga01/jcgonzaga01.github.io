@@ -33,7 +33,7 @@ const Banner: React.FC = () => {
           <div>
             {bannerDetails.list.map((item, idx) => (
               <span key={`${idx}-${item.title}`} className={styles.textWithImage}>
-                {`${item.emoji ? String.fromCodePoint(parseInt(item.emoji)) : ""} ${item.title}`}
+                {`${item.emoji && String.fromCodePoint(parseInt(item.emoji))} ${item.title}`}
               </span>
             ))}
           </div>
