@@ -39,7 +39,7 @@ const liveProjectItems: Array<ProjectItemProps> = [
     target: "_blank",
     color: styles.purpleBG,
     bgImg:
-      "https://firebasestorage.googleapis.com/v0/b/tlcfm-japan.appspot.com/o/home%2FbannerBG.jpg?alt=media&token=0ec30dd8-3f0e-488a-a3a6-fe6a30b213c3",
+      "https://firebasestorage.googleapis.com/v0/b/tlcfm-japan.appspot.com/o/home%2FbannerBG.jpeg?alt=media&token=5ba0cabd-4b78-4b62-94fd-629be686bb03",
   },
 ];
 
