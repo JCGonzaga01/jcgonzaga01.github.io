@@ -41,6 +41,15 @@ const liveProjectItems: Array<ProjectItemProps> = [
     bgImg:
       "https://firebasestorage.googleapis.com/v0/b/tlcfm-japan.appspot.com/o/home%2FbannerBG.jpeg?alt=media&token=5ba0cabd-4b78-4b62-94fd-629be686bb03",
   },
+  {
+    name: "Lady Fingers Bakeshop",
+    description: "Freshly Baked All Day, Everyday!",
+    url: "https://ladyfingersbakeshop-ph.web.app",
+    target: "_blank",
+    color: styles.orangeBG,
+    bgImg:
+      "https://firebasestorage.googleapis.com/v0/b/ladyfingersbakeshop-ph.appspot.com/o/logo.png?alt=media&token=d5baa71e-ae60-4854-acc8-c28b05212e2e",
+  },
 ];
 
 const osProjectItems: Array<ProjectItemProps> = [
