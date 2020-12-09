@@ -32,17 +32,22 @@
         border-bottom: 1px solid $textScrolled;
         border-top: 1px solid $textScrolled;
         font-size: 44px;
+        font-weight: normal;
         line-height: 50px;
-        margin-bottom: 10px;
+        margin: 0 0 10px;
         padding: 20px;
         width: fit-content;
       }
 
       & > :not(:first-child) {
+        @include align-center;
+        flex-wrap: wrap;
         font-family: "Poppins";
         font-size: 20px;
+        font-weight: normal;
         letter-spacing: 0.5px;
         padding: 10px 0;
+        margin: 0;
       }
 
       .textWithImage {
