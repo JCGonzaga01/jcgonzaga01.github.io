@@ -50,6 +50,15 @@ const liveProjectItems: Array<ProjectItemProps> = [
     bgImg:
       "https://firebasestorage.googleapis.com/v0/b/ladyfingersbakeshop-ph.appspot.com/o/logo.png?alt=media&token=d5baa71e-ae60-4854-acc8-c28b05212e2e",
   },
+  {
+    name: "Miss Crepes",
+    description: "We Create Delicious Memories",
+    url: "https://misscrepes-ph.web.app",
+    target: "_blank",
+    color: styles.redBG,
+    bgImg:
+      "https://firebasestorage.googleapis.com/v0/b/misscrepes-ph.appspot.com/o/home%2Fbanner.png?alt=media&token=c13b286a-9bde-4b1d-9283-5dc9df21f9b5",
+  },
 ];
 
 const osProjectItems: Array<ProjectItemProps> = [
