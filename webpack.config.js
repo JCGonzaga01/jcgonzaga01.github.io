@@ -11,7 +11,7 @@ var config = {
   entry: APP_DIR + "/index.tsx",
   output: {
     path: path.resolve(__dirname, "build"),
-    filename: "[name].[hash].min.js",
+    filename: "[name].[chunkhash:4].min.js",
     publicPath: "/",
   },
   resolve: {
