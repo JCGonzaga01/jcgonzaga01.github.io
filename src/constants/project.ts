@@ -26,7 +26,7 @@ const liveProjectItems: Array<ProjectItemProps> = [
   {
     name: "TLCFM",
     description: "Tokyo Lighthouse Church Filipino Ministry - Website",
-    url: "https://tlcfm.herokuapp.com",
+    url: "https://tlcfm-japan.web.app/",
     target: "_blank",
     color: styles.greenBG,
     bgImg:
@@ -35,7 +35,7 @@ const liveProjectItems: Array<ProjectItemProps> = [
   {
     name: "TLCFM-ADMIN",
     description: "Tokyo Lighthouse Church Filipino Ministry - Admin Site",
-    url: "https://tlcfm-admin.herokuapp.com",
+    url: "https://tlcfm-admin.web.app/login",
     target: "_blank",
     color: styles.purpleBG,
     bgImg:
