@@ -7,7 +7,7 @@ export const skillsDetails = {
     {
       icon: assets.web,
       title: "WEB",
-      description: "Javascript, ReactJS, TypeScript, HTML, CSS, Webpack, Express, NodeJS, and more",
+      description: "Javascript, ReactJS, TypeScript, HTML, CSS, Webpack, Express, NextJS, and more",
     },
     {
       icon: assets.database,

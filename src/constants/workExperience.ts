@@ -10,7 +10,7 @@ export const workExpDetails = {
       records: [
         {
           title: "",
-          description: "August 2020 ~ Present: Senior Web Engineer",
+          description: "August 2020 ~ January 2024: Expert Software Engineer",
         },
       ],
     },

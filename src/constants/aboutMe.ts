@@ -13,7 +13,7 @@ export const aboutMeDetails = {
     {
       icon: assets.working,
       title: "WORK",
-      description: "Currently work as a Senior Web Engineer in Finastra Philippines, Inc.",
+      description: "Currently work as an Expert Software Engineer in Finastra Philippines, Inc.",
     },
     {
       icon: assets.guitar,
