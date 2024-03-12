@@ -1,9 +1,10 @@
-import React from "react";
 import assets from "assets";
-import { Button } from "../_common";
 import { aboutMeDetails } from "constants/aboutMe";
+import { workExpDetails } from "constants/workExperience";
 import { useDeviceType, useVisibleInViewport } from "helpers/customHooks";
 import { classNames } from "helpers/functions";
+import React from "react";
+import { Button } from "../_common";
 import styles from "./AboutMe.scss";
 
 const AboutMe: React.FC = () => {
@@ -49,7 +50,17 @@ const AboutMe: React.FC = () => {
                 <div key={`${idx}-${item.title}`} className={styles.aboutMeList}>
                   <img src={item.icon} alt={item.title} />
                   <div className={styles.title}>{item.title}</div>
-                  <div className={styles.detail}>{item.description}</div>
+                  <div className={styles.detail}>
+                    {item.description}
+                    {item.isLinkedIn && (
+                      <div className={styles.linkedin}>
+                        <span>LinkedIn</span>
+                        <a href={workExpDetails.linkedInURL} target={"_blank"} rel={"noreferrer"}>
+                          <img src={assets.linkedin} alt={"LinkedIn"} />
+                        </a>
+                      </div>
+                    )}
+                  </div>
                 </div>
               ))}
             </div>

@@ -2,8 +2,8 @@
 import headerLogo from "./headerLogo.png";
 
 // BG
-import bannerBG from "./bg/banner.jpg";
 import aboutMeBG from "./bg/aboutMe.jpg";
+import bannerBG from "./bg/banner.jpg";
 import skillsBG from "./bg/skills.jpg";
 import workExpBG from "./bg/workExp.jpg";
 
@@ -12,34 +12,35 @@ import workExpBG from "./bg/workExp.jpg";
 import arrowDown from "./svg/arrowDown.svg";
 // - About Me
 import education from "./svg/education.svg";
-import working from "./svg/working.svg";
 import guitar from "./svg/guitar.svg";
+import working from "./svg/working.svg";
 // - Skills
-import web from "./svg/web.svg";
 import database from "./svg/database.svg";
 import otherTools from "./svg/otherTools.svg";
 import scrum from "./svg/scrum.svg";
+import web from "./svg/web.svg";
 // - Work Experience
-import jeonsoft from "./workExp/jeonsoft.png";
 import accenture from "./workExp/accenture.png";
 import finastra from "./workExp/finastra.png";
+import jeonsoft from "./workExp/jeonsoft.png";
+import jetpack from "./workExp/jetpack.png";
 // - Projects
 import live from "./svg/live.svg";
 import openSource from "./svg/openSource.svg";
 import prototype from "./svg/prototype.svg";
 //  - Fun Stuffs
+import biking from "./svg/biking.svg";
 import leftArrow from "./svg/leftArrow.svg";
 import rightArrow from "./svg/rightArrow.svg";
 import travels from "./svg/travels.svg";
-import biking from "./svg/biking.svg";
 //  - Contact
-import error from "./svg/error.svg";
 import check from "./svg/check.svg";
+import error from "./svg/error.svg";
 
 // ICONS
+import email from "./svg/email.svg";
 import github from "./svg/github.svg";
 import linkedin from "./svg/linkedin.svg";
-import email from "./svg/email.svg";
 
 export default {
   // HEADER
@@ -64,6 +65,7 @@ export default {
   jeonsoft,
   accenture,
   finastra,
+  jetpack,
   // PROJECTS
   live,
   openSource,

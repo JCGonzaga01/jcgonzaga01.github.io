@@ -13,7 +13,9 @@ export const aboutMeDetails = {
     {
       icon: assets.working,
       title: "WORK",
-      description: "Currently work as an Expert Software Engineer in Finastra Philippines, Inc.",
+      description:
+        "Currently doing freelancing. If you have a great opportunity, feel free to drop me a message at",
+      isLinkedIn: true,
     },
     {
       icon: assets.guitar,

@@ -7,7 +7,8 @@ export const skillsDetails = {
     {
       icon: assets.web,
       title: "WEB",
-      description: "Javascript, ReactJS, TypeScript, HTML, CSS, Webpack, Express, NextJS, and more",
+      description:
+        "JavaScript, ReactJS, TypeScript, HTML/CSS, NextJS, React-Query, React Hook Form, and more",
     },
     {
       icon: assets.database,
@@ -22,7 +23,7 @@ export const skillsDetails = {
     {
       icon: assets.otherTools,
       title: "OTHER TOOLS",
-      description: "GIT, Docker, VS Code Remote Container, Heroku",
+      description: "GIT, Docker, VS Code Remote Container, Firebase",
     },
   ],
 };

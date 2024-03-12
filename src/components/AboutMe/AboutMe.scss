@@ -82,6 +82,8 @@
               border: 1px solid #ff8080;
               border-radius: 10px;
               color: $textDefault;
+              display: flex;
+              flex-direction: column;
               min-height: 145px;
               min-width: 250px;
               max-width: 250px;
@@ -92,6 +94,19 @@
               filter: invert(0.55) sepia(1) saturate(9) hue-rotate(315deg);
               height: 80px;
               width: 80px;
+            }
+
+            .linkedin {
+              @include align-center;
+              font-family: "Poppins";
+              font-size: 16px;
+      
+              img {
+                display: flex;
+                height: 16px;
+                width: 40px;
+                padding: 0 10px;
+              }
             }
           }
         }

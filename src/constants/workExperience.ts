@@ -5,6 +5,16 @@ export const workExpDetails = {
   linkedInURL: "https://www.linkedin.com/in/jc-gonzaga/",
   details: [
     {
+      title: "Jetpack",
+      icon: assets.jetpack,
+      records: [
+        {
+          title: "",
+          description: "January 2024 ~ March 2024: Front-end Developer Consultant",
+        },
+      ],
+    },
+    {
       title: "Finastra",
       icon: assets.finastra,
       records: [
